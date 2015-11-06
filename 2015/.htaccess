@@ -1,0 +1,9 @@
+# Habilitar o PHP 5.5
+AddHandler application/x-httpd-php55 .php
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1
+RewriteCond %{HTTP_HOST} ^acirmro.com.br$
+RewriteRule ^/?$ "http\:\/\/www\.acirmro\.com\.br\/" [R=301,L]
+

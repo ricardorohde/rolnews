@@ -1,0 +1,27 @@
+<header class="shadowBottom">
+    <div class="centerlyt">
+        <div id="topo ">
+            <div class="menu t18 branco"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> MENU</a></div>
+            <div class="busca">
+                <input type="search" class="form-control" placeholder="Buscar...">
+                <button type="submit" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+            <div class="logo"><a href="<?= HOME;?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
+            <div class="sociais"><span class="icon-facebook2"></span></div>
+        </div>
+    </div>
+</header>
+
+<div id="menu">
+    <aside>
+        <ul>
+            <li>POLITICA</li>
+            <li>CULTURA</li>
+            <li>ESPORTES</li>
+            <li>POLICIAL</li>
+            <li>COBERTURAS</li>
+            <li>VIDEOS</li>
+        </ul>
+    </aside>
+</div>
+

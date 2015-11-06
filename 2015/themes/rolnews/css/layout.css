@@ -1,0 +1,58 @@
+/*Padroes*/
+.centerlyt{ width: 984px; margin: 0 auto;}
+.shadowBottom{ box-shadow: 0px 1px 5px #888;}
+.radius{border-radius: 5px;}
+.radiusBottom{ border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;}
+.borderTopRed{ border-top: 3px solid #ff0000;}
+.borderBottomGreen{ margin-bottom: 5px; border-bottom: 3px solid #009900;}
+.borderBottomPurple{ margin-bottom: 5px; border-bottom: 3px solid #a60ac2;}
+.borderBottomBlue{ margin-bottom: 5px; border-bottom: 3px solid #0067bc;}
+.borderBottomYellow{ margin-bottom: 5px; border-bottom: 3px solid #bcb000;}
+.marginBottom{ margin-bottom: 10px;}
+body{ background: #fff4f4;}
+
+/*Topo*/
+header{ width: 100%; height: 74px; margin-bottom: 10px; position: fixed; z-index: 2; background: #ff7212;}
+#topo{ width: 100%; float: left;}
+.menu{ width: 76px; padding: 25px 0 0 0; float: left;}
+.menu a{ text-decoration: none;}
+
+#menu{ width: 100%; margin: 74px 0 0 0; padding: 10px; position: fixed; z-index: 1; background: #fff; display: none;}
+aside{ width: 200px; border-right: 1px solid #999999; float: left;}
+aside ul{ display: block;}
+aside ul li{ width: 100%; padding: 5px 0; float: left;}
+
+.busca{ width: 265px; padding: 20px 0 0 20px; float: left;}
+.busca input[type=search]{ width: 230px; padding: 5px 35px 5px 5px; border-radius: 25px; float: left; }
+.busca .btnBusca{ width: 30px; margin: 8px 0 0 -35px; background: #fff; float: left;}
+.logo{ width: 513px; height: 74px; padding: 7px 0 0 161px; margin: 0 0 0 -100px; float: left; background: url('../images/bg-logo.png') no-repeat;}
+.sociais{ float: right;}
+
+/*Capa*/
+.capa{ width: 100%; margin: 90px 0 0 0; float: left;}
+.blcDestaqueNews{ width: 100%; float: left;}
+.vinDestaqueNews{}
+.boxDestaqueNews{ width: 100%; height: 300px; float: left; background: #fff;}
+
+.blcPublicidade{ width: 100%; float: left; padding: 3px; background: #fff;}
+.vinPublicidade{}
+.boxPublicidade{ width: 100%; height: 300px; float: left; background: #ff0000;}
+.boxPublicidadeFull{ width: 100%; height: 150px; float: left; background: #ff0000;}
+
+
+.blcMaisNews{ width: 100%; float: left;}
+.boxMaisNews{ width: 100%; height: 100px; float: left; background: #fff;}
+
+.blcCoberturas{width: 100%; float: left;}
+.vinCoberturas{}
+.boxCoberturas{width: 100%; height: 100px; float: left; background: #fff;}
+
+.blcFlyers{width: 100%; float: left;}
+.vinFlyers{}
+.boxFlyers{width: 100%; height: 100px; float: left; background: #fff;}
+
+.blcVideo{width: 100%; float: left;}
+.vinVideo{}
+.boxVideo{width: 100%; height: 100px; float: left; background: #fff;}
+/*Rodape*/
+footer{ width: 100%; height: 74px; float: left; background: #ff7212;}

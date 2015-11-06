@@ -1,0 +1,77 @@
+.clearout {
+    height:20px;
+    clear:both;
+}
+
+#flexisel {
+    display:none;
+    float: left;
+}
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+    height: 100px;
+    padding: 10px 0 0 0;
+    background:#fcfcfc;
+    border:1px solid #ccc; 
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:100px;
+    max-height:60px;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    width: 23px;
+    height: 53px; 
+    position: absolute;
+    margin: 40px 0 0 0;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 1;
+}
+.nbs-flexisel-nav-left:hover,
+.nbs-flexisel-nav-right:hover {
+    opacity: 0.7;
+}
+
+.nbs-flexisel-nav-left {
+    left: 10px;
+    background: url(../images/button-previous.png) no-repeat;
+}
+
+.nbs-flexisel-nav-right {
+    right: 5px;
+    background: url(../images/button-next.png) no-repeat;
+}
