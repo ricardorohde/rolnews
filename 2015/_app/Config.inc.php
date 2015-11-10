@@ -6,7 +6,7 @@ date_default_timezone_set("America/Manaus");
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '1234');
-define('DBSA', '_acirm_2015');
+define('DBSA', '_rolnews_2015');
 
 // DEFINE SERVIDOR DE E-MAIL ################
 define('MAILUSER', 'email@dominio.com.br');

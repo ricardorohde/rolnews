@@ -4,7 +4,20 @@
             <div class="col-md-8">
                 <div class="blcDestaqueNews">
                     <div class="vinDestaqueNews t18 grafite bold">NOTICIAS EM DESTAQUE</div>
-                    <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom"></div>
+                    <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
+                        <div class="destaqueNewsBig">
+                            <div class="destaqueNewsBigImg">[Imagem]</div>
+                            <div class="destaqueNewsBigDados">
+                                <div class="destaqueNewsBigDadosCat t11">POLITICA</div>
+                                <div class="destaqueNewsBigDadosTit t16">Grupo protesta contra Dilma em SP e pede impeachment</div>
+                            </div>
+                        </div>
+                        <div class="destaqueNewsSmall">
+                            <div class="destaqueNewsSmallItem"></div>
+                            <div class="destaqueNewsSmallItem"></div>
+                            <div class="destaqueNewsSmallItem"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">

@@ -63,93 +63,9 @@ class Seo {
         $ReadSeo = new Read;
 
         switch ($this->File):
-            //SEO:: POST
-            case 'artigo':
-                $Admin = (isset($_SESSION['userlogin']['user_level']) && $_SESSION['userlogin']['user_level'] == 3 ? true : false);
-                $Check = ($Admin ? '' : 'post_status = 1 AND');
-
-                $ReadSeo->ExeRead("ws_posts", "WHERE {$Check} post_name = :link", "link={$this->Link}");
-                if (!$ReadSeo->getResult()):
-                    $this->seoData = null;
-                    $this->seoTags = null;
-                else:
-                    $extract = extract($ReadSeo->getResult()[0]);
-                    $this->seoData = $ReadSeo->getResult()[0];
-                    $this->Data = [$post_title . ' - ' . SITENAME, $post_content, HOME . "/artigo/{$post_name}", HOME . "/uploads/{$post_cover}"];
-
-                    //post:: conta views do post
-                    $ArrUpdate = ['post_views' => $post_views + 1];
-                    $Update = new Update();
-                    $Update->ExeUpdate("ws_posts", $ArrUpdate, "WHERE post_id = :postid", "postid={$post_id}");
-                endif;
-                break;
-
-            //SEO:: CATEGORIA
-            case 'categoria':
-                $ReadSeo->ExeRead("ws_categories", "WHERE category_name = :link", "link={$this->Link}");
-                if (!$ReadSeo->getResult()):
-                    $this->seoData = null;
-                    $this->seoTags = null;
-                else:
-                    extract($ReadSeo->getResult()[0]);
-                    $this->seoData = $ReadSeo->getResult()[0];
-                    $this->Data = [$category_title . ' - ' . SITENAME, $category_content, HOME . "/categoria/{$category_name}", INCLUDE_PATH . '/images/site.png'];
-
-                    //category:: conta views da categoria
-                    $ArrUpdate = ['category_views' => $category_views + 1];
-                    $Update = new Update();
-                    $Update->ExeUpdate("ws_categories", $ArrUpdate, "WHERE category_id = :catid", "catid={$category_id}");
-                endif;
-                break;
-
-            //SEO:: PESQUISA
-            case 'pesquisa':
-                $ReadSeo->ExeRead("ws_posts", "WHERE post_status = 1 AND (post_title LIKE '%' :link '%' OR post_content LIKE '%' :link '%')", "link={$this->Link}");
-                if (!$ReadSeo->getResult()):
-                    $this->seoData = null;
-                    $this->seoTags = null;
-                else:
-                    $this->seoData['count'] = $ReadSeo->getRowCount();
-                    $this->Data = ["Pesquisa por: {$this->Link}" . ' - ' . SITENAME, "Sua pesquisa por {$this->Link} retornou {$this->seoData['count']} resultados!", HOME . "/pesquisa/{$this->Link}", INCLUDE_PATH . '/images/site.png'];
-                endif;
-                break;
-
-            //SEO:: LISTA EMPRESAS
-            case 'empresas':
-                $Name = ucwords(str_replace("-", " ", $this->Link));
-                $this->seoData = ["empresa_link" => $this->Link, "empresa_cat" => $Name];
-                $this->Data = ["Empresas {$this->Link}" . SITENAME, "Confira o guia completo de sua cidade, e encontra empresas {$this->Link}.", HOME . '/empresas/' . $this->Link, INCLUDE_PATH . '/images/site.png'];
-                break;
-
-            //SEO:: EMPRESA SINGLE
-            case 'empresa':
-                $Admin = (isset($_SESSION['userlogin']['user_level']) && $_SESSION['userlogin']['user_level'] == 3 ? true : false);
-                $Check = ($Admin ? '' : 'empresa_status = 1 AND');
-
-                $ReadSeo->ExeRead("app_empresas", "WHERE {$Check} empresa_name = :link", "link={$this->Link}");
-                if (!$ReadSeo->getResult()):
-                    $this->seoData = null;
-                    $this->seoTags = null;
-                else:
-                    extract($ReadSeo->getResult()[0]);
-                    $this->seoData = $ReadSeo->getResult()[0];
-                    $this->Data = [$empresa_title . ' - ' . SITENAME, $empresa_sobre, HOME . "/empresa/{$empresa_name}", HOME . "/uploads/{$empresa_capa}"];
-
-                    //empresa:: conta views da empresa
-                    $ArrUpdate = ['empresa_views' => $empresa_views + 1];
-                    $Update = new Update();
-                    $Update->ExeUpdate("app_empresas", $ArrUpdate, "WHERE empresa_id = :empresaid", "empresaid={$empresa_id}");
-                endif;
-                break;
-
-            //SEO:: CADASTRA EMPRESA
-            case 'cadastra-empresa':
-                $this->Data = ["Cadastre sua Empresa - " . SITENAME, "Página modelo para cadastro de empresas via Front-End do curso Work Series - PHP Orientado a Objetos!", HOME . '/cadastra-empresa/' . $this->Link, INCLUDE_PATH . '/images/site.png'];
-                break;
-
             //SEO:: INDEX
             case 'index':
-                $this->Data = [SITENAME . " - Associação Empresárial de Rolim de Moura", SITEDESC, HOME, INCLUDE_PATH . '/images/logo-topo.png'];
+                $this->Data = [SITENAME . " - Informação Digital", SITEDESC, HOME, INCLUDE_PATH . '/images/logo-topo.png'];
                 break;
 
             //SEO:: DIRETORIA
