@@ -39,8 +39,8 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 destaqueNewsBigDadosCat{ float: left; border-bottom: 1px solid #ff0000;}
 
 
-.destaqueNewsSmall{ width: 290px; margin-left: 10px; float: left; background: #888;}
-.destaqueNewsSmallItem{ width: 100%; height: 85px; float: left; margin-bottom: 10px; background: #ff0000;}
+.destaqueNewsSmall{ width: 290px; margin-left: 10px; float: left;}
+.destaqueNewsSmallItem{ width: 100%; height: 85px; float: left; margin-bottom: 10px; background: #a60ac2;}
 
 .blcPublicidade{ width: 100%; float: left; padding: 3px; background: #fff;}
 .vinPublicidade{}
