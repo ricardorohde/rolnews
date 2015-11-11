@@ -9,13 +9,18 @@
                             <div class="destaqueNewsBigImg">[Imagem]</div>
                             <div class="destaqueNewsBigDados">
                                 <div class="destaqueNewsBigDadosCat t11">POLITICA</div>
-                                <div class="destaqueNewsBigDadosTit t16">Grupo protesta contra Dilma em SP e pede impeachment</div>
+                                <div class="destaqueNewsBigDadosTit t16 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment</div>
                             </div>
                         </div>
                         <div class="destaqueNewsSmall">
-                            <div class="destaqueNewsSmallItem"></div>
-                            <div class="destaqueNewsSmallItem"></div>
-                            <div class="destaqueNewsSmallItem"></div>
+                            <?php
+                            for($s=1; $s<=3; $s++):
+                            ?>
+                            <div class="destaqueNewsSmallItem">
+                                <div class="destaqueNewsSmallItemImg">[Imagem]</div>
+                                <div class="destaqueNewsSmallItemTit t14 grafite"> Animale faz um inverno poderoso, leve e com transparencia</div>
+                            </div>
+                            <?php endfor;?>
                         </div>
                     </div>
                 </div>
