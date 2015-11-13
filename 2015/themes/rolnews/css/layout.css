@@ -33,7 +33,7 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .blcDestaqueNews{ width: 100%; float: left;}
 .vinDestaqueNews{}
 .boxDestaqueNews{ width: 100%; padding: 10px; float: left; background: #fff;}
-.destaqueNewsBig{ width: 326px; height: 200px; float: left; background: #0067bc;}
+.destaqueNewsBig{ width: 326px; float: left;}
 .destaqueNewsBigImg{ width: 100%; height: 200px; float: left; background: #a60ac2;}
 .destaqueNewsBigDados{ width: 100%; float: left;}
 .destaqueNewsBigDadosCat{ float: left; padding-top: 2px; border-bottom: 1px solid #ff0000;}
@@ -48,7 +48,6 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .vinPublicidade{}
 .boxPublicidade{ width: 100%; height: 312px; float: left; background: #ff0000;}
 .boxPublicidadeFull{ width: 100%; height: 150px; float: left; background: #ff0000;}
-
 
 .blcMaisNews{ width: 100%; float: left;}
 .boxMaisNews{ width: 100%; float: left; background: #fff;}
