@@ -32,7 +32,7 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .capa{ width: 100%; margin: 90px 0 0 0; float: left;}
 .blcDestaqueNews{ width: 100%; float: left;}
 .vinDestaqueNews{}
-.boxDestaqueNews{ width: 100%; height: 300px; padding: 10px; float: left; background: #fff;}
+.boxDestaqueNews{ width: 100%; padding: 10px; float: left; background: #fff;}
 .destaqueNewsBig{ width: 326px; height: 200px; float: left; background: #0067bc;}
 .destaqueNewsBigImg{ width: 100%; height: 200px; float: left; background: #a60ac2;}
 .destaqueNewsBigDados{ width: 100%; float: left;}
@@ -42,11 +42,11 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .destaqueNewsSmall{ width: 290px; margin-left: 10px; float: left;}
 .destaqueNewsSmallItem{ width: 100%; height: 85px; float: left; margin-bottom: 10px;}
 .destaqueNewsSmallItemImg{ width: 115px; height: 85px; float: left; background: #009900;}
-.destaqueNewsSmallItemTit{ width: 175px; height: 85px; float: left; padding-left: 5px; background: #999999;}
+.destaqueNewsSmallItemTit{ width: 175px; height: 85px; float: left; padding-left: 5px; }
 
 .blcPublicidade{ width: 100%; float: left; padding: 3px; background: #fff;}
 .vinPublicidade{}
-.boxPublicidade{ width: 100%; height: 300px; float: left; background: #ff0000;}
+.boxPublicidade{ width: 100%; height: 312px; float: left; background: #ff0000;}
 .boxPublicidadeFull{ width: 100%; height: 150px; float: left; background: #ff0000;}
 
 

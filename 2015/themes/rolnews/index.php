@@ -67,9 +67,9 @@
                 <div class="boxMaisNews radius shadowBottom" style="background: #00733e;">
                     <div class="boxMaisNewsFull" >
                         <div class="boxMaisNewsFullDados">
-                            <div class="boxMaisNewsCat t11 grafite">ESPAÇO</div>
+                            <div class="boxMaisNewsCat t11 branco">ESPAÇO</div>
                             <div class="boxMaisNewsTit t20 branco">Marte pode ter comportado lagos durante milhões de anos </div>
-                            <div class="boxMaisNewsDate t11 grafite">12/11/2015 ás 18:17</div>
+                            <div class="boxMaisNewsDate t11 branco">12/11/2015 ás 18:17</div>
                         </div>
                     </div>
                 </div>
@@ -125,11 +125,31 @@
             <div class="col-md-4">
                 <div class="blcPublicidade radius shadowBottom">
                     <div class="vinPublicidade t11 grafite">Publicidade</div>
-                    <div class="boxPublicidade"></div>
+                    <div class="boxPublicidade" style="height: 285px;"></div>
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="boxMaisNews radius shadowBottom"></div>
+                <div class="blcDestaqueNews">
+                    <div class="boxDestaqueNews radius shadowBottom">
+                        <div class="destaqueNewsBig">
+                            <div class="destaqueNewsBigImg">[Imagem]</div>
+                            <div class="destaqueNewsBigDados">
+                                <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
+                                <div class="destaqueNewsBigDadosTit t16 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment</div>
+                            </div>
+                        </div>
+                        <div class="destaqueNewsSmall">
+                            <?php
+                            for ($s = 1; $s <= 3; $s++):
+                                ?>
+                                <div class="destaqueNewsSmallItem">
+                                    <div class="destaqueNewsSmallItemImg">[Imagem]</div>
+                                    <div class="destaqueNewsSmallItemTit t14 grafite"> Animale faz um inverno poderoso, leve e com transparencia</div>
+                                </div>
+                            <?php endfor; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row marginBottom">
