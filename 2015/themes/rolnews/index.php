@@ -1,4 +1,9 @@
 <div class="centerlyt">
+    <?php
+    $news = new Read;
+    $news->ExeRead("noticias", "WHERE destaque = :destaque ORDER BY id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=1&offset=0");
+    $newsDestBig = $news->getResult()[0];
+    ?>
     <div class="capa">
         <div class="row marginBottom">
             <div class="col-md-8">
@@ -9,18 +14,19 @@
                             <div class="destaqueNewsBigImg">[Imagem]</div>
                             <div class="destaqueNewsBigDados">
                                 <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
-                                <div class="destaqueNewsBigDadosTit t16 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment</div>
+                                <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= $newsDestBig['titulo']; ?></div>
                             </div>
                         </div>
                         <div class="destaqueNewsSmall">
                             <?php
-                            for ($s = 1; $s <= 3; $s++):
+                            $news->setPlaces("destaque=sim&limit=3&offset=1");
+                            foreach ($news->getResult() as $newsDesSmall):
                                 ?>
                                 <div class="destaqueNewsSmallItem">
                                     <div class="destaqueNewsSmallItemImg">[Imagem]</div>
-                                    <div class="destaqueNewsSmallItemTit t14 grafite"> Animale faz um inverno poderoso, leve e com transparencia</div>
+                                    <div class="destaqueNewsSmallItemTit t14 grafite"><?= $newsDesSmall['titulo']; ?></div>
                                 </div>
-                            <?php endfor; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -36,11 +42,15 @@
             <div class="col-md-7">
                 <div class="row marginBottom">
                     <div class="col-md-12">
+                        <?php
+                        $news->setPlaces("destaque=sim&limit=1&offset=4");
+                        $newsBig = $news->getResult()[0];
+                        ?>
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
                             <div class="boxMaisNewsBigImg">[imagem]</div>
                             <div class="boxMaisNewsBigDados">
                                 <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                <div class="boxMaisNewsTit t18 grafite">TV acusada de sexismo cancela propaganda de apresentadoras</div>
+                                <div class="boxMaisNewsTit t18 grafite"><?= $newsBig['titulo']; ?></div>
                                 <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
                             </div>
                         </div>
@@ -48,27 +58,32 @@
                 </div>
                 <div class="row marginBottom">
                     <?php
-                    for ($s = 1; $s <= 2; $s++):
+                    $news->setPlaces("destaque=sim&limit=2&offset=5");
+                    foreach ($news->getResult() as $newsSmall):
                         ?>
                         <div class="col-md-6">
                             <div class="boxMaisNews borderTopRed radius shadowBottom">
                                 <div class="boxMaisNewsSmallImg">[imagem]</div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                    <div class="boxMaisNewsTit t13 bold grafite">TV acusada de sexismo cancela propaganda de ...</div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= $newsSmall['titulo']; ?></div>
                                     <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="boxMaisNews radius shadowBottom" style="background: #00733e;">
+                    <?php
+                    $news->setPlaces("destaque=sim&limit=1&offset=7");
+                    $newsSingle = $news->getResult()[0];
+                    ?>
                     <div class="boxMaisNewsFull" >
                         <div class="boxMaisNewsFullDados">
                             <div class="boxMaisNewsCat t11 branco">ESPAÇO</div>
-                            <div class="boxMaisNewsTit t20 branco">Marte pode ter comportado lagos durante milhões de anos </div>
+                            <div class="boxMaisNewsTit t20 branco"><?= $newsSingle['titulo'];?> </div>
                             <div class="boxMaisNewsDate t11 branco">12/11/2015 ás 18:17</div>
                         </div>
                     </div>
