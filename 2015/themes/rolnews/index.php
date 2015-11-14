@@ -93,7 +93,7 @@
                 <div class="row marginBottom">
                     <div class="col-md-4">
                         <?php
-                        for ($s = 1; $s <= 2; $s++):
+                        for ($s = 1; $s <= 3; $s++):
                             ?>
                             <div class="row marginBottom">
                                 <div class="col-md-12">
@@ -114,7 +114,12 @@
                         ?>
                         <div class="col-md-4">
                             <div class="boxMaisNews radius shadowBottom">
-                                teste
+                                <div class="boxMaisNewImg">[imagem]</div>
+                                <div class="boxMaisNewsDados">
+                                    <div class="boxMaisNewsDadosCat t11 grafite">POLITICA</div>
+                                    <div class="boxMaisNewsDadosTit t18 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment  Dilma em SP e pede impeachment</div>
+                                    <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                </div>
                             </div>
                         </div>
                     <?php endfor; ?>
