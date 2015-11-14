@@ -51,7 +51,7 @@
                             <div class="boxMaisNewsBigDados">
                                 <div class="boxMaisNewsCat t11 grafite">TV</div>
                                 <div class="boxMaisNewsTit t18 grafite"><?= $newsBig['titulo']; ?></div>
-                                <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                <div class="boxMaisNewsDateTime t11 grafite"><?= $newsBig['data']; ?></div>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat t11 grafite">TV</div>
                                     <div class="boxMaisNewsTit t13 bold grafite"><?= $newsSmall['titulo']; ?></div>
-                                    <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= $newsSmall['data']; ?></div>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                         <div class="boxMaisNewsFullDados">
                             <div class="boxMaisNewsCat t11 branco">ESPAÇO</div>
                             <div class="boxMaisNewsTit t20 branco"><?= $newsSingle['titulo'];?> </div>
-                            <div class="boxMaisNewsDate t11 branco">12/11/2015 ás 18:17</div>
+                            <div class="boxMaisNewsDate t11 branco"><?= $newsSingle['data'];?></div>
                         </div>
                     </div>
                 </div>
