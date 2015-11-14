@@ -11,11 +11,13 @@
                     <div class="vinDestaqueNews t18 grafite bold">NOTICIAS EM DESTAQUE</div>
                     <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                         <div class="destaqueNewsBig">
-                            <div class="destaqueNewsBigImg">[Imagem]</div>
-                            <div class="destaqueNewsBigDados">
-                                <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
-                                <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= $newsDestBig['titulo']; ?></div>
-                            </div>
+                            <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
+                                <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
+                                <div class="destaqueNewsBigDados">
+                                    <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
+                                    <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= Check::Words($newsDestBig['titulo'], 15); ?></div>
+                                </div>
+                            </a>
                         </div>
                         <div class="destaqueNewsSmall">
                             <?php
@@ -23,8 +25,10 @@
                             foreach ($news->getResult() as $newsDesSmall):
                                 ?>
                                 <div class="destaqueNewsSmallItem">
-                                    <div class="destaqueNewsSmallItemImg">[Imagem]</div>
-                                    <div class="destaqueNewsSmallItemTit t14 grafite"><?= $newsDesSmall['titulo']; ?></div>
+                                    <a href="<?= HOME . '/noticia/' . $newsDesSmall['url_name']; ?>" title="<?= $newsDesSmall['titulo']; ?>">
+                                        <div class="destaqueNewsSmallItemImg"><img alt="<?= $newsDesSmall['titulo']; ?>" title="<?= $newsDesSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDesSmall['foto'] . '&w=115&h=85'; ?>" width="115" height="85"/></div>
+                                        <div class="destaqueNewsSmallItemTit t14 grafite"><?= Check::Words($newsDesSmall['titulo'], 13); ?></div>
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -47,11 +51,11 @@
                         $newsBig = $news->getResult()[0];
                         ?>
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
-                            <div class="boxMaisNewsBigImg">[imagem]</div>
+                            <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=143&h=108'; ?>" width="143" height="108"/></div>
                             <div class="boxMaisNewsBigDados">
                                 <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                <div class="boxMaisNewsTit t18 grafite"><?= $newsBig['titulo']; ?></div>
-                                <div class="boxMaisNewsDateTime t11 grafite"><?= $newsBig['data']; ?></div>
+                                <div class="boxMaisNewsTit t18 grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
+                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
                             </div>
                         </div>
                     </div>
@@ -63,11 +67,11 @@
                         ?>
                         <div class="col-md-6">
                             <div class="boxMaisNews borderTopRed radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg">[imagem]</div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                    <div class="boxMaisNewsTit t13 bold grafite"><?= $newsSmall['titulo']; ?></div>
-                                    <div class="boxMaisNewsDateTime t11 grafite"><?= $newsSmall['data']; ?></div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 15); ?></div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
                                 </div>
                             </div>
                         </div>
@@ -75,16 +79,16 @@
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="boxMaisNews radius shadowBottom" style="background: #00733e;">
-                    <?php
-                    $news->setPlaces("destaque=sim&limit=1&offset=7");
-                    $newsSingle = $news->getResult()[0];
-                    ?>
+                <?php
+                $news->setPlaces("destaque=sim&limit=1&offset=7");
+                $newsSingle = $news->getResult()[0];
+                ?>
+                <div class="boxMaisNews radius shadowBottom" style="background: url(<?= HOME . '/uploads/' . $newsSingle['foto']; ?>)">
                     <div class="boxMaisNewsFull" >
                         <div class="boxMaisNewsFullDados">
                             <div class="boxMaisNewsCat t11 branco">ESPAÇO</div>
-                            <div class="boxMaisNewsTit t20 branco"><?= $newsSingle['titulo'];?> </div>
-                            <div class="boxMaisNewsDate t11 branco"><?= $newsSingle['data'];?></div>
+                            <div class="boxMaisNewsTit t20 branco"><?= Check::Words($newsSingle['titulo'], 12); ?></div>
+                            <div class="boxMaisNewsDate t11 branco"><?= date('d/m/Y H:i', strtotime($newsSingle['data'])); ?></div>
                         </div>
                     </div>
                 </div>
