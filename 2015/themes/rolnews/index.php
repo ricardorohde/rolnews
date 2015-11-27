@@ -14,7 +14,7 @@
                             <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
                                 <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
                                 <div class="destaqueNewsBigDados">
-                                    <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
+                                    <div class="destaqueNewsBigDadosCat t11 grafite"><?= strtoupper($newsDestBig['categoria']); ?></div>
                                     <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= Check::Words($newsDestBig['titulo'], 15); ?></div>
                                 </div>
                             </a>
@@ -53,7 +53,7 @@
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
                             <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=143&h=108'; ?>" width="143" height="108"/></div>
                             <div class="boxMaisNewsBigDados">
-                                <div class="boxMaisNewsCat t11 grafite">TV</div>
+                                <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsBig['categoria']); ?></div>
                                 <div class="boxMaisNewsTit t18 grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
                                 <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
                             </div>
@@ -69,7 +69,7 @@
                             <div class="boxMaisNews borderTopRed radius shadowBottom">
                                 <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
                                 <div class="boxMaisNewsSmallDados">
-                                    <div class="boxMaisNewsCat t11 grafite">TV</div>
+                                    <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
                                     <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 15); ?></div>
                                     <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
                                 </div>
@@ -86,7 +86,7 @@
                 <div class="boxMaisNews radius shadowBottom" style="background: url(<?= HOME . '/uploads/' . $newsSingle['foto']; ?>)">
                     <div class="boxMaisNewsFull" >
                         <div class="boxMaisNewsFullDados">
-                            <div class="boxMaisNewsCat t11 branco">ESPAÇO</div>
+                            <div class="boxMaisNewsCat t11 branco"><?= strtoupper($newsSingle['categoria']); ?></div>
                             <div class="boxMaisNewsTit t20 branco"><?= Check::Words($newsSingle['titulo'], 12); ?></div>
                             <div class="boxMaisNewsDate t11 branco"><?= date('d/m/Y H:i', strtotime($newsSingle['data'])); ?></div>
                         </div>
@@ -112,36 +112,39 @@
                 <div class="row marginBottom">
                     <div class="col-md-4">
                         <?php
-                        for ($s = 1; $s <= 3; $s++):
+                        $newsCat = new Read;
+                        $newsCat->ExeRead("noticias", "WHERE categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
+                        foreach ($newsCat->getResult() as $catPolitica):
                             ?>
                             <div class="row marginBottom">
                                 <div class="col-md-12">
                                     <div class="boxMaisNews radius shadowBottom">
-                                        <div class="boxMaisNewsSmallImg">[imagem]</div>
+                                        <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
                                         <div class="boxMaisNewsSmallDados">
-                                            <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                            <div class="boxMaisNewsTit t13 bold grafite">TV acusada de sexismo cancela propaganda de ...</div>
-                                            <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                            <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
+                                            <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolitica['titulo'], 10); ?></div>
+                                            <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        <?php endfor; ?>
+                        <?php endforeach; ?>
                     </div>
                     <?php
-                    for ($s = 1; $s <= 2; $s++):
+                    $newsCat->setPlaces("categoria=politica&limit=2&offset=3");
+                    foreach ($newsCat->getResult() as $catPoliticaBig):
                         ?>
                         <div class="col-md-4">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewImg">[imagem]</div>
+                                <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=308&h=170'; ?>" width="308" height="170"/></div>
                                 <div class="boxMaisNewsDados">
-                                    <div class="boxMaisNewsDadosCat t11 grafite">POLITICA</div>
-                                    <div class="boxMaisNewsDadosTit t18 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment  Dilma em SP e pede impeachment</div>
-                                    <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                    <div class="boxMaisNewsDadosCat t11 grafite"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
+                                    <div class="boxMaisNewsDadosTit t18 grafite bold"><?= Check::Words($catPoliticaBig['titulo'], 10); ?></div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPoliticaBig['data'])); ?></div>
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -155,22 +158,27 @@
             <div class="col-md-8">
                 <div class="blcDestaqueNews">
                     <div class="boxDestaqueNews radius shadowBottom">
+                        <?php
+                        $newsCat->setPlaces("categoria=politica&limit=1&offset=5");
+                        $catPoliticaSingle = $newsCat->getResult()[0];
+                        ?>
                         <div class="destaqueNewsBig">
-                            <div class="destaqueNewsBigImg">[Imagem]</div>
+                            <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
                             <div class="destaqueNewsBigDados">
-                                <div class="destaqueNewsBigDadosCat t11 grafite">POLITICA</div>
-                                <div class="destaqueNewsBigDadosTit t16 grafite bold">Grupo protesta contra Dilma em SP e pede impeachment</div>
+                                <div class="destaqueNewsBigDadosCat t11 grafite"><?= strtoupper($catPoliticaSingle['categoria']); ?></div>
+                                <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= Check::Words($catPoliticaSingle['titulo'], 10); ?></div>
                             </div>
                         </div>
                         <div class="destaqueNewsSmall">
                             <?php
-                            for ($s = 1; $s <= 3; $s++):
+                            $newsCat->setPlaces("categoria=politica&limit=3&offset=6");
+                            foreach ($newsCat->getResult() as $catPoliticaSmall):
                                 ?>
                                 <div class="destaqueNewsSmallItem">
-                                    <div class="destaqueNewsSmallItemImg">[Imagem]</div>
-                                    <div class="destaqueNewsSmallItemTit t14 grafite"> Animale faz um inverno poderoso, leve e com transparencia</div>
+                                    <div class="destaqueNewsSmallItemImg"><img alt="<?= $catPoliticaSmall['titulo']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSmall['foto'] . '&w=115&h=85'; ?>" width="115" height="85"/></div>
+                                    <div class="destaqueNewsSmallItemTit t14 grafite"><?= Check::Words($catPoliticaSmall['titulo'], 10); ?></div>
                                 </div>
-                            <?php endfor; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -179,66 +187,68 @@
         <div class="row marginBottom">
             <div class="col-md-4">
                 <div class="blcMaisNews ">
-                    <div class="vinMaisNews borderBottomGreen t18 grafite bold">POLITICA</div>
+                    <div class="vinMaisNews borderBottomGreen t18 grafite bold">POLICIAL</div>
                     <?php
-                    for ($s = 1; $s <= 2; $s++):
+                    $newsCat->setPlaces("categoria=policial&limit=2&offset=0");
+                    foreach ($newsCat->getResult() as $catPolicial):
                         ?>
                         <div class="row marginBottom">
                             <div class="col-md-12">
                                 <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg">[imagem]</div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
                                     <div class="boxMaisNewsSmallDados">
-                                        <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                        <div class="boxMaisNewsTit t13 bold grafite">TV acusada de sexismo cancela propaganda de ...</div>
-                                        <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                        <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolicial['categoria']); ?></div>
+                                        <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolicial['titulo'], 10); ?></div>
+                                        <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolicial['data'])); ?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>
-
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="blcMaisNews">
                     <div class="vinMaisNews borderBottomPurple t18 grafite bold">CULTURA</div>
                     <?php
-                    for ($s = 1; $s <= 2; $s++):
+                    $newsCat->setPlaces("categoria=cultura&limit=2&offset=0");
+                    foreach ($newsCat->getResult() as $catCultura):
                         ?>
                         <div class="row marginBottom">
                             <div class="col-md-12">
                                 <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg">[imagem]</div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
                                     <div class="boxMaisNewsSmallDados">
-                                        <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                        <div class="boxMaisNewsTit t13 bold grafite">TV acusada de sexismo cancela propaganda de ...</div>
-                                        <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                        <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catCultura['categoria']); ?></div>
+                                        <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catCultura['titulo'], 10); ?></div>
+                                        <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catCultura['data'])); ?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="blcMaisNews">
                     <div class="vinMaisNews borderBottomBlue t18 grafite bold">ESPORTES</div>
                     <?php
-                    for ($s = 1; $s <= 2; $s++):
+                    $newsCat->setPlaces("categoria=esporte&limit=2&offset=0");
+                    foreach ($newsCat->getResult() as $catEsporte):
                         ?>
                         <div class="row marginBottom">
                             <div class="col-md-12">
                                 <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg">[imagem]</div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
                                     <div class="boxMaisNewsSmallDados">
-                                        <div class="boxMaisNewsCat t11 grafite">TV</div>
-                                        <div class="boxMaisNewsTit t13 bold grafite">TV acusada de sexismo cancela propaganda de ...</div>
-                                        <div class="boxMaisNewsDateTime t11 grafite">12/11/2015 ás 18:17</div>
+                                        <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catEsporte['categoria']); ?></div>
+                                        <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catEsporte['titulo'], 10); ?></div>
+                                        <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catEsporte['data'])); ?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php endfor; ?>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>

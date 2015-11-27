@@ -45,6 +45,29 @@
                     <div class="box-body">
                         <div class="form-group">
                             <div class="row">
+                                <div class="col-md-6 col-xs-8">
+                                    <label for="categoria">Categoria</label>
+                                    <select name="categoria" class="form-control" id="categoria">
+                                        <option value="">Selecione...</option>
+                                        <?php
+                                        $readCat = new Read;
+                                        $readCat->ExeRead("noticias_categoria", "ORDER BY categoria ASC");
+                                        if ($readCat->getRowCount() >= 1):
+                                            foreach ($readCat->getResult() as $cat):
+                                                echo "<option ";
+                                                if ($dados['categoria'] == $cat['url_name']):
+                                                    echo "selected=\"selected\" ";
+                                                endif;
+                                                echo "value=\"{$cat['url_name']}\"> &raquo;&raquo; {$cat['categoria']}</option>";
+                                            endforeach;
+                                        endif;
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
                                 <div class="col-md-6 col-xs-12">
                                     <label for="titulo">Titulo</label>
                                     <input type="text" name="titulo" class="form-control" id="titulo" value="<?= isset($dados['titulo']) ? $dados['titulo'] : ''; ?>" placeholder="Informe o Titulo da Notícia">
