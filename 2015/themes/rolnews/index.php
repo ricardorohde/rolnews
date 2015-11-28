@@ -84,7 +84,7 @@
                                 <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
-                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 15); ?></div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 10); ?></div>
                                     <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
                                 </div>
                             </div>
@@ -334,14 +334,13 @@
                         <?php
                         $videos = new Read;
                         $videos->ExeRead('videos', "WHERE destaque = :destaque ORDER BY id ASC LIMIT :limit OFFSET :offset", "destaque=sim&limit=4&offset=0");
-
                         foreach ($videos->getResult() as $videoCapa):
                             ?>
                             <div class="col-md-3">
                                 <a href="#">
                                     <div class="boxVideo radius shadowBottom">
                                         <div class="boxVideoImg"><img src="<?= $videoCapa['foto']; ?>" width="215" height="110" alt="<?= $videoCapa['titulo']; ?>" title="<?= $videoCapa['titulo']; ?>"/></div>
-                                        <div class="boxVideoTit"><?= Check::Words($videoCapa['titulo'], 10); ?></div>
+                                        <div class="boxVideoTit preto"><?= Check::Words($videoCapa['titulo'], 10); ?></div>
                                     </div>
                                 </a>
                             </div>
