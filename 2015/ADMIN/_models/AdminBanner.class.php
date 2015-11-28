@@ -27,11 +27,7 @@ class AdminBanner {
 
         if ($this->Data['banner']):
             $upload = new Upload;
-            if ($this->Data['tipo'] == '1' || $this->Data['tipo'] == '2'):
-                $upload->Image($this->Data['banner'], $this->Data['titulo'], 418, 'banners');
-            else:
-                $upload->Image($this->Data['banner'], $this->Data['titulo'], 228, 'banners');
-            endif;
+            $upload->Image($this->Data['banner'], $this->Data['titulo'], $this->Data['dimens_w'], 'banners');
         endif;
 
         if (isset($upload) && $upload->getResult()):
@@ -57,11 +53,7 @@ class AdminBanner {
         if (is_array($this->Data['banner'])):
             $this->fotoDelete($this->Id);
             $upload = new Upload;
-            if ($this->Data['tipo'] == '1' || $this->Data['tipo'] == '2'):
-                $upload->Image($this->Data['banner'], $this->Data['titulo'], 418, 'banners');
-            else:
-                $upload->Image($this->Data['banner'], $this->Data['titulo'], 228, 'banners');
-            endif;
+            $upload->Image($this->Data['banner'], $this->Data['titulo'], $this->Data['dimens_w'], 'banners');
         endif;
 
         if (isset($upload) && $upload->getResult()):
@@ -153,7 +145,7 @@ class AdminBanner {
         $Create = new Create;
         $this->setData();
         $this->Data['qm_cadastr'] = $_SESSION['userlogin']['id'];
-        
+
         $Create->ExeCreate(self::Entity, $this->Data);
         if ($Create->getResult()):
             $this->Error = ["O Banner <b>{$this->Data['titulo']}</b> foi cadastrado com sucesso no sistema!", WS_ACCEPT];
@@ -165,7 +157,7 @@ class AdminBanner {
     private function Update() {
         $Update = new Update;
         $this->Data['qm_alterou'] = $_SESSION['userlogin']['id'];
-        
+
         $Update->ExeUpdate(self::Entity, $this->Data, "WHERE id = :id", "id={$this->Id}");
         if ($Update->getResult()):
             $this->Error = ["O Banner <b>{$this->Data['titulo']}</b> foi atualizado com sucesso!", WS_ACCEPT];

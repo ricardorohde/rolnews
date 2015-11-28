@@ -38,7 +38,21 @@
             <div class="col-md-4">
                 <div class="blcPublicidade radius shadowBottom">
                     <div class="vinPublicidade t11 grafite">Publicidade</div>
-                    <div class="boxPublicidade"></div>
+                    <div class="boxPublicidade">
+                        <?php
+                        $banners = new Read;
+                        $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=2");
+                        if (!$banners->getResult()):
+                            WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                        else:
+                            foreach ($banners->getResult() as $bnr):
+                                echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                                echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=302&h=312\" />";
+                                echo "</a>";
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +116,20 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull"></div>
+                    <div class="boxPublicidadeFull">
+                        <?php
+                        $banners->setPlaces("idtipo=3");
+                        if (!$banners->getResult()):
+                            WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                        else:
+                            foreach ($banners->getResult() as $bnr):
+                                echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                                echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                                echo "</a>";
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,7 +179,20 @@
             <div class="col-md-4">
                 <div class="blcPublicidade radius shadowBottom">
                     <div class="vinPublicidade t11 grafite">Publicidade</div>
-                    <div class="boxPublicidade" style="height: 285px;"></div>
+                    <div class="boxPublicidade" style="height: 285px;">
+                        <?php
+                        $banners->setPlaces("idtipo=4");
+                        if (!$banners->getResult()):
+                            WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                        else:
+                            foreach ($banners->getResult() as $bnr):
+                                echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                                echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=302&h=285\" />";
+                                echo "</a>";
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
             <div class="col-md-8">
@@ -255,7 +295,20 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull"></div>
+                    <div class="boxPublicidadeFull">
+                        <?php
+                        $banners->setPlaces("idtipo=5");
+                        if (!$banners->getResult()):
+                            WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                        else:
+                            foreach ($banners->getResult() as $bnr):
+                                echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                                echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                                echo "</a>";
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,10 +331,23 @@
                 <div class="blcVideo">
                     <div class="vinVideo borderBottomBlue t18 grafite bold">VIDEOS</div>
                     <div class="row">
-                        <div class="col-md-3"><div class="boxVideo radius shadowBottom"></div></div>
-                        <div class="col-md-3"><div class="boxVideo radius shadowBottom"></div></div>
-                        <div class="col-md-3"><div class="boxVideo radius shadowBottom"></div></div>
-                        <div class="col-md-3"><div class="boxVideo radius shadowBottom"></div></div>
+                        <?php
+                        $videos = new Read;
+                        $videos->ExeRead('videos', "WHERE destaque = :destaque ORDER BY id ASC LIMIT :limit OFFSET :offset", "destaque=sim&limit=4&offset=0");
+
+                        foreach ($videos->getResult() as $videoCapa):
+                            ?>
+                            <div class="col-md-3">
+                                <a href="#">
+                                    <div class="boxVideo radius shadowBottom">
+                                        <div class="boxVideoImg"><img src="<?= $videoCapa['foto']; ?>" width="215" height="110" alt="<?= $videoCapa['titulo']; ?>" title="<?= $videoCapa['titulo']; ?>"/></div>
+                                        <div class="boxVideoTit"><?= Check::Words($videoCapa['titulo'], 10); ?></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php
+                        endforeach;
+                        ?>
                     </div>
                 </div>
             </div>
@@ -289,7 +355,20 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull"></div>
+                    <div class="boxPublicidadeFull">
+                        <?php
+                        $banners->setPlaces("idtipo=6");
+                        if (!$banners->getResult()):
+                            WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                        else:
+                            foreach ($banners->getResult() as $bnr):
+                                echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                                echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                                echo "</a>";
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

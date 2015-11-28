@@ -69,16 +69,17 @@ CREATE TABLE IF NOT EXISTS `banners_tipo` (
   `dimens_w` varchar(50) NOT NULL,
   `dimens_h` varchar(50) NOT NULL,
   PRIMARY KEY (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Tipos de banners';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Tipos de banners';
 
 -- Copiando dados para a tabela _rolnews_2015.banners_tipo: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `banners_tipo` DISABLE KEYS */;
 REPLACE INTO `banners_tipo` (`id_tipo`, `tipo`, `dimens_w`, `dimens_h`) VALUES
-	(1, 'Banner Capa Grande', '418', '358'),
-	(2, 'Banner Capa Pequeno', '418', '132'),
-	(3, 'Banner Lateral 1', '228', '159'),
-	(4, 'Banner Lateral 2', '228', '159'),
-	(5, 'Banner Lateral 3', '228', '159');
+	(1, 'Pub. Menu ', '???', '???'),
+	(2, 'Pub. Capa 1', '302', '312'),
+	(3, 'Pub. Capa 2', '978', '150'),
+	(4, 'Pub. Capa 3', '302', '285'),
+	(5, 'Pub. Capa 4', '978', '150'),
+	(6, 'Pub. Capa 5', '978', '150');
 /*!40000 ALTER TABLE `banners_tipo` ENABLE KEYS */;
 
 
@@ -152,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `institucional` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Armazena informações institucional do site.';
 
--- Copiando dados para a tabela _rolnews_2015.institucional: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.institucional: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `institucional` DISABLE KEYS */;
 REPLACE INTO `institucional` (`id`, `instituicao`, `fanpage`, `sobre`, `missao`, `visao`, `valores`, `id_presidente`, `qm_cadastr`, `qm_alterou`) VALUES
 	(1, 'ACIRM - ASSOCIAÇÃO EMPRESARIAL DE ROLIM DE MOURA', 'https://www.facebook.com/groupcreativewebsites', '<p>A Associa&ccedil;&atilde;o Empresarial de Rolim de Moura &ndash; ACIRM &eacute; uma entidade associativa, civil, sem&nbsp;fins lucrativos, fundada em 22 de novembro 1983, desde ent&atilde;o n&atilde;o cessou o exerc&iacute;cio da&nbsp;representatividade e as a&ccedil;&otilde;es que beneficiam e contribuem para a melhoria das condi&ccedil;&otilde;es de&nbsp;neg&oacute;cios das empresas rolimourenses. Atua diretamente na classe empresarial, apoiando suas&nbsp;iniciativas, ajudando e orientando seus associados perante poderes P&uacute;blicos/Municipais,&nbsp;Estaduais e Federais, dando-lhes suporte legal e assessoramento t&eacute;cnico na solu&ccedil;&atilde;o de&nbsp;problemas e, na defesa de seus direitos sempre que necess&aacute;rios.</p>\r\n\r\n<p>O prop&oacute;sito da ACIRM &eacute; atuar no desenvolvimento da popula&ccedil;&atilde;o e toda a comunidade&nbsp;empresarial de Rolim de Moura, tendo como compromisso n&atilde;o s&oacute; criar riqueza na nossa&nbsp;cidade, mas, acima de tudo, fazer com que essa riqueza fique na nossa comunidade, de&nbsp;maneira que esta possa ser melhor distribu&iacute;da e alavancar o progresso.</p>\r\n\r\n<p>A ACIRM trabalha em parceria com v&aacute;rias outras entidades para melhor atender as empresas,&nbsp;seus colaboradores e a popula&ccedil;&atilde;o em geral, melhorando a capacidade de neg&oacute;cios das&nbsp;empresas e a efici&ecirc;ncia de seus colaboradores na presta&ccedil;&atilde;o de servi&ccedil;os.</p>\r\n', '<p>Desenvolvimento econ&ocirc;mico e social dos empreendedores e da cidade de Rolim de&nbsp;Moura, de maneira a estimular o desenvolvimento cont&iacute;nuo e sustent&aacute;vel da regi&atilde;o.</p>\r\n', '<p>Consolidar o reconhecimento da entidade pela excel&ecirc;ncia em produtos e servi&ccedil;os oferecidos&nbsp;aos associados e atuar como &oacute;rg&atilde;o representativo nas discuss&otilde;es pol&iacute;ticas, econ&ocirc;micas e&nbsp;sociais em prol do empresariado Rolimourense.</p>\r\n', '<p>1. Lideran&ccedil;a e defesa do empresariado;</p>\r\n\r\n<p>2. Fomento ao empreendedorismo;</p>\r\n\r\n<p>3. Cria&ccedil;&atilde;o de valor aos associados e &agrave; sociedade;</p>\r\n\r\n<p>4. Respeito &agrave; tradi&ccedil;&atilde;o empresarial e social;</p>\r\n\r\n<p>5. Excel&ecirc;ncia na conduta das atividades;</p>\r\n\r\n<p>6. Criatividade e inova&ccedil;&atilde;o nas realiza&ccedil;&otilde;es;</p>\r\n\r\n<p>7. Integridade, Seriedade, &Eacute;tica;</p>\r\n\r\n<p>8. Responsabilidade socioambiental;</p>\r\n\r\n<p>9. Solidariedade e respeito &agrave; diversidade humana.</p>\r\n', 1, 1, 1);
@@ -351,7 +352,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COMMENT='Armazena informações dos usuarios do painel';
 
--- Copiando dados para a tabela _rolnews_2015.usuarios: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.usuarios: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 REPLACE INTO `usuarios` (`id`, `nome`, `email`, `data_nasc`, `sexo`, `login`, `senha`, `foto`, `ativo`, `nivel`, `cont_acesso`, `ip`, `ultimo_acesso`, `qm_cadastr`, `dt_cadastr`, `qm_alterou`, `dt_alterou`) VALUES
 	(1, 'Creative Websites', 'suporte@creativewebsites.com.br', '2015-02-14', 1, 'creative', '19d910ef608e4947aa0c6dcee352a3e8', 'usuarios/2015/03/creative.jpeg', 's', 1, 40, '::1', '2015-02-13 22:33:25', 1, NULL, 1, '2015-03-25 21:57:12');
@@ -404,9 +405,9 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews` (
   `siteviews_pages` decimal(10,0) NOT NULL,
   PRIMARY KEY (`siteviews_id`),
   KEY `idx_1` (`siteviews_date`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela _rolnews_2015.ws_siteviews: ~11 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.ws_siteviews: ~12 rows (aproximadamente)
 /*!40000 ALTER TABLE `ws_siteviews` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews` (`siteviews_id`, `siteviews_date`, `siteviews_users`, `siteviews_views`, `siteviews_pages`) VALUES
 	(1, '2015-09-02', 2, 8, 45),
@@ -419,7 +420,8 @@ REPLACE INTO `ws_siteviews` (`siteviews_id`, `siteviews_date`, `siteviews_users`
 	(8, '2015-11-14', 4, 4, 22),
 	(9, '2015-11-22', 1, 1, 3),
 	(10, '2015-11-25', 2, 2, 2),
-	(11, '2015-11-26', 1, 1, 34);
+	(11, '2015-11-26', 1, 1, 34),
+	(12, '2015-11-28', 1, 1, 1);
 /*!40000 ALTER TABLE `ws_siteviews` ENABLE KEYS */;
 
 
@@ -437,7 +439,7 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews_agent` (
 /*!40000 ALTER TABLE `ws_siteviews_agent` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews_agent` (`agent_id`, `agent_name`, `agent_views`) VALUES
 	(1, 'Firefox', 2),
-	(2, 'Chrome', 15),
+	(2, 'Chrome', 16),
 	(3, 'Outros', 1);
 /*!40000 ALTER TABLE `ws_siteviews_agent` ENABLE KEYS */;
 
@@ -454,12 +456,12 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews_online` (
   `online_agent` varchar(255) CHARACTER SET latin1 NOT NULL,
   `agent_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`online_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela _rolnews_2015.ws_siteviews_online: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `ws_siteviews_online` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews_online` (`online_id`, `online_session`, `online_startview`, `online_endview`, `online_ip`, `online_url`, `online_agent`, `agent_name`) VALUES
-	(26, '26a1tfkvt7q576ad4u1v4hat86', '2015-11-26 21:41:53', '2015-11-26 23:25:13', '::1', '/servidor/rolnews/2015/', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Chrome');
+	(27, '573n4o88us357gjh63k5u057o6', '2015-11-28 14:47:01', '2015-11-28 14:57:01', '::1', '/servidor/rolnews/2015/', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Chrome');
 /*!40000 ALTER TABLE `ws_siteviews_online` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
