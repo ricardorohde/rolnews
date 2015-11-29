@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <div class="blcPublicidade radius shadowBottom">
                     <div class="vinPublicidade t11 grafite">Publicidade</div>
-                    <div class="boxPublicidade">
+                    <div class="boxPublicidade slide">
                         <?php
                         $banners = new Read;
                         $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=2");
@@ -116,7 +116,7 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull">
+                    <div class="boxPublicidadeFull slide">
                         <?php
                         $banners->setPlaces("idtipo=3");
                         if (!$banners->getResult()):
@@ -179,7 +179,7 @@
             <div class="col-md-4">
                 <div class="blcPublicidade radius shadowBottom">
                     <div class="vinPublicidade t11 grafite">Publicidade</div>
-                    <div class="boxPublicidade" style="height: 285px;">
+                    <div class="boxPublicidade slide" style="height: 285px;">
                         <?php
                         $banners->setPlaces("idtipo=4");
                         if (!$banners->getResult()):
@@ -295,7 +295,7 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull">
+                    <div class="boxPublicidadeFull slide">
                         <?php
                         $banners->setPlaces("idtipo=5");
                         if (!$banners->getResult()):
@@ -354,11 +354,9 @@
                             if ($banners->getResult()):
                                 foreach ($banners->getResult() as $flyers):
                                     ?>
-                                    <li>
-                                        <a href="#" title="<?= $flyers['titulo']; ?>">
-                                            <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $flyers['banner'] . '&w=382&h=310'; ?>" width="382" height="310" title="<?= $flyers['titulo']; ?>" alt="<?= $flyers['titulo']; ?>">
-                                        </a>
-                                    </li>     
+                                    <a href="#" title="<?= $flyers['titulo']; ?>">
+                                        <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $flyers['banner'] . '&w=382&h=310'; ?>" width="382" height="310" title="<?= $flyers['titulo']; ?>" alt="<?= $flyers['titulo']; ?>">
+                                    </a>
                                     <?php
                                 endforeach;
                             endif;
@@ -396,7 +394,7 @@
         <div class="row marginBottom">
             <div class="col-md-12">
                 <div class="blcPublicidade radius shadowBottom">
-                    <div class="boxPublicidadeFull">
+                    <div class="boxPublicidadeFull slide">
                         <?php
                         $banners->setPlaces("idtipo=6");
                         if (!$banners->getResult()):

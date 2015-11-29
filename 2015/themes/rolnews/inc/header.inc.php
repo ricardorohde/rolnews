@@ -6,7 +6,7 @@
                 <input type="search" class="form-control" placeholder="Buscar...">
                 <button type="submit" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
             </div>
-            <div class="logo"><a href="<?= HOME;?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
+            <div class="logo"><a href="<?= HOME; ?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
             <div class="sociais"><span class="icon-facebook2"></span></div>
         </div>
     </div>
@@ -15,10 +15,13 @@
 <div id="menu">
     <aside>
         <ul>
-            <li>POLITICA</li>
-            <li>CULTURA</li>
-            <li>ESPORTES</li>
-            <li>POLICIAL</li>
+            <?php
+            $ReadMenu = new Read;
+            $ReadMenu->ExeRead('noticias_categoria', "ORDER BY categoria ASC");
+            foreach ($ReadMenu->getResult() as $menu):
+                ?>
+                <li><?= $menu['categoria']; ?></li>
+            <?php endforeach; ?>
             <li>COBERTURAS</li>
             <li>VIDEOS</li>
         </ul>
