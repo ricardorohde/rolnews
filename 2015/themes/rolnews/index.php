@@ -316,13 +316,55 @@
             <div class="col-md-7">
                 <div class="blcCoberturas">
                     <div class="vinCoberturas borderBottomYellow t18 grafite bold">COBERTURAS</div>
-                    <div class="boxCoberturas radius shadowBottom"></div>
+                    <div class="boxCoberturas radius shadowBottom">
+                        <section id="slide">
+                            <section id="buttons">
+                                <a href="#" class="prev">&laquo;</a>
+                                <a href="#" class="next">&raquo;</a>
+                            </section>
+                            <ul>
+                                <?php
+                                $capaNews = new Read;
+                                $capaNews->ExeRead("eventos", "WHERE evento != :tit AND destaque = :dest ORDER BY id DESC LIMIT :limit", "tit=''&dest=sim&limit=5");
+                                if ($capaNews->getResult()):
+                                    foreach ($capaNews->getResult() as $eventos):
+                                        ?>
+                                        <li>
+                                            <a href="#" title="<?= $eventos['evento']; ?>">
+                                                <span><?= $eventos['evento']; ?></span>
+                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" width="561" height="320" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
+                                            </a>
+                                        </li>     
+                                        <?php
+                                    endforeach;
+                                endif;
+                                ?>
+                            </ul>    
+                        </section>
+                    </div>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="blcFlyers">
                     <div class="vinFlyers borderBottomPurple t18 grafite bold">DESTAQUES</div>
-                    <div class="boxFlyers radius shadowBottom"></div>
+                    <div class="boxFlyers radius shadowBottom">
+                        <div class="slide">
+                            <?php
+                            $banners->setPlaces("idtipo=7");
+                            if ($banners->getResult()):
+                                foreach ($banners->getResult() as $flyers):
+                                    ?>
+                                    <li>
+                                        <a href="#" title="<?= $flyers['titulo']; ?>">
+                                            <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $flyers['banner'] . '&w=382&h=310'; ?>" width="382" height="310" title="<?= $flyers['titulo']; ?>" alt="<?= $flyers['titulo']; ?>">
+                                        </a>
+                                    </li>     
+                                    <?php
+                                endforeach;
+                            endif;
+                            ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
