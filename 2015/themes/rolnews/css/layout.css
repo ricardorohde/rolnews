@@ -9,6 +9,7 @@
 .borderBottomBlue{ margin-bottom: 5px; border-bottom: 3px solid #0067bc;}
 .borderBottomYellow{ margin-bottom: 5px; border-bottom: 3px solid #bcb000;}
 .marginBottom{ margin-bottom: 10px;}
+.vinPag{ width: 100%; float: left;}
 body{ background: #fff4f4;}
 
 /*Topo*/
@@ -97,3 +98,13 @@ section#slide ul li span{ width: 600px; background: #bcb000; display: table; pad
 .boxVideoTit{ width: 100%; height: 40px; margin: 4px; float: left;}
 /*Rodape*/
 footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
+
+/*Noticias*/
+.news{ width: 100%; padding: 5px; float: left; background: #FFF;}
+.blcNews{ width: 100%; float: left;}
+.boxNews{ width: 100%; padding: 5px; margin-bottom: 5px; float: left; background: #ececec;}
+.boxNewsImg{}
+.boxNewsDados{}
+.boxNewsDadosDtHr{}
+.boxNewsDadosTit{}
+.boxNewsDadosPrev{}
