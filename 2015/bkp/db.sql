@@ -48,16 +48,19 @@ CREATE TABLE IF NOT EXISTS `banners` (
   KEY `titulo` (`titulo`),
   KEY `fk_banners_tipo` (`tipo`),
   CONSTRAINT `fk_banners_tipo` FOREIGN KEY (`tipo`) REFERENCES `banners_tipo` (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='Armazena informações sobre banners de publicidade';
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='Armazena informações sobre banners de publicidade';
 
--- Copiando dados para a tabela _rolnews_2015.banners: ~5 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.banners: ~8 rows (aproximadamente)
 /*!40000 ALTER TABLE `banners` DISABLE KEYS */;
 REPLACE INTO `banners` (`id`, `titulo`, `banner`, `tipo`, `link`, `data_inicial`, `data_final`, `data_atual`, `qm_cadastr`, `qm_alterou`) VALUES
-	(11, 'Centro de Treinamento', 'banners/2015/05/centro-de-treinamento.jpg', 1, 'http://www.acirmro.com.br/cursos', '2015-05-12', '2016-01-01', '2015-05-12 23:08:13', 1, NULL),
-	(12, 'Agentes Locais de Inovação', 'banners/2015/07/sebrae.jpg', 2, 'http://www.sebrae.com.br/sites/PortalSebrae/Programas/Agentes-Locais-de-Inova%C3%A7%C3%A3o:-receba-o-Sebrae-na-sua-empresa', '2015-05-12', '2016-01-01', '2015-05-12 23:08:42', 1, 53),
-	(14, 'Ano Novo Premiado', 'banners/2015/07/ano-novo-premiado.jpg', 4, 'http://www.acirmro.com.br/noticia/ano-novo-premiado-senhas-disponiveis-na-sede-da-acirm', '2015-05-12', '2016-01-01', '2015-05-12 23:09:32', 1, 53),
-	(15, 'CURSO GESTÃO EMPRESARIAL E ESTRTURA ORGANIZACIONAL CRC RO', 'banners/2015/08/curso-gestao-empresarial-e-estrtura-organizacional-crc-ro.jpg', 5, 'http://www2.cfc.org.br/sisweb/sgewebsgi/view/user/login.aspx', '2015-08-24', '2016-01-01', '2015-05-12 23:09:51', 1, 53),
-	(21, 'LIQUIDA ROLIM 2015', 'banners/2015/07/liquida-rolim-2015.jpg', 3, 'http://www.acirmro.com.br/noticia/conheca-as-empresas-participantes-do-liquida-rolim-2015', '2015-05-14', '2015-05-21', '2015-05-14 14:56:14', 53, 53);
+	(22, 'Banner Teste - Capa 1', 'banners/2015/11/banner-teste-capa-1.jpg', 2, '#', '2015-11-28', '2016-01-28', '2015-11-28 16:56:18', 1, NULL),
+	(23, 'Banner Teste - Capa 2', 'banners/2015/11/banner-teste-capa-2.jpg', 3, '#', '2015-11-28', '2016-01-28', '2015-11-28 16:57:41', 1, 1),
+	(24, 'Banner Teste - Capa 3', 'banners/2015/11/banner-teste-capa-3.jpg', 4, '#', '2015-11-28', '2016-01-28', '2015-11-28 16:58:11', 1, 1),
+	(25, 'Banner Teste - Capa 4', 'banners/2015/11/banner-teste-capa-4.jpg', 5, '#', '2015-11-28', '2016-01-28', '2015-11-28 16:59:03', 1, 1),
+	(26, 'Banner Teste - Capa 5', 'banners/2015/11/banner-teste-capa-5.jpg', 6, '#', '2015-11-28', '2016-01-28', '2015-11-28 16:59:29', 1, 1),
+	(27, 'Flyer 1', 'banners/2015/11/flyer-1.jpg', 7, '#', '2015-11-28', '2016-01-01', '2015-11-28 23:46:52', 1, 1),
+	(28, 'Flyer 2', 'banners/2015/11/flyer-2.jpg', 7, '#', '2015-11-28', '2016-01-01', '2015-11-28 23:47:06', 1, NULL),
+	(29, 'Flyer 3', 'banners/2015/11/flyer-3.jpg', 7, '#', '2015-11-28', '2016-01-01', '2015-11-28 23:47:22', 1, NULL);
 /*!40000 ALTER TABLE `banners` ENABLE KEYS */;
 
 
@@ -69,9 +72,9 @@ CREATE TABLE IF NOT EXISTS `banners_tipo` (
   `dimens_w` varchar(50) NOT NULL,
   `dimens_h` varchar(50) NOT NULL,
   PRIMARY KEY (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Tipos de banners';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Tipos de banners';
 
--- Copiando dados para a tabela _rolnews_2015.banners_tipo: ~5 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.banners_tipo: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `banners_tipo` DISABLE KEYS */;
 REPLACE INTO `banners_tipo` (`id_tipo`, `tipo`, `dimens_w`, `dimens_h`) VALUES
 	(1, 'Pub. Menu ', '???', '???'),
@@ -79,7 +82,8 @@ REPLACE INTO `banners_tipo` (`id_tipo`, `tipo`, `dimens_w`, `dimens_h`) VALUES
 	(3, 'Pub. Capa 2', '978', '150'),
 	(4, 'Pub. Capa 3', '302', '285'),
 	(5, 'Pub. Capa 4', '978', '150'),
-	(6, 'Pub. Capa 5', '978', '150');
+	(6, 'Pub. Capa 5', '978', '150'),
+	(7, 'Flyers / Destaques ', '382', '310');
 /*!40000 ALTER TABLE `banners_tipo` ENABLE KEYS */;
 
 
@@ -228,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `menu_sub_nav` (
   PRIMARY KEY (`id_menu_sub_nav`),
   KEY `fkmenu_sub_id_menu_sub` (`id_menu_sub`),
   CONSTRAINT `fkmenu_sub_id_menu_sub` FOREIGN KEY (`id_menu_sub`) REFERENCES `menu_sub` (`id_menu_sub`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Menu Sub Nav';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Menu Sub Nav';
 
 -- Copiando dados para a tabela _rolnews_2015.menu_sub_nav: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `menu_sub_nav` DISABLE KEYS */;
@@ -350,12 +354,13 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COMMENT='Armazena informações dos usuarios do painel';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Armazena informações dos usuarios do painel';
 
--- Copiando dados para a tabela _rolnews_2015.usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.usuarios: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 REPLACE INTO `usuarios` (`id`, `nome`, `email`, `data_nasc`, `sexo`, `login`, `senha`, `foto`, `ativo`, `nivel`, `cont_acesso`, `ip`, `ultimo_acesso`, `qm_cadastr`, `dt_cadastr`, `qm_alterou`, `dt_alterou`) VALUES
-	(1, 'Creative Websites', 'suporte@creativewebsites.com.br', '2015-02-14', 1, 'creative', '19d910ef608e4947aa0c6dcee352a3e8', 'usuarios/2015/03/creative.jpeg', 's', 1, 40, '::1', '2015-02-13 22:33:25', 1, NULL, 1, '2015-03-25 21:57:12');
+	(1, 'Creative Websites', 'suporte@creativewebsites.com.br', '2015-02-14', 1, 'creative', '19d910ef608e4947aa0c6dcee352a3e8', 'usuarios/2015/03/creative.jpeg', 's', 1, 40, '::1', '2015-02-13 22:33:25', 1, NULL, 1, '2015-03-25 21:57:12'),
+	(2, 'Jheime de Paula', 'contato@rolnews.com.br', '2015-11-30', 1, 'jheime', '53320adf29c66059eb8142ef522de3f4', NULL, 's', 1, 0, NULL, NULL, NULL, '2015-11-30 20:57:26', NULL, NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 
@@ -381,11 +386,11 @@ CREATE TABLE IF NOT EXISTS `videos` (
 -- Copiando dados para a tabela _rolnews_2015.videos: ~11 rows (aproximadamente)
 /*!40000 ALTER TABLE `videos` DISABLE KEYS */;
 REPLACE INTO `videos` (`id`, `url_name`, `titulo`, `url`, `link`, `destaque`, `autor`, `data`, `foto`, `qm_cadastr`, `dt_cadastr`, `qm_alterou`, `dt_alterou`) VALUES
-	(13, '2-feira-do-artesao-de-rolim-de-moura', '2ª Feira do Artesão de Rolim de Moura', 'https://www.youtube.com/watch?v=Ai-Yu2lNKVg', 'Ai-Yu2lNKVg', 'nao', 'Marketing ACIRM Digital', '2015-03-20 23:50:23', 'http://i1.ytimg.com/vi/Ai-Yu2lNKVg/hqdefault.jpg', 1, '2015-03-23 22:14:23', 1, '2015-03-23 23:22:01'),
-	(16, 'como-elaborar-um-plano-de-negocios-mat-cpt-do-sebrae', 'Como Elaborar Um Plano de Negócios - Mat.Cpt do SEBRAE', 'https://www.youtube.com/watch?v=k-MLkiSNWeg', 'k-MLkiSNWeg', 'nao', 'Sebrae', '2015-06-17 09:20:02', 'http://i1.ytimg.com/vi/k-MLkiSNWeg/hqdefault.jpg', 53, '2015-03-29 09:56:08', 53, NULL),
-	(17, 'no-meio-do-caminho-tinha-uma-pedra', 'No meio do caminho tinha uma pedra', 'https://www.youtube.com/watch?v=49Z6WS_v8Zk&list=P', '49Z6WS_v8Zk', 'nao', 'Sebrae', '2015-06-17 09:19:46', 'http://i1.ytimg.com/vi/49Z6WS_v8Zk/hqdefault.jpg', 53, '2015-03-29 10:01:31', 53, NULL),
-	(18, 'comemoracao-do-dia-das-maes', 'Comemoração do dia das Mães', 'http://www.youtube.com/watch?v=HjFNPuR8CAo&feature', 'HjFNPuR8CAo', 'nao', 'Marketing ACIRM Digital', '2015-05-07 18:08:27', 'http://i1.ytimg.com/vi/HjFNPuR8CAo/hqdefault.jpg', 53, '2015-05-07 17:58:29', 53, NULL),
-	(19, 'voce-e-mais-forte-do-que-imagina', 'Você é mais forte do que imagina', 'http://www.youtube.com/watch?v=iz52rFnufPg', 'iz52rFnufPg', 'nao', 'Les Brown Eric, Thomas, Steve Jobs,Louis Zamperini', '2015-12-05 18:08:37', 'http://i1.ytimg.com/vi/iz52rFnufPg/hqdefault.jpg', 53, '2015-05-12 09:43:56', 53, NULL),
+	(13, '2-feira-do-artesao-de-rolim-de-moura', '2ª Feira do Artesão de Rolim de Moura', 'https://www.youtube.com/watch?v=Ai-Yu2lNKVg', 'Ai-Yu2lNKVg', 'sim', 'Marketing ACIRM Digital', '0000-00-00 00:00:00', 'http://i1.ytimg.com/vi/Ai-Yu2lNKVg/hqdefault.jpg', 1, '2015-03-23 22:14:23', 1, '2015-03-23 23:22:01'),
+	(16, 'como-elaborar-um-plano-de-negocios-mat-cpt-do-sebrae', 'Como Elaborar Um Plano de Negócios - Mat.Cpt do SEBRAE', 'https://www.youtube.com/watch?v=k-MLkiSNWeg', 'k-MLkiSNWeg', 'sim', 'Sebrae', '0000-00-00 00:00:00', 'http://i1.ytimg.com/vi/k-MLkiSNWeg/hqdefault.jpg', 53, '2015-03-29 09:56:08', 1, NULL),
+	(17, 'no-meio-do-caminho-tinha-uma-pedra', 'No meio do caminho tinha uma pedra', 'https://www.youtube.com/watch?v=49Z6WS_v8Zk&list=P', '49Z6WS_v8Zk', 'sim', 'Sebrae', '0000-00-00 00:00:00', 'http://i1.ytimg.com/vi/49Z6WS_v8Zk/hqdefault.jpg', 53, '2015-03-29 10:01:31', 1, NULL),
+	(18, 'comemoracao-do-dia-das-maes', 'Comemoração do dia das Mães', 'http://www.youtube.com/watch?v=HjFNPuR8CAo&feature', 'HjFNPuR8CAo', 'sim', 'Marketing ACIRM Digital', '2015-07-05 17:21:54', 'http://i1.ytimg.com/vi/HjFNPuR8CAo/hqdefault.jpg', 53, '2015-05-07 17:58:29', 1, NULL),
+	(19, 'voce-e-mais-forte-do-que-imagina', 'Você é mais forte do que imagina', 'http://www.youtube.com/watch?v=iz52rFnufPg', 'iz52rFnufPg', 'sim', 'Les Brown Eric, Thomas, Steve Jobs,Louis Zamperini', '2015-05-12 17:21:58', 'http://i1.ytimg.com/vi/iz52rFnufPg/hqdefault.jpg', 53, '2015-05-12 09:43:56', 1, NULL),
 	(20, 'o-campeao-de-vendas', 'O Campeão de Vendas', 'http://www.youtube.com/watch?v=d3A6RB4NIso', 'd3A6RB4NIso', 'nao', 'Alfredo Rocha', '2015-05-12 08:46:03', 'http://i1.ytimg.com/vi/d3A6RB4NIso/hqdefault.jpg', 53, '2015-05-12 09:46:03', NULL, NULL),
 	(21, 'david-camelo-tecnica-de-vendas', 'David Camelô - Técnica de Vendas', 'http://www.youtube.com/watch?v=Qcu0dLSFD5M', 'Qcu0dLSFD5M', 'nao', 'Davi Camelô', '2015-05-12 08:47:46', 'http://i1.ytimg.com/vi/Qcu0dLSFD5M/hqdefault.jpg', 53, '2015-05-12 09:47:46', NULL, NULL),
 	(22, 'motivacao-sucesso', 'Motivação Sucesso', 'http://www.youtube.com/watch?v=7-gpoQiyGkA', '7-gpoQiyGkA', 'nao', 'Thirty Seconds to Mars', '2015-06-17 09:19:34', 'http://i1.ytimg.com/vi/7-gpoQiyGkA/hqdefault.jpg', 53, '2015-05-18 19:16:01', 53, NULL),
@@ -405,9 +410,9 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews` (
   `siteviews_pages` decimal(10,0) NOT NULL,
   PRIMARY KEY (`siteviews_id`),
   KEY `idx_1` (`siteviews_date`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela _rolnews_2015.ws_siteviews: ~12 rows (aproximadamente)
+-- Copiando dados para a tabela _rolnews_2015.ws_siteviews: ~13 rows (aproximadamente)
 /*!40000 ALTER TABLE `ws_siteviews` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews` (`siteviews_id`, `siteviews_date`, `siteviews_users`, `siteviews_views`, `siteviews_pages`) VALUES
 	(1, '2015-09-02', 2, 8, 45),
@@ -421,7 +426,9 @@ REPLACE INTO `ws_siteviews` (`siteviews_id`, `siteviews_date`, `siteviews_users`
 	(9, '2015-11-22', 1, 1, 3),
 	(10, '2015-11-25', 2, 2, 2),
 	(11, '2015-11-26', 1, 1, 34),
-	(12, '2015-11-28', 1, 1, 1);
+	(12, '2015-11-28', 2, 2, 79),
+	(13, '2015-11-29', 1, 1, 35),
+	(14, '2015-11-30', 1, 1, 109);
 /*!40000 ALTER TABLE `ws_siteviews` ENABLE KEYS */;
 
 
@@ -439,7 +446,7 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews_agent` (
 /*!40000 ALTER TABLE `ws_siteviews_agent` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews_agent` (`agent_id`, `agent_name`, `agent_views`) VALUES
 	(1, 'Firefox', 2),
-	(2, 'Chrome', 16),
+	(2, 'Chrome', 19),
 	(3, 'Outros', 1);
 /*!40000 ALTER TABLE `ws_siteviews_agent` ENABLE KEYS */;
 
@@ -456,12 +463,12 @@ CREATE TABLE IF NOT EXISTS `ws_siteviews_online` (
   `online_agent` varchar(255) CHARACTER SET latin1 NOT NULL,
   `agent_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`online_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela _rolnews_2015.ws_siteviews_online: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `ws_siteviews_online` DISABLE KEYS */;
 REPLACE INTO `ws_siteviews_online` (`online_id`, `online_session`, `online_startview`, `online_endview`, `online_ip`, `online_url`, `online_agent`, `agent_name`) VALUES
-	(27, '573n4o88us357gjh63k5u057o6', '2015-11-28 14:47:01', '2015-11-28 14:57:01', '::1', '/servidor/rolnews/2015/', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Chrome');
+	(30, 'oatk35qntbvkdgr4ruutq30fs5', '2015-11-30 19:04:53', '2015-11-30 21:02:53', '::1', '/servidor/rolnews/2015/', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Chrome');
 /*!40000 ALTER TABLE `ws_siteviews_online` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

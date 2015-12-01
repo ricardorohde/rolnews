@@ -103,8 +103,18 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 .news{ width: 100%; padding: 5px; float: left; background: #FFF;}
 .blcNews{ width: 100%; float: left;}
 .boxNews{ width: 100%; padding: 5px; margin-bottom: 5px; float: left; background: #ececec;}
-.boxNewsImg{}
-.boxNewsDados{}
-.boxNewsDadosDtHr{}
-.boxNewsDadosTit{}
-.boxNewsDadosPrev{}
+.boxNewsImg{ width: 110px; height: 80px; float: left;}
+.boxNewsDados{ width: 844px; margin-left: 10px; float: left; }
+.boxNewsDadosDtHr{ width: 100%; float: left;}
+.boxNewsDadosTit{ width: 100%; float: left;}
+.boxNewsDadosPrev{ width: 100%; float: left;}
+
+/*Noticia*/
+.headline{ width: 100%; float: left;}
+.headline h1{ width: 100%; font-size: 4rem; float: left; }
+.headline h2{ width: 100%; font-size: 2rem; margin: -5px 0 0 0; float: left;}
+.headline h3{ width: 100%; font-size: 1.5rem; margin: 5px 0 0 0; float: left;}
+.noticiaImg{ width: 480px; margin: 5px 5px 5px 0px; float: left;}
+.noticiaTxt{ width: 100%; font-size: 1.6rem;}
+
+

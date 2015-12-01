@@ -1,5 +1,5 @@
 # Habilitar o PHP 5.5
-AddHandler application/x-httpd-php55 .php
+# AddHandler application/x-httpd-php55 .php
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d

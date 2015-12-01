@@ -62,14 +62,16 @@ $newsDestBig = $news->getResult()[0];
                 $news->setPlaces("destaque=sim&limit=1&offset=4");
                 $newsBig = $news->getResult()[0];
                 ?>
-                <div class="boxMaisNews borderTopRed radius shadowBottom">
-                    <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=143&h=108'; ?>" width="143" height="108"/></div>
-                    <div class="boxMaisNewsBigDados">
-                        <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsBig['categoria']); ?></div>
-                        <div class="boxMaisNewsTit t18 grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
-                        <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
+                <a href="<?= HOME . '/noticia/' . $newsBig['url_name']; ?>" title="<?= $newsBig['titulo']; ?>">
+                    <div class="boxMaisNews borderTopRed radius shadowBottom">
+                        <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=143&h=108'; ?>" width="143" height="108"/></div>
+                        <div class="boxMaisNewsBigDados">
+                            <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsBig['categoria']); ?></div>
+                            <div class="boxMaisNewsTit t18 grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
+                            <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="row marginBottom">
@@ -77,16 +79,18 @@ $newsDestBig = $news->getResult()[0];
             $news->setPlaces("destaque=sim&limit=2&offset=5");
             foreach ($news->getResult() as $newsSmall):
                 ?>
-                <div class="col-md-6">
-                    <div class="boxMaisNews borderTopRed radius shadowBottom">
-                        <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
-                        <div class="boxMaisNewsSmallDados">
-                            <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
-                            <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 10); ?></div>
-                            <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
+                <a href="<?= HOME . '/noticia/' . $newsSmall['url_name']; ?>" title="<?= $newsSmall['titulo']; ?>">
+                    <div class="col-md-6">
+                        <div class="boxMaisNews borderTopRed radius shadowBottom">
+                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
+                            <div class="boxMaisNewsSmallDados">
+                                <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
+                                <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($newsSmall['titulo'], 10); ?></div>
+                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </div>
@@ -96,19 +100,21 @@ $newsDestBig = $news->getResult()[0];
         $newsSingle = $news->getResult()[0];
         ?>
         <div class="boxMaisNews radius shadowBottom" style="background: url(<?= HOME . '/uploads/' . $newsSingle['foto']; ?>)">
-            <div class="boxMaisNewsFull" >
-                <div class="boxMaisNewsFullDados">
-                    <div class="boxMaisNewsCat t11 branco"><?= strtoupper($newsSingle['categoria']); ?></div>
-                    <div class="boxMaisNewsTit t20 branco"><?= Check::Words($newsSingle['titulo'], 12); ?></div>
-                    <div class="boxMaisNewsDate t11 branco"><?= date('d/m/Y H:i', strtotime($newsSingle['data'])); ?></div>
+            <a href="<?= HOME . '/noticia/' . $newsSingle['url_name']; ?>" title="<?= $newsSingle['titulo']; ?>">
+                <div class="boxMaisNewsFull" >
+                    <div class="boxMaisNewsFullDados">
+                        <div class="boxMaisNewsCat t11 branco"><?= strtoupper($newsSingle['categoria']); ?></div>
+                        <div class="boxMaisNewsTit t20 branco"><?= Check::Words($newsSingle['titulo'], 12); ?></div>
+                        <div class="boxMaisNewsDate t11 branco"><?= date('d/m/Y H:i', strtotime($newsSingle['data'])); ?></div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
-        <p class="t18 grafite tcenter bold"><a href="<?= HOME.'/noticias';?>">TODAS AS NOTICIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
+        <p class="t18 grafite tcenter bold"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTICIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
     </div>
 </div>
 <div class="row marginBottom">
@@ -143,14 +149,16 @@ $newsDestBig = $news->getResult()[0];
                     ?>
                     <div class="row marginBottom">
                         <div class="col-md-12">
-                            <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
-                                <div class="boxMaisNewsSmallDados">
-                                    <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
-                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolitica['titulo'], 10); ?></div>
-                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
+                            <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
+                                <div class="boxMaisNews radius shadowBottom">
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                    <div class="boxMaisNewsSmallDados">
+                                        <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
+                                        <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolitica['titulo'], 10); ?></div>
+                                        <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -160,14 +168,16 @@ $newsDestBig = $news->getResult()[0];
             foreach ($newsCat->getResult() as $catPoliticaBig):
                 ?>
                 <div class="col-md-4">
-                    <div class="boxMaisNews radius shadowBottom">
-                        <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=308&h=170'; ?>" width="308" height="170"/></div>
-                        <div class="boxMaisNewsDados">
-                            <div class="boxMaisNewsDadosCat t11 grafite"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
-                            <div class="boxMaisNewsDadosTit t18 grafite bold"><?= Check::Words($catPoliticaBig['titulo'], 10); ?></div>
-                            <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPoliticaBig['data'])); ?></div>
+                    <a href="<?= HOME . '/noticia/' . $catPoliticaBig['url_name']; ?>" title="<?= $catPoliticaBig['titulo']; ?>">
+                        <div class="boxMaisNews radius shadowBottom">
+                            <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=308&h=170'; ?>" width="308" height="170"/></div>
+                            <div class="boxMaisNewsDados">
+                                <div class="boxMaisNewsDadosCat t11 grafite"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
+                                <div class="boxMaisNewsDadosTit t18 grafite bold"><?= Check::Words($catPoliticaBig['titulo'], 10); ?></div>
+                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPoliticaBig['data'])); ?></div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -201,21 +211,25 @@ $newsDestBig = $news->getResult()[0];
                 $catPoliticaSingle = $newsCat->getResult()[0];
                 ?>
                 <div class="destaqueNewsBig">
-                    <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
-                    <div class="destaqueNewsBigDados">
-                        <div class="destaqueNewsBigDadosCat t11 grafite"><?= strtoupper($catPoliticaSingle['categoria']); ?></div>
-                        <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= Check::Words($catPoliticaSingle['titulo'], 10); ?></div>
-                    </div>
+                    <a href="<?= HOME . '/noticia/' . $catPoliticaSingle['url_name']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>">
+                        <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
+                        <div class="destaqueNewsBigDados">
+                            <div class="destaqueNewsBigDadosCat t11 grafite"><?= strtoupper($catPoliticaSingle['categoria']); ?></div>
+                            <div class="destaqueNewsBigDadosTit t16 grafite bold"><?= Check::Words($catPoliticaSingle['titulo'], 10); ?></div>
+                        </div>
+                    </a>
                 </div>
                 <div class="destaqueNewsSmall">
                     <?php
                     $newsCat->setPlaces("categoria=politica&limit=3&offset=6");
                     foreach ($newsCat->getResult() as $catPoliticaSmall):
                         ?>
-                        <div class="destaqueNewsSmallItem">
-                            <div class="destaqueNewsSmallItemImg"><img alt="<?= $catPoliticaSmall['titulo']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSmall['foto'] . '&w=115&h=85'; ?>" width="115" height="85"/></div>
-                            <div class="destaqueNewsSmallItemTit t14 grafite"><?= Check::Words($catPoliticaSmall['titulo'], 10); ?></div>
-                        </div>
+                        <a href="<?= HOME . '/noticia/' . $catPoliticaSmall['url_name']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>">
+                            <div class="destaqueNewsSmallItem">
+                                <div class="destaqueNewsSmallItemImg"><img alt="<?= $catPoliticaSmall['titulo']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSmall['foto'] . '&w=115&h=85'; ?>" width="115" height="85"/></div>
+                                <div class="destaqueNewsSmallItemTit t14 grafite"><?= Check::Words($catPoliticaSmall['titulo'], 10); ?></div>
+                            </div>
+                        </a>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -232,14 +246,16 @@ $newsDestBig = $news->getResult()[0];
                 ?>
                 <div class="row marginBottom">
                     <div class="col-md-12">
-                        <div class="boxMaisNews radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
-                            <div class="boxMaisNewsSmallDados">
-                                <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolicial['categoria']); ?></div>
-                                <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolicial['titulo'], 10); ?></div>
-                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolicial['data'])); ?></div>
+                        <a href="<?= HOME . '/noticia/' . $catPolicial['url_name']; ?>" title="<?= $catPolicial['titulo']; ?>">
+                            <div class="boxMaisNews radius shadowBottom">
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallDados">
+                                    <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catPolicial['categoria']); ?></div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catPolicial['titulo'], 10); ?></div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catPolicial['data'])); ?></div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -254,14 +270,16 @@ $newsDestBig = $news->getResult()[0];
                 ?>
                 <div class="row marginBottom">
                     <div class="col-md-12">
-                        <div class="boxMaisNews radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
-                            <div class="boxMaisNewsSmallDados">
-                                <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catCultura['categoria']); ?></div>
-                                <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catCultura['titulo'], 10); ?></div>
-                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catCultura['data'])); ?></div>
+                        <a href="<?= HOME . '/noticia/' . $catCultura['url_name']; ?>" title="<?= $catCultura['titulo']; ?>">
+                            <div class="boxMaisNews radius shadowBottom">
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallDados">
+                                    <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catCultura['categoria']); ?></div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catCultura['titulo'], 10); ?></div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catCultura['data'])); ?></div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -276,14 +294,16 @@ $newsDestBig = $news->getResult()[0];
                 ?>
                 <div class="row marginBottom">
                     <div class="col-md-12">
-                        <div class="boxMaisNews radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
-                            <div class="boxMaisNewsSmallDados">
-                                <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catEsporte['categoria']); ?></div>
-                                <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catEsporte['titulo'], 10); ?></div>
-                                <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catEsporte['data'])); ?></div>
+                        <a href="<?= HOME . '/noticia/' . $catEsporte['url_name']; ?>" title="<?= $catEsporte['titulo']; ?>">
+                            <div class="boxMaisNews radius shadowBottom">
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallDados">
+                                    <div class="boxMaisNewsCat t11 grafite"><?= strtoupper($catEsporte['categoria']); ?></div>
+                                    <div class="boxMaisNewsTit t13 bold grafite"><?= Check::Words($catEsporte['titulo'], 10); ?></div>
+                                    <div class="boxMaisNewsDateTime t11 grafite"><?= date('d/m/Y H:i', strtotime($catEsporte['data'])); ?></div>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>
