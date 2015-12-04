@@ -1,4 +1,7 @@
 <?php
+$View = new View;
+$tpl_videos = $View->Load('videos');
+
 $news = new Read;
 $news->ExeRead("noticias", "WHERE destaque = :destaque ORDER BY id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=1&offset=0");
 $newsDestBig = $news->getResult()[0];
@@ -392,17 +395,9 @@ $newsDestBig = $news->getResult()[0];
                 <?php
                 $videos = new Read;
                 $videos->ExeRead('videos', "WHERE destaque = :destaque ORDER BY id ASC LIMIT :limit OFFSET :offset", "destaque=sim&limit=4&offset=0");
-                foreach ($videos->getResult() as $videoCapa):
-                    ?>
-                    <div class="col-md-3">
-                        <a href="#">
-                            <div class="boxVideo radius shadowBottom">
-                                <div class="boxVideoImg"><img src="<?= $videoCapa['foto']; ?>" width="215" height="110" alt="<?= $videoCapa['titulo']; ?>" title="<?= $videoCapa['titulo']; ?>"/></div>
-                                <div class="boxVideoTit preto"><?= Check::Words($videoCapa['titulo'], 10); ?></div>
-                            </div>
-                        </a>
-                    </div>
-                    <?php
+                foreach ($videos->getResult() as $v):
+                    $v['titulo'] = Check::Words($v['titulo'], 10);
+                    $View->Show($v, $tpl_videos);
                 endforeach;
                 ?>
             </div>

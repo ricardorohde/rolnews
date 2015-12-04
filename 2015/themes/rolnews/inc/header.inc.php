@@ -23,7 +23,7 @@
                 <li><?= $menu['categoria']; ?></li>
             <?php endforeach; ?>
             <li>COBERTURAS</li>
-            <li>VIDEOS</li>
+            <li><a href="<?= HOME.'/videos';?>">VIDEOS</a></li>
         </ul>
     </aside>
 </div>
