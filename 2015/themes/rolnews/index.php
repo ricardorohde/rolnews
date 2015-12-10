@@ -424,3 +424,49 @@ $newsDestBig = $news->getResult()[0];
         </div>
     </div>
 </div>
+<div class="row marginBottom">
+    <div class="col-md-12">
+        <div class="blcVideo">
+            <div class="vinVideo borderBottomGreen t18 grafite bold">COLUNISTAS</div>
+            <div class="row">
+
+                <?php
+                $ReadColunista = new Read;
+                $ReadColunista->ExeRead('usuarios', "WHERE foto != :foto AND nome != :nome AND colunista = :colunista", "foto=''&nome=''&colunista=sim");
+
+                if (!$ReadColunista->getResult()):
+                    WSErro('Desculpe, ainda não há nenhum <br><b>Colunista</b> cadastrado!', WS_INFOR);
+                else:
+                    foreach ($ReadColunista->getResult() as $colunista):
+
+                        $ReadColuna = new Read;
+                        $ReadColuna->ExeRead('noticias', "WHERE coluna = :coluna AND qm_cadastr = :colunista ORDER BY id DESC LIMIT 1", "coluna=sim&colunista={$colunista['id']}");
+                        $coluna = $ReadColuna->getResult()[0];
+                        ?>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>"><?= $colunista['nome']; ?></a></div>
+                                <div class="panel-body">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>">
+                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $colunista['foto'] . '&w=100'; ?>" width="100" title="<?= $colunista['nome']; ?>" alt="<?= $colunista['nome']; ?>">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <p  class="media-heading bold"><?= Check::Words($coluna['titulo'], 5); ?></p>
+                                            <?= Check::Words($coluna['noticia'], 7); ?>
+                                            <a href="#">ver mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    endforeach;
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,11 +22,10 @@ endif;
     <?php
     $OutrasFotos = new Read;
     $OutrasFotos->ExeRead("banco_fotos", "WHERE id_tipo = :idtipo AND tipo = :tipo", "idtipo={$id}&tipo=n");
-
     if ($OutrasFotos->getResult()):
         ?>
         <div class="noticiaMediaMais">
-            <div class="vinheta t18 bold branco">Outras Fotos</div>
+            <div class="vinheta t18 bold grafite">Outras Fotos</div>
             <div class="noticiaBlcMediaMais">
                 <?php
                 foreach ($OutrasFotos->getResult() as $fotos):
