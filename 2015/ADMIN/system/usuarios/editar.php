@@ -96,6 +96,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-8">
+                                    <label for="colunista">É Colunista?</label>
+                                    <select name="colunista" class="form-control" id="sexo">
+                                        <option value="nao" <?= ($dados['colunista'] == 'nao') ? ' selected="selected"' : ''; ?>>Não</option>
+                                        <option value="sim" <?= ($dados['colunista'] == 'sim') ? ' selected="selected"' : ''; ?>>Sim</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="box box-primary">
