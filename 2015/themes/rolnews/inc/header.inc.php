@@ -7,7 +7,10 @@
                 <button type="submit" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
             </div>
             <div class="logo"><a href="<?= HOME; ?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
-            <div class="sociais"><span class="icon-facebook2"></span></div>
+            <div class="dataTopo t16 branco">
+                <script language="javascript1.2">dataCorrente();</script>
+                <div id="boxHr"></div>
+            </div>
         </div>
     </div>
 </header>

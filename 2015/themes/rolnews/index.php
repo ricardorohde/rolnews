@@ -438,10 +438,8 @@ $newsDestBig = $news->getResult()[0];
                     WSErro('Desculpe, ainda não há nenhum <br><b>Colunista</b> cadastrado!', WS_INFOR);
                 else:
                     foreach ($ReadColunista->getResult() as $colunista):
-
                         $ReadColuna = new Read;
                         $ReadColuna->ExeRead('noticias', "WHERE coluna = :coluna AND qm_cadastr = :colunista ORDER BY id DESC LIMIT 1", "coluna=sim&colunista={$colunista['id']}");
-                        $coluna = $ReadColuna->getResult()[0];
                         ?>
                         <div class="col-md-4">
                             <div class="panel panel-default">
@@ -454,9 +452,20 @@ $newsDestBig = $news->getResult()[0];
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            <p  class="media-heading bold"><?= Check::Words($coluna['titulo'], 5); ?></p>
-                                            <?= Check::Words($coluna['noticia'], 7); ?>
-                                            <a href="#">ver mais</a>
+                                            <?php
+                                            if (!$ReadColuna->getResult()):
+                                                ?>
+                                                <p  class="media-heading bold">Nenhuma coluna cadastrada...</p>                                                
+                                                <?php
+                                            else:
+                                                $coluna = $ReadColuna->getResult()[0];
+                                                ?>
+                                                <p  class="media-heading bold"><?= Check::Words($coluna['titulo'], 5); ?></p>
+                                                <?= Check::Words($coluna['noticia'], 7); ?>
+                                                <a href="#">ver mais</a>
+                                            <?php
+                                            endif;
+                                            ?>
                                         </div>
                                     </div>
                                 </div>

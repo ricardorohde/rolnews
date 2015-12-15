@@ -86,7 +86,7 @@ class AdminNoticia {
     /**
      * <b>Enviar Galeria:</b> Envelope um $_FILES de um input multiple e envie junto a um postID para executar
      * o upload e o cadastro de galerias!
-     * @param ARRAY $Files = Envie um $_FILES multiple
+     * @param ARRAY $Images = Envie um $_FILES multiple
      * @param STRING $Tipo = Informe o Tipo
      * @param INT $TipoId = Informe o ID do tipo
      */

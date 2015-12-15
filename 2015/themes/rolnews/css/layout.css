@@ -27,8 +27,8 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .busca{ width: 265px; padding: 20px 0 0 20px; float: left;}
 .busca input[type=search]{ width: 230px; padding: 5px 35px 5px 5px; border-radius: 25px; float: left; }
 .busca .btnBusca{ width: 30px; margin: 8px 0 0 -35px; background: #fff; float: left;}
-.logo{ width: 513px; height: 74px; padding: 7px 0 0 161px; margin: 0 0 0 -100px; float: left; background: url('../images/bg-logo.png') no-repeat;}
-.sociais{ float: right;}
+.logo{ width: 470px; height: 74px; padding: 7px 0 0 161px; margin: 0 0 0 -100px; float: left; background: url('../images/bg-logo.png') no-repeat;}
+.dataTopo{ padding: 20px 0 0 0; float: right;}
 
 /*Capa*/
 .capa{ width: 100%; margin: 90px 0 0 0; float: left;}

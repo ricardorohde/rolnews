@@ -20,6 +20,7 @@ Check::UserOnline();
         <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/jqueryValidation/validationEngine.jquery.css"/>
         <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/styles.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/layout.css"/>
+        <script src="<?= HOME; ?>/js/hr.js"></script>
     </head>
     <!-- END CSS -->
     <script>
