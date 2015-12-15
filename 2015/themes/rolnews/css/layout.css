@@ -99,6 +99,10 @@ section#slide ul li span{ width: 600px; background: #bcb000; display: table; pad
 .boxVideoTit{ width: 100%; height: 40px; margin: 4px; float: left;}
 /*Rodape*/
 footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
+.copyright{ float: left;}
+.logoRodape{ width: 65px; height: 54px; float: left; padding: 10px 0 0 0;}
+.txtCopyright{ padding: 20px 0 0 10px; float: left;}
+.developer{ padding: 20px 0 0 0; float: right;}
 
 /*Noticias*/
 .news{ width: 100%; padding: 5px; float: left; background: #FFF;}
