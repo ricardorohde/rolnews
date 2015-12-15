@@ -102,6 +102,17 @@
                         </div>
                         <div class="form-group">
                             <div class="row">
+                                <div class="col-md-2 col-xs-8">
+                                    <label for="coluna">É Coluna?</label>
+                                    <select name="coluna" class="form-control" id="sexo">
+                                        <option value="nao" <?= ($dados['coluna'] == 'nao') ? ' selected="selected"' : ''; ?>>Não</option>
+                                        <option value="sim" <?= ($dados['coluna'] == 'sim') ? ' selected="selected"' : ''; ?>>Sim</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
                                 <div class="col-md-6 col-xs-12">
                                     <label for="foto">Foto Capa</label>
                                     <input type="file" name="foto" class="form-control" id="foto">

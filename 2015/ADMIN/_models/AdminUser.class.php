@@ -203,6 +203,8 @@ class AdminUser {
     //Cadasrtra Usuário!
     private function Create() {
         $Create = new Create;
+        $this->Data['qm_cadastr'] = $_SESSION['userlogin']['id'];
+        
         $this->Data['senha'] = md5($this->Data['senha']);
         $this->setData();
         $Create->ExeCreate(self::Entity, $this->Data);
@@ -215,6 +217,8 @@ class AdminUser {
     //Atualiza Usuário!
     private function Update() {
         $Update = new Update;
+        $this->Data['qm_alterou'] = $_SESSION['userlogin']['id'];
+        
         if (isset($this->Data['senha'])):
             $this->Data['senha'] = md5($this->Data['senha']);
         endif;

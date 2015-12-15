@@ -224,6 +224,8 @@ class AdminNoticia {
     //Cadastrar Notícia
     private function Create() {
         $Create = new Create;
+        $this->Data['qm_cadastr'] = $_SESSION['userlogin']['id'];
+        
         $Create->ExeCreate(self::Entity, $this->Data);
         if ($Create->getResult()):
             $this->Error = ["A noticia <b>{$this->Data['titulo']}</b> foi cadastrada com sucesso no sistema!", WS_ACCEPT];
@@ -234,6 +236,8 @@ class AdminNoticia {
     //Atualiza Notícia
     private function Update() {
         $Update = new Update;
+        $this->Data['qm_alterou'] = $_SESSION['userlogin']['id'];
+        
         $Update->ExeUpdate(self::Entity, $this->Data, "WHERE id = :id", "id={$this->Id}");
         if ($Update->getResult()):
             $this->Error = ["A noticia <b>{$this->Data['nome']}</b> foi atualizada com sucesso!", WS_ACCEPT];
