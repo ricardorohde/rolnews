@@ -7,8 +7,8 @@
                 <button type="submit" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
             </div>
             <div class="logo"><a href="<?= HOME; ?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
-            <div class="dataTopo t16 branco">
-                <script language="javascript1.2">dataCorrente();</script>
+            <div class="dataTopo t14 branco">
+                <script>dataCorrente();</script>
                 <div id="boxHr"></div>
             </div>
         </div>
