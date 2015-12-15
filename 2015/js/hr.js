@@ -17,14 +17,8 @@ function Tempo() {
 window.setInterval("Tempo()", 1000);
 
 function dataCorrente() {
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var timeValue = "" + ((hours > 12) ? hours - 12 : hours);
-    timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
-    timeValue += (hours >= 12) ? " PM" : " AM";
-    timerRunning = true;
-
+    now = new Date();
+    hours = now.getHours();
     myday = now.getDay();
     mymonth = now.getMonth();
     myweekday = now.getDate();
@@ -76,17 +70,17 @@ function dataCorrente() {
         month = " de Dezembro de ";
 
     if ((hours >= 6) && (hours <= 11))
-        saudacao = ", Bom dia!";
+        saudacao = "Bom dia!, ";
     else if ((hours >= 12) && (hours <= 17))
-        saudacao = ", Boa tarde!";
+        saudacao = "Boa tarde!, ";
     else if ((hours >= 18) && (hours <= 23))
-        saudacao = ", Boa noite!";
+        saudacao = "Boa noite!, ";
     else if ((hours >= 0) && (hours <= 3))
-        saudacao = ", Boa noite!";
+        saudacao = "Boa noite!, ";
     else if ((hours >= 4) && (hours <= 5))
-        saudacao = ", Boa madrugada!";
+        saudacao = "Boa madrugada!, ";
     else
         saudacao = "Ocorreu um erro!";
 
-    return document.write(myweekday + month + year + saudacao);
+    return document.write(saudacao + myweekday + month + year);
 }
