@@ -89,4 +89,18 @@ $("#flexisel").flexisel({
     js.id = id;
     js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=193104280795065";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'))
+}(document, 'script', 'facebook-jssdk'));
+
+//Exibir MENU
+$('.menu').click(function () {
+    var altura = ($(window).height() - 74);
+    $('#menu').css("height", altura);
+    $('#menu').slideToggle(500);
+});
+
+//Exibir POPUP
+$('.menu').click(function () {
+    var altura = ($(window).height() - 74);
+    $('#menu').css("height", altura);
+    $('#menu').slideToggle(500);
+});
