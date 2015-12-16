@@ -9,7 +9,7 @@
                 $Pager->ExePager($getPage, 12);
 
                 $videos = new Read;
-                $videos->ExeRead('videos', "WHERE titulo != :t ORDER BY id ASC LIMIT :limit OFFSET :offset", "t=''&limit={$Pager->getLimit()}&offset={$Pager->getOffset()}");
+                $videos->ExeRead('videos', "WHERE titulo != :t ORDER BY id DESC LIMIT :limit OFFSET :offset", "t=''&limit={$Pager->getLimit()}&offset={$Pager->getOffset()}");
                 if (!$videos->getResult()):
                     WSErro('Desculpe, ainda não há nenhum <br><b>VIDEO</b> cadastrado!', WS_INFOR);
                 else:

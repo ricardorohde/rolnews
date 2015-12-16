@@ -390,13 +390,13 @@ $newsDestBig = $news->getResult()[0];
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinPag borderBottomBlue t18 grafite bold">VIDEOS</div>
+            <div class="vinPag borderBottomBlue"><span class="t18 grafite bold">VIDEOS</span> <span class="btnVertodos"><a href="<?= HOME.'/videos'?>" class="btn btn-primary btn-xs t14"><b class="glyphicon glyphicon-play-circle"></b> VER TODOS</a></span></div>
             <div class="row">
                 <?php
                 $videos = new Read;
-                $videos->ExeRead('videos', "WHERE destaque = :destaque ORDER BY id ASC LIMIT :limit OFFSET :offset", "destaque=sim&limit=4&offset=0");
+                $videos->ExeRead('videos', "WHERE destaque = :destaque ORDER BY id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=8&offset=0");
                 foreach ($videos->getResult() as $v):
-                    $v['titulo'] = Check::Words($v['titulo'], 10);
+                    $v['titulo'] = Check::Words($v['titulo'], 8);
                     $View->Show($v, $tpl_videos);
                 endforeach;
                 ?>
