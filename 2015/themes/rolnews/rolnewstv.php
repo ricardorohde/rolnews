@@ -3,7 +3,7 @@
         <div class="vinVideo borderBottomBlue t18 grafite bold">ROLNEWS TV</div>
         <div class="logoRolnewsTV"></div>
         <div class="videoPlayer">
-            embed...
+            <iframe style="margin: 0 !important; width:640px; height:360px;" src="https://sitehosting.com.br/controle/player.php?playerimg=https%3A%2F%2Fsitehosting.com.br%2Fimagens%2Fhospedagemestreaming.png%3Fe%3D2%26u%3Dstudiomax&amp;playermovie=&amp;nome=studiomax&amp;servidor=streaming55.sitehosting.com.br&amp;width=640&amp;height=360&amp;autostart=true&amp;iframe=iframe" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class="social">
             <!-- AddToAny BEGIN -->

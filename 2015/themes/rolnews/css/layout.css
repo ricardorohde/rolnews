@@ -36,17 +36,17 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .vinDestaqueNews{}
 .boxDestaqueNews{ width: 100%; padding: 10px; float: left; background: #fff;}
 .destaqueNewsBig{ width: 326px; float: left;}
-.destaqueNewsBig:hover{ background: #ff9966;}
 .destaqueNewsBigImg{ width: 100%; height: 200px; float: left;}
 .destaqueNewsBigDados{ width: 100%; float: left;}
 .destaqueNewsBigDadosCat{ float: left; padding-top: 2px; border-bottom: 1px solid #ff0000;}
 .destaqueNewsBigDadosTit{ width: 100%; padding-top: 2px; float: left;}
+.destaqueNewsBigDadosTit:hover{ width: 100%; color: #ff7212; padding-top: 2px; float: left;}
 
 .destaqueNewsSmall{ width: 290px; margin-left: 10px; float: left;}
 .destaqueNewsSmallItem{ width: 100%; height: 85px; float: left; margin-bottom: 10px;}
-.destaqueNewsSmallItem:hover{ background: #ff9966;}
 .destaqueNewsSmallItemImg{ width: 115px; height: 85px; float: left;}
 .destaqueNewsSmallItemTit{ width: 175px; height: 85px; float: left; padding-left: 5px; }
+.destaqueNewsSmallItemTit:hover{ width: 175px; height: 85px; float: left; color: #ff7212;  padding-left: 5px; }
 
 .blcPublicidade{ width: 100%; float: left; padding: 3px; background: #fff;}
 .vinPublicidade{}
@@ -59,16 +59,18 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 .boxMaisNewsDados{ width: 100%; height: 175px; padding: 0 5px; float: left;}
 .boxMaisNewsDadosCat{float: left; padding-top: 2px; border-bottom: 1px solid #ff0000;}
 .boxMaisNewsDadosTit{ width: 100%; float: left;}
+.boxMaisNewsDadosTit:hover{ width: 100%; color: #ff7212; float: left;}
 
 .boxMaisNewsBigImg{ width: 25.6%; height: 108px; padding-left: 2px; float: left;}
 .boxMaisNewsBigDados{ width: 74.4%; padding-left: 10px; float: left;}
 .boxMaisNewsSmallImg{ width: 45.1%; height: 108px; padding-left: 2px; float: left;}
 .boxMaisNewsSmallDados{ width: 54.9%; padding-left: 5px; float: left;}
-.boxMaisNewsFull{ width: 100%; height: 233px; padding: 5px; float: left;}
-.boxMaisNewsFullDados{ width: 91%; position: absolute; bottom: 0;}
+.boxMaisNewsFull{ width: 100%; height: 233px; float: left;}
+.boxMaisNewsFullDados{ width: 93%; position: absolute; bottom: 0; padding: 5px; background: #000;}
 
 .boxMaisNewsCat{ float: left; padding-top: 2px; border-bottom: 1px solid #ff0000;}
 .boxMaisNewsTit{ width: 100%; padding-top: 5px; float: left;}
+.boxMaisNewsTit:hover{ width: 100%; padding-top: 5px; color: #ff7212; float: left;}
 .boxMaisNewsDateTime{ width: 100%; bottom: 0; position: absolute;}
 .boxMaisNewsDate{ width: 100%; float: left;}
 
