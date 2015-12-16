@@ -3,7 +3,7 @@ $View = new View;
 $tpl_videos = $View->Load('videos');
 
 $news = new Read;
-$news->ExeRead("noticias", "WHERE destaque = :destaque ORDER BY id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=1&offset=0");
+$news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=1&offset=0");
 $newsDestBig = $news->getResult()[0];
 ?>
 <div class="row marginBottom">
@@ -105,7 +105,7 @@ $newsDestBig = $news->getResult()[0];
         <div class="boxMaisNews radius shadowBottom" style="background: url(<?= HOME . '/uploads/' . $newsSingle['foto']; ?>)">
             <a href="<?= HOME . '/noticia/' . $newsSingle['url_name']; ?>" title="<?= $newsSingle['titulo']; ?>">
                 <div class="boxMaisNewsFull" >
-                    <div class="boxMaisNewsFullDados">
+                    <div class="boxMaisNewsFullDados fade80">
                         <div class="boxMaisNewsCat t11 branco"><?= strtoupper($newsSingle['categoria']); ?></div>
                         <div class="boxMaisNewsTit t20 branco"><?= Check::Words($newsSingle['titulo'], 12); ?></div>
                         <div class="boxMaisNewsDate t11 branco"><?= date('d/m/Y H:i', strtotime($newsSingle['data'])); ?></div>
@@ -142,12 +142,12 @@ $newsDestBig = $news->getResult()[0];
 </div>
 <div class="row marginBottom">
     <div class="col-md-12">
-        <div class="vinDestaqueNews borderBottomGreen t18 grafite bold">POLITICA</div>
+        <div class="vinDestaqueNews borderBottomGreen t18 grafite bold">POLÍTICA</div>
         <div class="row marginBottom">
             <div class="col-md-4">
                 <?php
                 $newsCat = new Read;
-                $newsCat->ExeRead("noticias", "WHERE categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
+                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.url_name = n.categoria  WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
                 foreach ($newsCat->getResult() as $catPolitica):
                     ?>
                     <div class="row marginBottom">
@@ -485,6 +485,6 @@ $newsDestBig = $news->getResult()[0];
     </div>
     <div class="col-md-6">
         <div class="vinPag borderBottomYellow t18 grafite bold">ROLNEWS TV</div>
-        <div class="boxRolnewsTv"><a href="<?= HOME.'/rolnews-tv';?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH.'/images/img-rolnews-tv.jpg';?>" width="480" height="214" alt="Rolnews TV" title="Rolnews TV"></a></div>
+        <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="480" height="214" alt="Rolnews TV" title="Rolnews TV"></a></div>
     </div>
 </div>

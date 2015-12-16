@@ -1,2 +1,2 @@
----Scripts---05/05/2015---
-UPDATE `_acirm_2015`.`menu_sub` SET `titulo`='Conselhos e Diretoria' WHERE  `id_menu_sub`=19;
+---Executar Script No Banco de Dados --
+UPDATE noticias_categoria SET categoria='POLÍTICA' WHERE id_categoria=1;
