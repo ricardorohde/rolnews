@@ -390,7 +390,7 @@ $newsDestBig = $news->getResult()[0];
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinVideo borderBottomBlue t18 grafite bold">VIDEOS</div>
+            <div class="vinPag borderBottomBlue t18 grafite bold">VIDEOS</div>
             <div class="row">
                 <?php
                 $videos = new Read;
@@ -427,9 +427,8 @@ $newsDestBig = $news->getResult()[0];
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinVideo borderBottomGreen t18 grafite bold">COLUNISTAS</div>
+            <div class="vinPag borderBottomGreen t18 grafite bold">COLUNISTAS</div>
             <div class="row">
-
                 <?php
                 $ReadColunista = new Read;
                 $ReadColunista->ExeRead('usuarios', "WHERE foto != :foto AND nome != :nome AND colunista = :colunista", "foto=''&nome=''&colunista=sim");
@@ -477,5 +476,15 @@ $newsDestBig = $news->getResult()[0];
                 ?>
             </div>
         </div>
+    </div>
+</div>
+<div class="row marginBottom">
+    <div class="col-md-6">    
+        <div class="vinPag borderBottomPurple t18 grafite bold">FACEBOOK</div>
+        <div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="480" data-height="485" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div>
+    </div>
+    <div class="col-md-6">
+        <div class="vinPag borderBottomYellow t18 grafite bold">ROLNEWS TV</div>
+        <div class="boxRolnewsTv"><a href="<?= HOME.'/rolnews-tv';?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH.'/images/img-rolnews-tv.jpg';?>" width="480" height="214" alt="Rolnews TV" title="Rolnews TV"></a></div>
     </div>
 </div>

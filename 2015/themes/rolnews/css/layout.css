@@ -93,10 +93,11 @@ section#slide ul li span{ width: 600px; background: #bcb000; display: table; pad
 .boxFlyers{width: 100%; padding: 5px; float: left; background: #fff;}
 
 .blcVideo{width: 100%; float: left;}
-.vinVideo{}
 .boxVideo{width: 100%; float: left; margin-bottom: 10px; background: #fff;}
 .boxVideoImg{ width: 225px; height: 110px; margin: 4px; float: left;}
 .boxVideoTit{ width: 100%; height: 40px; margin: 4px; float: left;}
+
+.boxRolnewsTv{ width: 100%; float: left;}
 /*Rodape*/
 footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 .copyright{ float: left;}

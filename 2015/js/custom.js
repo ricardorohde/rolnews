@@ -87,61 +87,6 @@ $("#flexisel").flexisel({
         return;
     js = d.createElement(s);
     js.id = id;
-    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=193104280795065";
     fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-//Empregos
-$(function () {
-    //Exibi Form Candidato
-    $('.j_cad_candidato').click(function () {
-        $('.boxCadastroCandidato').fadeIn(300, function () {
-            $('.boxCadastroEmpregador').fadeOut(100);
-        });
-    });
-    //Exibi Form Empregador
-    $('.j_cad_empregador').click(function () {
-        $('.boxCadastroEmpregador').fadeIn(300, function () {
-            $('.boxCadastroCandidato').fadeOut(100);
-        });
-    });
-
-    //Validar Campos Senha Candidato
-    $('.FCadCandidato').find('.checasenha').focusout(function () {
-        if ($('.FCadCandidato').find('input[name="candidato_senha"]').val() !== $(this).val()) {
-            $('.j_checasenha').fadeIn(500);
-        } else {
-            $('.j_checasenha').hide();
-        }
-    });
-
-    //Validar Campos Senha Empregador
-    $('.FCadEmpregador').find('.checasenha').focusout(function () {
-        if ($('.FCadEmpregador').find('input[name="empregador_senha"]').val() !== $(this).val()) {
-            $('.j_checasenha').fadeIn(500);
-        } else {
-            $('.j_checasenha').hide();
-        }
-    });
-
-    //Exibir campos alterar senha;
-    $('.alt_senha').click(function () {
-        if ($('input[name="alt_senha"]').is(':checked')) {
-            $('#senha_acesso').fadeIn(500);
-        } else {
-            $('#senha_acesso').fadeOut(500);
-        }
-    });
-
-    //Ativa INPUT File pelo LINK
-    $('.j_click_file').click(function () {
-        $('.img_user').click();
-    });
-    
-    //Exibir MENU
-    $('.menu').click(function () {
-        var altura = ($(window).height()-74);
-        $('#menu').css("height",altura);        
-        $('#menu').slideToggle(500);
-    });
-});
+}(document, 'script', 'facebook-jssdk'))
