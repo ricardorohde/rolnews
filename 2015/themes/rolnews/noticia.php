@@ -8,6 +8,7 @@ endif;
 ?>
 <article class="news">
     <div class="headline">
+        <h3 class="borderBottomBlue bold"><?= $categoria; ?></h3>
         <h1><?= $titulo; ?></h1>
         <h2 class="italico"><?= $subtitulo; ?></h2>
         <h3>

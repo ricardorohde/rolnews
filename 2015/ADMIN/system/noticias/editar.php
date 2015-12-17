@@ -55,10 +55,10 @@
                                         if ($readCat->getRowCount() >= 1):
                                             foreach ($readCat->getResult() as $cat):
                                                 echo "<option ";
-                                                if ($dados['categoria'] == $cat['url_name']):
+                                                if ($dados['categoria'] == $cat['cat_url']):
                                                     echo "selected=\"selected\" ";
                                                 endif;
-                                                echo "value=\"{$cat['url_name']}\"> &raquo;&raquo; {$cat['categoria']}</option>";
+                                                echo "value=\"{$cat['cat_url']}\"> &raquo;&raquo; {$cat['categoria']}</option>";
                                             endforeach;
                                         endif;
                                         ?>

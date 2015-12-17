@@ -147,7 +147,7 @@ $newsDestBig = $news->getResult()[0];
             <div class="col-md-4">
                 <?php
                 $newsCat = new Read;
-                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.url_name = n.categoria  WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
+                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
                 foreach ($newsCat->getResult() as $catPolitica):
                     ?>
                     <div class="row marginBottom">
@@ -190,7 +190,7 @@ $newsDestBig = $news->getResult()[0];
     <div class="col-md-4">
         <div class="blcPublicidade radius shadowBottom">
             <div class="vinPublicidade t11 grafite">Publicidade</div>
-            <div class="boxPublicidade slide" style="height: 285px;">
+            <div class="boxPublicidade slide">
                 <?php
                 $banners->setPlaces("idtipo=4");
                 if (!$banners->getResult()):
@@ -208,9 +208,10 @@ $newsDestBig = $news->getResult()[0];
     </div>
     <div class="col-md-8">
         <div class="blcDestaqueNews">
-            <div class="boxDestaqueNews radius shadowBottom">
+            <div class="vinDestaqueNews t18 grafite bold">GERAL</div>
+            <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                 <?php
-                $newsCat->setPlaces("categoria=politica&limit=1&offset=5");
+                $newsCat->setPlaces("categoria=geral&limit=1&offset=5");
                 $catPoliticaSingle = $newsCat->getResult()[0];
                 ?>
                 <div class="destaqueNewsBig">
@@ -224,7 +225,7 @@ $newsDestBig = $news->getResult()[0];
                 </div>
                 <div class="destaqueNewsSmall">
                     <?php
-                    $newsCat->setPlaces("categoria=politica&limit=3&offset=6");
+                    $newsCat->setPlaces("categoria=geral&limit=3&offset=6");
                     foreach ($newsCat->getResult() as $catPoliticaSmall):
                         ?>
                         <a href="<?= HOME . '/noticia/' . $catPoliticaSmall['url_name']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>">
@@ -372,7 +373,9 @@ $newsDestBig = $news->getResult()[0];
                 <div class="slide">
                     <?php
                     $banners->setPlaces("idtipo=7");
-                    if ($banners->getResult()):
+                    if (!$banners->getResult()):
+                        WSErro('Desculpe, ainda não há nenhum <br><b>FLYER</b> cadastrado!', WS_INFOR);
+                    else:
                         foreach ($banners->getResult() as $flyers):
                             ?>
                             <a href="#" title="<?= $flyers['titulo']; ?>">
@@ -390,7 +393,7 @@ $newsDestBig = $news->getResult()[0];
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinPag borderBottomBlue"><span class="t18 grafite bold">VIDEOS</span> <span class="btnVertodos"><a href="<?= HOME.'/videos'?>" class="btn btn-primary btn-xs t14"><b class="glyphicon glyphicon-play-circle"></b> VER TODOS</a></span></div>
+            <div class="vinPag borderBottomBlue"><span class="t18 grafite bold">VIDEOS</span> <span class="btnVertodos"><a href="<?= HOME . '/videos' ?>" class="btn btn-primary btn-xs t14"><b class="glyphicon glyphicon-play-circle"></b> VER TODOS</a></span></div>
             <div class="row">
                 <?php
                 $videos = new Read;
@@ -461,7 +464,7 @@ $newsDestBig = $news->getResult()[0];
                                                 ?>
                                                 <p  class="media-heading bold"><?= Check::Words($coluna['titulo'], 5); ?></p>
                                                 <?= Check::Words($coluna['noticia'], 7); ?>
-                                                <a href="#">ver mais</a>
+                                                <a href="<?= HOME . '/noticia/' . $coluna['url_name']; ?>">ver mais</a>
                                             <?php
                                             endif;
                                             ?>

@@ -93,7 +93,7 @@ section#slide ul li span{ width: 600px; background: #bcb000; display: table; pad
 
 .blcFlyers{width: 100%; float: left;}
 .vinFlyers{}
-.boxFlyers{width: 100%; padding: 5px; float: left; background: #fff;}
+.boxFlyers{width: 100%; height: 320px; padding: 5px; float: left; background: #fff;}
 
 .blcVideo{width: 100%; float: left;}
 .boxVideo{width: 100%; float: left; margin-bottom: 10px; background: #fff;}

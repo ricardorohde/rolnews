@@ -1,0 +1,73 @@
+[07-Dec-2015 09:40:14 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[07-Dec-2015 09:41:14 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[08-Dec-2015 11:13:10 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[08-Dec-2015 11:14:02 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[08-Dec-2015 11:15:01 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[09-Dec-2015 11:48:13 America/Manaus] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16964580 bytes) in /home/rolnews/public_html/new/_app/Helpers/Upload.class.php on line 180
+[16-Dec-2015 21:20:19 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:23 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:25 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:27 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:30 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:34 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:36 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:38 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:40 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:42 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:43 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:45 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:47 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:48 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:50 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:53 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:57 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:20:59 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:01 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:02 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:04 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:05 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:07 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:08 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:10 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:12 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:13 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:15 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:17 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:19 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:22 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:24 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:26 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:28 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:30 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:31 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:33 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:35 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:36 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:38 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:40 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:42 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:43 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:46 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:47 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:50 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:53 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:21:58 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:00 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:02 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:04 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:06 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:08 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:11 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:13 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:15 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:17 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:19 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:21 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:24 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:26 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:28 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:29 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:31 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:32 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:34 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
+[16-Dec-2015 21:22:36 America/Sao_Paulo] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
