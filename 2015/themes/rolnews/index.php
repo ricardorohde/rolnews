@@ -147,7 +147,7 @@ $newsDestBig = $news->getResult()[0];
             <div class="col-md-4">
                 <?php
                 $newsCat = new Read;
-                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
+                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");               
                 foreach ($newsCat->getResult() as $catPolitica):
                     ?>
                     <div class="row marginBottom">
@@ -211,7 +211,7 @@ $newsDestBig = $news->getResult()[0];
             <div class="vinDestaqueNews t18 grafite bold">GERAL</div>
             <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                 <?php
-                $newsCat->setPlaces("categoria=geral&limit=1&offset=5");
+                $newsCat->setPlaces("categoria=geral&limit=1&offset=0");
                 $catPoliticaSingle = $newsCat->getResult()[0];
                 ?>
                 <div class="destaqueNewsBig">
@@ -225,7 +225,7 @@ $newsDestBig = $news->getResult()[0];
                 </div>
                 <div class="destaqueNewsSmall">
                     <?php
-                    $newsCat->setPlaces("categoria=geral&limit=3&offset=6");
+                    $newsCat->setPlaces("categoria=geral&limit=3&offset=1");
                     foreach ($newsCat->getResult() as $catPoliticaSmall):
                         ?>
                         <a href="<?= HOME . '/noticia/' . $catPoliticaSmall['url_name']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>">

@@ -97,10 +97,3 @@ $('.menu').click(function () {
     $('#menu').css("height", altura);
     $('#menu').slideToggle(500);
 });
-
-//Exibir POPUP
-$('.menu').click(function () {
-    var altura = ($(window).height() - 74);
-    $('#menu').css("height", altura);
-    $('#menu').slideToggle(500);
-});
