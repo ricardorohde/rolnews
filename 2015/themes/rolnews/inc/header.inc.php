@@ -18,15 +18,17 @@
 <div id="menu">
     <aside>
         <ul>
+            <li><a href="<?= HOME . '/noticias'; ?>">NOTICIAS</a></li>
             <?php
             $ReadMenu = new Read;
             $ReadMenu->ExeRead('noticias_categoria', "ORDER BY categoria ASC");
             foreach ($ReadMenu->getResult() as $menu):
                 ?>
-                <li><?= $menu['categoria']; ?></li>
+                <li><a href="<?= HOME . '/noticias/'.$menu['cat_url']; ?>">&raquo; <?= $menu['categoria']; ?></a></li>
             <?php endforeach; ?>
-            <li>COBERTURAS</li>
-            <li><a href="<?= HOME.'/videos';?>">VIDEOS</a></li>
+            <li><a href="<?= HOME . '/eventos'; ?>">EVENTOS</a></li>
+            <li><a href="<?= HOME . '/videos'; ?>">VIDEOS</a></li>
+            <li><a href="<?= HOME . '/contato'; ?>">CONTATO</a></li>
         </ul>
     </aside>
 </div>

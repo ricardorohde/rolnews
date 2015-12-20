@@ -16,9 +16,9 @@
             $tpl_noticias = $View->Load('noticias');
 
             foreach ($ReadNewsAll->getResult() as $n):
-                $n['titulo'] = Check::Words($n['titulo'], 18);
+                $n['titulo'] = Check::Words($n['titulo'], 16);
                 $n['noticia'] = strip_tags($n['noticia']);
-                $n['noticia'] = Check::Words($n['noticia'], 38);
+                $n['noticia'] = Check::Words($n['noticia'], 36);
                 $n['data'] = date('d/m/Y H:i', strtotime($n['data']));
                 $View->Show($n, $tpl_noticias);
             endforeach;

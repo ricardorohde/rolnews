@@ -68,6 +68,11 @@ class Seo {
                 $this->Data = [SITENAME . " - Informação Digital", SITEDESC, HOME, INCLUDE_PATH . '/images/logo-topo.png'];
                 break;
 
+            //SEO:: ROLNEWS TV
+            case 'rolnewstv':
+                $this->Data = [SITENAME . " - Rolnews TV", "Rolnews TV com exibição da programação da STUDIO MAX TV", HOME . '/rolnewstv', INCLUDE_PATH . '/images/logo-topo.png'];
+                break;
+            
             //SEO:: EVENTOS
             case 'eventos':
                 $this->Data = [SITENAME . " - Cobertura de Eventos", "Galeria de Eventos da ACIRM", HOME . '/eventos', INCLUDE_PATH . '/images/logo-topo.png'];
@@ -85,7 +90,7 @@ class Seo {
                     $this->Data = ["Evento: {$evento}" . ' - ' . SITENAME, "Exibição do evento: {$evento}", HOME . "/evento/{$url_name}", $foto];
                 endif;
                 break;
-            
+
             //SEO:: VIDEOS
             case 'videos':
                 $this->Data = [SITENAME . " - Galeria de Videos", "Galeria de Videos da ACIRM", HOME . '/videos', INCLUDE_PATH . '/images/logo-topo.png'];
@@ -151,7 +156,7 @@ class Seo {
         $this->Data = null;
 
         //NORMAL PAGE
-        $this->seoTags = '<link rel="shortcut icon" type="image/x-icon" href="'.INCLUDE_PATH.'/images/favicon.ico" />' . "\n";
+        $this->seoTags = '<link rel="shortcut icon" type="image/x-icon" href="' . INCLUDE_PATH . '/images/favicon.ico" />' . "\n";
         $this->seoTags .= '<title>' . $this->Tags['Title'] . '</title> ' . "\n";
         $this->seoTags .= '<meta name="description" content="' . $this->Tags['Content'] . '"/>' . "\n";
         $this->seoTags .= '<meta name="robots" content="index, follow" />' . "\n";
