@@ -21,25 +21,7 @@ $(document).ready(function () {
         player: ['img', 'html', 'swf']
     });
 
-    //Menu SPC DropDown
-    $(".select-services").click(function () {
-        if ($(".select-services-itens").is(".active")) {
-            $(".select-services-itens").removeClass("active");
-            $(".select-services-itens").slideUp(100);
-            $(".seta").removeClass("glyphicon-chevron-up");
-            $(".seta").addClass("glyphicon-chevron-down");
-        } else {
-            $(".select-services-itens").addClass("active");
-            $(".select-services-itens").slideDown(100);
-            $(".seta").removeClass("glyphicon-chevron-down");
-            $(".seta").addClass("glyphicon-chevron-up");
-        }
-    });
-
-    //Modal 
-    $('#agendaModal').modal('show');
-
-    //tooltip
+    //Tooltip
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -93,7 +75,21 @@ $("#flexisel").flexisel({
 
 //Exibir MENU
 $('.menu').click(function () {
-    var altura = ($(window).height() - 74);
+    altura = ($(window).height() - 74);
     $('#menu').css("height", altura);
     $('#menu').slideToggle(500);
+});
+
+//Campo de Busca
+$('.busca input[type=search]').bind({
+    focus: function () {
+        $('.logo').hide(0, function () {
+            $('.busca').css("width", '66%');
+        });
+    },
+    blur: function () {
+        $('.logo').show(0, function () {
+            $('.busca').css("width", '26.9%');
+        });
+    }
 });

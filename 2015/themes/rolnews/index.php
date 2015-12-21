@@ -6,7 +6,7 @@ $news = new Read;
 $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LIMIT :limit OFFSET :offset", "destaque=sim&limit=1&offset=0");
 $newsDestBig = $news->getResult()[0];
 ?>
-<div class="row marginBottom">
+<div class="row marginBottom hidden-xs">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull slide">
@@ -18,7 +18,7 @@ $newsDestBig = $news->getResult()[0];
         </div>
     </div>
 </div>
-<div class="row marginBottom">
+<div class="row marginBottom hidden-xs">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull slide">

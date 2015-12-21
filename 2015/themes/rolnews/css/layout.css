@@ -15,7 +15,7 @@ nav{ width: 100%; float: left;}
 body{ background: #fff4f4;}
 
 /*Topo*/
-header{ width: 100%; height: 74px; margin-bottom: 10px; position: fixed; z-index: 1000; background: #ff7212;}
+header{ width: 100%; margin-bottom: 10px; position: fixed; z-index: 1000; background: #ff7212;}
 #topo{ width: 100%; float: left;}
 .menu{ width: 76px; padding: 25px 0 0 0; float: left;}
 .menu a{ text-decoration: none;}
@@ -27,9 +27,9 @@ aside ul li{ width: 100%; padding: 5px 0; float: left;}
 aside ul li a{ color: #000;}
 aside ul li a:hover{ color: #ff7212; text-decoration: none;}
 
-.busca{ width: 265px; padding: 20px 0 0 20px; float: left;}
-.busca input[type=search]{ width: 230px; padding: 5px 35px 5px 5px; border-radius: 25px; float: left; }
-.busca .btnBusca{ width: 30px; margin: 8px 0 0 -35px; background: #fff; float: left;}
+.busca{ width: 26.9%; padding: 20px 0 0 20px; float: left;}
+.busca input[type=search]{ width: 100%; padding: 5px 35px 5px 5px; border-radius: 25px; float: left; }
+.busca .btnBusca{ width: 30px; margin: 8px 0 0 -35px; background: #fff; position: absolute;}
 .logo{ width: 470px; height: 74px; padding: 7px 0 0 161px; margin: 0 0 0 -100px; float: left; background: url('../images/bg-logo.png') no-repeat;}
 .dataTopo{ padding: 20px 0 0 0; float: right;}
 
