@@ -1,8 +1,8 @@
 <div class="blcPopUp"></div>
-<div class="boxPopUp">
-    <div class="closePopUp"><span class="btn btn-xs btn-danger"><b class="glyphicon glyphicon-off"></b> Fechar Publicidades</span></div>
-    <?php
-    
+<div class="grpPoupUp">
+    <div class="boxPopUp">
+        <div class="closePopUp"><span class="btn btn-xs btn-danger"><b class="glyphicon glyphicon-off"></b> Fechar Publicidades</span></div>
+        <?php
         foreach ($popUp->getResult() as $bnr):
             echo "<div class='popUp'>";
             echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
@@ -10,6 +10,6 @@
             echo "</a>";
             echo "</div>";
         endforeach;
-    
-    ?>
+        ?>
+    </div>
 </div>
