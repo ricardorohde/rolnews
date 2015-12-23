@@ -17,7 +17,7 @@
                     $tpl_videos = $View->Load('videos');
 
                     foreach ($videos->getResult() as $v):
-                        $v['titulo'] = Check::Words($v['titulo'], 10);
+                        $v['titulo'] = Check::Words($v['titulo'], 9);
                         $View->Show($v, $tpl_videos);
                     endforeach;
 

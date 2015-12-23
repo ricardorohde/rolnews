@@ -376,7 +376,7 @@ $newsDestBig = $news->getResult()[0];
                             foreach ($capaNews->getResult() as $eventos):
                                 ?>
                                 <li>
-                                    <a href="#" title="<?= $eventos['evento']; ?>">
+                                    <a href="<?= HOME.'/evento/'.$eventos['url_name'];?>" title="<?= $eventos['evento']; ?>">
                                         <span><?= $eventos['evento']; ?></span>
                                         <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" width="561" height="320" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
                                     </a>

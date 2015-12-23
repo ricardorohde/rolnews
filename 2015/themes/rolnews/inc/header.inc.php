@@ -1,7 +1,7 @@
 <header class="shadowBottom">
     <div class="centerlyt">
         <div id="topo ">
-            <div class="menu t18 branco"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span> MENU</a></div>
+            <div class="menu t18 branco"><span class="glyphicon glyphicon-menu-hamburger"></span> MENU</div>
             <div class="busca">
                 <?php
                 $search = filter_input(INPUT_POST, 's', FILTER_DEFAULT);

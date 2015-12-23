@@ -1,29 +1,8 @@
 $(document).ready(function () {
-    //Mascára Inputs
-    $(".cep").mask("99999-999");
-    $(".cpf").mask("999.999.999-99");
-    $(".cnpj").mask("99.999.999/9999-99");
-    $(".fone").mask("(99) 9999-9999");
-    $(".data").mask("99/99/9999");
-
-    //Valida Formularios      
-    $("#formContato").validationEngine('attach');
-
     //Cycle Efeito de Slide nos Banners
     $('.slide').cycle({
         fx: 'fade',
         speed: 1000
-    });
-
-    //ShandowBox 
-    Shadowbox.init({
-        language: 'pt',
-        player: ['img', 'html', 'swf']
-    });
-
-    //Tooltip
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
     });
 
     //Exibir POPUP
@@ -37,41 +16,6 @@ $(document).ready(function () {
     });
 
 });
-
-//Slider Carrosel
-$("#flexisel").flexisel({
-    visibleItems: 5,
-    animationSpeed: 1000,
-    autoPlay: true,
-    autoPlaySpeed: 3000,
-    pauseOnHover: true,
-    enableResponsiveBreakpoints: true,
-    responsiveBreakpoints: {
-        portrait: {
-            changePoint: 480,
-            visibleItems: 1
-        },
-        landscape: {
-            changePoint: 640,
-            visibleItems: 2
-        },
-        tablet: {
-            changePoint: 768,
-            visibleItems: 3
-        }
-    }
-});
-
-//Twitter
-!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = p + "://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, "script", "twitter-wjs");
 
 //Facebook
 (function (d, s, id) {
@@ -103,4 +47,10 @@ $('.busca input[type=search]').bind({
             $('.busca').css("width", '26.9%');
         });
     }
+});
+
+//ShandowBox 
+Shadowbox.init({
+    language: 'pt',
+    player: ['img', 'html', 'swf']
 });

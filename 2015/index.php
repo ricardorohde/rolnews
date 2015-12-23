@@ -16,8 +16,6 @@ Check::UserOnline();
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/shadowbox/shadowbox.css"/>
-        <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/flexisel/css/flexisel.css"/>
-        <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/jqueryValidation/validationEngine.jquery.css"/>
         <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/styles.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/layout.css"/>
         <script src="<?= HOME; ?>/js/hr.js"></script>
@@ -50,10 +48,6 @@ Check::UserOnline();
 <script src="<?= HOME; ?>/lib/jquery/jquery.js"></script>
 <script src="<?= HOME; ?>/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?= HOME; ?>/lib/shadowbox/shadowbox.js"></script>
-<script src="<?= HOME; ?>/lib/flexisel/js/jquery.flexisel.js"></script>
-<script src="<?= HOME; ?>/lib/jqueryValidation/jquery.validationEngine.js"></script>
-<script src="<?= HOME; ?>/lib/jqueryValidation/jquery.validationEngine-pt_BR.js"></script>
-<script src="<?= HOME; ?>/js/jquery.maskedinput.min.js"></script>
 <script src="<?= HOME; ?>/js/jcycle.min.js"></script>
 <script src="<?= HOME; ?>/js/slide.min.js"></script>
 <script src="<?= HOME; ?>/js/custom.js"></script>

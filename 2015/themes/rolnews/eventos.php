@@ -1,9 +1,8 @@
-<div class="container">
-    <div class="center">
-        <div class="rowCapa">
-            <div class="vinheta t18 bold branco">Eventos ACIRM</div>
-            <article>
-                <?php
+<div class="row">
+    <div class="col-md-12">
+        <div class="vinVideo borderBottomBlue t18 grafite bold">ROLNEWS EVENTOS</div>
+        <div class="videoPlayer">
+            <?php
                 $getPage = (!empty($Link->getlocal()[1]) ? $Link->getlocal()[1] : 1);
                 $Pager = new Pager(HOME . '/eventos/');
                 $Pager->ExePager($getPage, 12);
@@ -27,7 +26,6 @@
                 echo $Pager->getPaginator();
                 echo '</nav>';
                 ?>
-            </article>
         </div>
     </div>
 </div>

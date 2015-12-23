@@ -34,7 +34,9 @@ endif;
         </div>
     </div>
     <figure class="noticiaImg">
-        <img alt="<?= $titulo; ?>" class="img-responsive" title="<?= $titulo; ?>" src="<?= HOME . '/uploads/' . $foto; ?>" width="480"/>
+        <a href="<?= HOME . '/uploads/' . $foto; ?>" rel="shadowbox">
+            <img alt="<?= $titulo; ?>" class="img-responsive" title="<?= $titulo; ?>" src="<?= HOME . '/uploads/' . $foto; ?>" width="480"/>
+        </a>
     </figure>
     <div class="noticiaTxt tjustify"><?= $noticia; ?></div>
     <?php
@@ -47,7 +49,9 @@ endif;
             <div class="noticiaBlcMediaMais">
                 <?php
                 foreach ($OutrasFotos->getResult() as $fotos):
+                    echo '<a href="' . HOME . '/uploads/' . $fotos['foto'] . '" rel="shadowbox[vocation]">';
                     echo '<img alt="' . $titulo . '" title="' . $titulo . '" class="img-thumbnail" src="' . HOME . '/tim.php?src=' . HOME . '/uploads/' . $fotos['foto'] . '&w=180&h=100&q=90" width="180" height="100"/>';
+                    echo '</a>';
                 endforeach;
                 ?>
             </div>
