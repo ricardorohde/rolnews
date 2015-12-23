@@ -27,11 +27,19 @@ Check::UserOnline();
 <body>
     <?php
     require(REQUIRE_PATH . '/inc/header.inc.php');
+    if ($Link->getLocal()[0] == 'index'):
+        $popUp = new Read;
+        $popUp->ExeRead("banners", "WHERE tipo = :idtipo ORDER BY id DESC LIMIT 4", "idtipo=1");
+        if ($popUp->getResult()):
+            require(REQUIRE_PATH . '/inc/popup.inc.php');
+        endif;
+    endif;
+
     echo '<div class="centerlyt">';
     echo '  <div class="capa">';
-        if (!require($Link->getPatch())):
-            WSErro('Erro ao incluir arquivo de navegação!', WS_ERROR, true);
-        endif;
+    if (!require($Link->getPatch())):
+        WSErro('Erro ao incluir arquivo de navegação!', WS_ERROR, true);
+    endif;
     echo '  </div>';
     echo '</div>';
     require(REQUIRE_PATH . '/inc/footer.inc.php');

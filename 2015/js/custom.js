@@ -25,6 +25,17 @@ $(document).ready(function () {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    //Exibir POPUP
+    $('.blcPopUp').show(function () {
+        altura = ($(document).height());
+        $('.blcPopUp').css("height", altura);
+        $('.closePopUp').click(function () {
+            $('.blcPopUp').fadeOut();
+            $('.boxPopUp').fadeOut();
+        });
+    });
+
 });
 
 //Slider Carrosel

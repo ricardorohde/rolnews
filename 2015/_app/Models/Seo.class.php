@@ -68,11 +68,23 @@ class Seo {
                 $this->Data = [SITENAME . " - Informação Digital", SITEDESC, HOME, INCLUDE_PATH . '/images/logo-topo.png'];
                 break;
 
+            //SEO:: BUSCA
+            case 'busca':
+                $ReadSeo->ExeRead("noticias", "WHERE (titulo LIKE '%' :link '%' OR noticia LIKE '%' :link '%')", "link={$this->Link}");
+                if (!$ReadSeo->getResult()):
+                    $this->seoData = null;
+                    $this->seoTags = null;
+                else:
+                    $this->seoData['count'] = $ReadSeo->getRowCount();
+                    $this->Data = ["Pesquisa por: {$this->Link}" . ' - ' . SITENAME, "Sua pesquisa por {$this->Link} retornou {$this->seoData['count']} resultados!", HOME . "/busca/{$this->Link}", INCLUDE_PATH . '/images/logo-topo.png'];
+                endif;
+                break;
+
             //SEO:: ROLNEWS TV
             case 'rolnewstv':
                 $this->Data = [SITENAME . " - Rolnews TV", "Rolnews TV com exibição da programação da STUDIO MAX TV", HOME . '/rolnewstv', INCLUDE_PATH . '/images/logo-topo.png'];
                 break;
-            
+
             //SEO:: EVENTOS
             case 'eventos':
                 $this->Data = [SITENAME . " - Cobertura de Eventos", "Galeria de Eventos da ACIRM", HOME . '/eventos', INCLUDE_PATH . '/images/logo-topo.png'];
@@ -124,6 +136,11 @@ class Seo {
                     $extract = extract($ReadSeo->getResult()[0]);
                     $this->seoData = $ReadSeo->getResult()[0];
                     $this->Data = [$titulo . ' - ' . SITENAME, "Exibição da notícia: {$titulo}", HOME . "/noticia/{$url_name}", $foto];
+                    
+                    //noticia:: conta views da noticia
+                    $ArrUpdate = ['contador' => $contador + 1];
+                    $Update = new Update();
+                    $Update->ExeUpdate("noticias", $ArrUpdate, "WHERE id = :idnews", "idnews={$id}");
                 endif;
                 break;
 
