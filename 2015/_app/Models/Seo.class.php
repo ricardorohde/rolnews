@@ -68,6 +68,19 @@ class Seo {
                 $this->Data = [SITENAME . " - Informação Digital", SITEDESC, HOME, INCLUDE_PATH . '/images/logo-topo.png'];
                 break;
 
+            //SEO:: CATEGORIA
+            case 'categoria':
+                $ReadSeo->ExeRead("noticias_categoria", "WHERE cat_url = :link", "link={$this->Link}");
+                if (!$ReadSeo->getResult()):
+                    $this->seoData = null;
+                    $this->seoTags = null;
+                else:
+                    extract($ReadSeo->getResult()[0]);
+                    $this->seoData = $ReadSeo->getResult()[0];
+                    $this->Data = [$categoria . ' - ' . SITENAME, "Categoria de Notícias Rolnews", HOME . "/categoria/{$cat_url}", INCLUDE_PATH . '/images/logo-topo.png'];
+                endif;
+                break;
+
             //SEO:: BUSCA
             case 'busca':
                 $ReadSeo->ExeRead("noticias", "WHERE (titulo LIKE '%' :link '%' OR noticia LIKE '%' :link '%')", "link={$this->Link}");
@@ -136,7 +149,7 @@ class Seo {
                     $extract = extract($ReadSeo->getResult()[0]);
                     $this->seoData = $ReadSeo->getResult()[0];
                     $this->Data = [$titulo . ' - ' . SITENAME, "Exibição da notícia: {$titulo}", HOME . "/noticia/{$url_name}", $foto];
-                    
+
                     //noticia:: conta views da noticia
                     $ArrUpdate = ['contador' => $contador + 1];
                     $Update = new Update();

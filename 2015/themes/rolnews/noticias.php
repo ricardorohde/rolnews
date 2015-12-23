@@ -1,5 +1,5 @@
 <div class="news">
-    <div class="vinPag  t18 grafite bold">&raquo; NOTICIAS</div>
+    <div class="vinPag  t18 grafite bold">&raquo; NOTÍCIAS</div>
     <div class="blcNews">
         <?php
         $getPage = (!empty($Link->getlocal()[1]) ? $Link->getlocal()[1] : 1);

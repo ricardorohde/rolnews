@@ -33,7 +33,7 @@ $newsDestBig = $news->getResult()[0];
 <div class="row marginBottom">
     <div class="col-md-8">
         <div class="blcDestaqueNews">
-            <div class="vinDestaqueNews t18 grafite bold">NOTICIAS EM DESTAQUE</div>
+            <div class="vinDestaqueNews t18 grafite bold">NOTÍCIAS EM DESTAQUE</div>
             <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                 <div class="destaqueNewsBig">
                     <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
@@ -141,7 +141,7 @@ $newsDestBig = $news->getResult()[0];
 </div>
 <div class="row">
     <div class="col-md-12">
-        <p class="t18 grafite tcenter bold"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTICIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
+        <p class="t18 grafite tcenter bold"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTÍCIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
     </div>
 </div>
 <div class="row marginBottom">
