@@ -4,3 +4,5 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1
+#RewriteCond %{HTTP_HOST} ^rolnews.com.br$
+#RewriteRule ^/?$ "http\:\/\/www\.rolnews\.com\.br\/" [R=301,L]
