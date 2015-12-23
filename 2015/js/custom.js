@@ -32,6 +32,7 @@ $(document).ready(function () {
 $('.menu').click(function () {
     altura = ($(window).height() - 74);
     $('#menu').css("height", altura);
+    $('aside').css("height", altura-30);
     $('#menu').slideToggle(500);
 });
 
