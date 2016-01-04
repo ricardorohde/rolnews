@@ -201,7 +201,7 @@ class Seo {
         $this->seoTags .= '<meta property="og:locale" content="pt_BR" />' . "\n";
         $this->seoTags .= '<meta property="og:title" content="' . $this->Tags['Title'] . '" />' . "\n";
         $this->seoTags .= '<meta property="og:description" content="' . $this->Tags['Content'] . '" />' . "\n";
-        $this->seoTags .= '<meta property="og:image" content="' . $this->Tags['Image'] . '" />' . "\n";
+        $this->seoTags .= '<meta property="og:image" content="' .HOME .'/'. $this->Tags['Image'] . '" />' . "\n";
         $this->seoTags .= '<meta property="og:url" content="' . $this->Tags['Link'] . '" />' . "\n";
         $this->seoTags .= '<meta property="og:type" content="article" />' . "\n";
         $this->seoTags .= "\n";
