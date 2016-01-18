@@ -44,7 +44,7 @@ endif;
         $tpl_videos = $View->Load('videos');
 
         $videos = new Read;
-        $videos->ExeRead('videos', "WHERE titulo != :titulo ORDER BY id ASC LIMIT :limit OFFSET :offset", "titulo=''&limit=4&offset=0");
+        $videos->ExeRead('videos', "WHERE titulo != :titulo ORDER BY id DESC LIMIT :limit OFFSET :offset", "titulo=''&limit=4&offset=0");
         if (!$videos->getResult()):
             WSErro('Desculpe, ainda não há nenhum <br><b>VIDEO</b> cadastrado!', WS_INFOR);
         else:
