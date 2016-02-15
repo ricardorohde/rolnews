@@ -38,7 +38,30 @@ endif;
             <img alt="<?= $titulo; ?>" class="img-responsive" title="<?= $titulo; ?>" src="<?= HOME . '/uploads/' . $foto; ?>" width="480"/>
         </a>
     </figure>
-    <div class="noticiaTxt tjustify"><?= $noticia; ?></div>
+    <div class="noticiaTxt tjustify">
+        <?= $noticia; ?>
+    </div>
+    <div class="row marginBottom">
+        <div class="col-md-12">
+            <div class="blcPublicidade radius shadowBottom">
+                <div class="boxPublicidadeFull slide">
+                    <?php
+                    $banners = new Read;
+                    $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=9");
+                    if (!$banners->getResult()):
+                        WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                    else:
+                        foreach ($banners->getResult() as $bnr):
+                            echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                            echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                            echo "</a>";
+                        endforeach;
+                    endif;
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php
     $OutrasFotos = new Read;
     $OutrasFotos->ExeRead("banco_fotos", "WHERE id_tipo = :idtipo AND tipo = :tipo", "idtipo={$id}&tipo=n");

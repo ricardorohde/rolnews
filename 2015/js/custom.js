@@ -32,7 +32,7 @@ $(document).ready(function () {
 $('.menu').click(function () {
     altura = ($(window).height() - 74);
     $('#menu').css("height", altura);
-    $('aside').css("height", altura-30);
+    $('aside').css("height", altura - 30);
     $('#menu').slideToggle(500);
 });
 
@@ -55,3 +55,9 @@ Shadowbox.init({
     language: 'pt',
     player: ['img', 'html', 'swf']
 });
+
+//Redireciona conforme a resolução
+var resol = screen.width;
+if (resol <= 768) {
+    window.location.href = "http://m.rolnews.com.br";
+}

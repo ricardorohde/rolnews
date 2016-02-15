@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $View = new View;
 $tpl_videos = $View->Load('videos');
 
@@ -7,16 +7,17 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
-$bannerSwf2 = '1000x150-interior (1).swf';
+$bannerSwf2 = 'ceramicauniao.jpg';
+$bannerSwf1 = '221537-1000x150.swf';
+$bannerSwf3 = 'gazin.jpg';
 ?>
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull slide">
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
-                    <param name="movie" value="<?= HOME.'/uploads/banners/swf/'.$bannerSwf1;?>"><param name="quality" value="high">
-                    <embed src="<?= HOME.'/uploads/banners/swf/'.$bannerSwf1;?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="978"></embed>
+                    <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>"><param name="quality" value="high">
+                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="978"></embed>
                 </object>
             </div>
         </div>
@@ -27,9 +28,30 @@ $bannerSwf2 = '1000x150-interior (1).swf';
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull slide">
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
-                    <param name="movie" value="<?= HOME.'/uploads/banners/swf/'.$bannerSwf2;?>"><param name="quality" value="high">
-                    <embed src="<?= HOME.'/uploads/banners/swf/'.$bannerSwf2;?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="978"></embed>
+                    <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf2; ?>"><param name="quality" value="high">
+                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf2; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="978"></embed>
                 </object>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row marginBottom">
+    <div class="col-md-12">
+        <div class="blcPublicidade radius shadowBottom">
+            <div class="boxPublicidadeFull slide">
+                <?php
+                $banners = new Read;
+                $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=8");
+                if (!$banners->getResult()):
+                    WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                else:
+                    foreach ($banners->getResult() as $bnr):
+                        echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                        echo "</a>";
+                    endforeach;
+                endif;
+                ?>
             </div>
         </div>
     </div>
@@ -69,8 +91,7 @@ $bannerSwf2 = '1000x150-interior (1).swf';
             <div class="vinPublicidade t11 grafite">Publicidade</div>
             <div class="boxPublicidade slide">
                 <?php
-                $banners = new Read;
-                $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=2");
+                $banners->setPlaces("idtipo=2");
                 if (!$banners->getResult()):
                     WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
                 else:
@@ -380,7 +401,7 @@ $bannerSwf2 = '1000x150-interior (1).swf';
                             foreach ($capaNews->getResult() as $eventos):
                                 ?>
                                 <li>
-                                    <a href="<?= HOME.'/evento/'.$eventos['url_name'];?>" title="<?= $eventos['evento']; ?>">
+                                    <a href="<?= HOME . '/evento/' . $eventos['url_name']; ?>" title="<?= $eventos['evento']; ?>">
                                         <span><?= $eventos['evento']; ?></span>
                                         <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" width="561" height="320" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
                                     </a>
@@ -517,5 +538,12 @@ $bannerSwf2 = '1000x150-interior (1).swf';
     <div class="col-md-6">
         <div class="vinPag borderBottomYellow t18 grafite bold">ROLNEWS TV</div>
         <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="480" height="214" alt="Rolnews TV" title="Rolnews TV"></a></div>
+    </div>
+</div>
+<div class="row marginBottom">
+    <div class="col-md-12">  
+        <div class="alert alert-warning" style="text-align:justify;">
+            <B>Decisão Judicial</B><br>Juiz de Direito <b>Jeferson Cristi Tessila de Melo</b>, da 2ª Vara Cívil do Poder Judiciário de Rondônia, sob o processo ordinário 0003368-18.2011.8.22.0010 requerente ao <b>Sr. Eliazar Lisboa </b>// Segue em anexo a Sentença e Processo do mesmo.   <a href="http://www.rolnews.com.br/judicial.pdf" target="_blank">[[ Download ]]</a> 
+        </div>
     </div>
 </div>
