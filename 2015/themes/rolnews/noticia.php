@@ -71,7 +71,7 @@ endif;
                 <div class="boxPublicidadeFull slide">
                     <?php
                     $banners = new Read;
-                    $banners->ExeRead("banners", "WHERE tipo = :idtipo", "idtipo=9");
+                    $banners->ExeRead("banners", "WHERE tipo = :idtipo ORDER BY rand()", "idtipo=9");
                     if (!$banners->getResult()):
                         WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
                     else:
