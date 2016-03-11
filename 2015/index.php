@@ -8,6 +8,7 @@ Check::UserOnline();
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--[if lt IE 9]><script src="../../_cdn/html5.js"></script><![endif]-->
         <?php
         $Link = new Link;
@@ -16,7 +17,6 @@ Check::UserOnline();
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?= HOME; ?>/lib/shadowbox/shadowbox.css"/>
-        <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/styles.min.css"/>
         <link rel="stylesheet" type="text/css" href="<?= INCLUDE_PATH; ?>/css/layout.css"/>
         <script src="<?= HOME; ?>/js/hr.js"></script>
         <script>
@@ -48,7 +48,7 @@ Check::UserOnline();
         endif;
     endif;
 
-    echo '<div class="centerlyt">';
+    echo '<div class="container">';
     echo '  <div class="capa">';
     if (!require($Link->getPatch())):
         WSErro('Erro ao incluir arquivo de navegação!', WS_ERROR, true);
@@ -59,7 +59,6 @@ Check::UserOnline();
     ?>
 </body>
 <!-- JS -->
-<script src="<?= HOME; ?>/js/modernizr.min.js"></script>
 <script src="<?= HOME; ?>/lib/jquery/jquery.js"></script>
 <script src="<?= HOME; ?>/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?= HOME; ?>/lib/shadowbox/shadowbox.js"></script>

@@ -20,7 +20,7 @@ define('SITEDESC', 'Rolnews - Informação digital');
 
 // DEFINE A BASE DO SITE ####################
 define('HOME', 'http://localhost/servidor/rolnews/2015');
-define('THEME', 'rolnews');
+define('THEME', 'rolnewsresp');
 
 define('INCLUDE_PATH', HOME . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . THEME);
 define('REQUIRE_PATH', 'themes' . DIRECTORY_SEPARATOR . THEME);

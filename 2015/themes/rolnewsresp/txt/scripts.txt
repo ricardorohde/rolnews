@@ -1,0 +1,2 @@
+---Executar Script No Banco de Dados --
+UPDATE noticias_categoria SET categoria='POLÍTICA' WHERE id_categoria=1;
