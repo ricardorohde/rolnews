@@ -20,7 +20,7 @@
                 <!-- AddToAny END -->
             </div>
             <div class="frameBox">
-                <iframe src="https://sitehosting.com.br/controle/player.php?playerimg=https%3A%2F%2Fsitehosting.com.br%2Fimagens%2Fhospedagemestreaming.png%3Fe%3D2%26u%3Dstudiomax&amp;playermovie=&amp;nome=studiomax&amp;servidor=streaming55.sitehosting.com.br&amp;width=640&amp;height=360&amp;autostart=true&amp;iframe=iframe" frameborder="0" scrolling="no"></iframe>
+                <iframe align="middle" frameborder="0" height="360" longdesc="www.rolnews.com.br/rolnewstv" scrolling="no" src="https://iframe.dacast.com/b/20748/c/80766" title="ROLNEWS TV" width="645"></iframe>
             </div>
             <div class="maxLogo tcenter bold">
                 TODO CONTEÚDO GERADO PERTENCE A: <br>
