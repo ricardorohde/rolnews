@@ -45,7 +45,7 @@ $bannerSwf1 = '221537-1000x150.swf';
 <div class="row marginBottom">
     <div class="col-md-8">
         <div class="blcDestaqueNews">
-            <div class="vinDestaqueNews t18 grafite bold">NOTÍCIAS EM DESTAQUE</div>
+            <h4>NOTÍCIAS EM DESTAQUE</h4>
             <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                 <div class="destaqueNewsBig">
                     <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">

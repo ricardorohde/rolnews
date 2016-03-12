@@ -22,9 +22,8 @@ nav{ width: 100%; float: left;}
 
 
 /*============= TOPO ==============*/
-header{ width: 100%; height: 12%; margin-bottom: 10px; position: fixed; z-index: 11; background: #FF7212;}
+header{ width: 100%; height: 11%; margin-bottom: 10px; position: fixed; z-index: 11; background: #FF7212;}
 #topo{ width: 100%; float: left;}
-
 .menu{ width: 25%; padding-top: 8%; float: left; cursor: pointer; font-size: 1.2em; color: #FFF;}
 #menu{ width: 100%; margin: 74px 0 0 0; padding: 1%; position: fixed; z-index: 10; background: #FFF; display: none; }
 aside{ width: 100%; border-right: 0.3em solid #ececec; float: left;}
@@ -33,29 +32,11 @@ aside ul li{ width: 100%; padding: 2%; float: left; font-size: 1.2em}
 aside ul li:hover{ width: 100%; background: #ececec;}
 aside ul li a{ width: 100%; color: #000;}
 aside ul li a:hover{color: #ff7212; text-decoration: none;}
-
 .busca{ width: 26.9%; padding: 20px 0 0 20px; float: left;}
 .busca input[type=search]{ width: 100%; padding: 5px 35px 5px 5px; border-radius: 25px; float: left; }
 .busca .btnBusca{ width: 30px; margin: 8px 0 0 -35px; background: #fff; position: absolute;}
-
 .logo{ width: 50%; float: right; margin-top: 3%; text-align: right;}
 .dataTopo{ padding: 20px 0 0 0; float: right;}
-
-@media (min-width: 768px) { 
-
-}
-
-@media (min-width: 992px) { 
-    header{ height: 9.90%;}
-    .menu{ width: 10%; padding-top: 2.5%; }
-    aside ul li{ padding: 1%;}
-    .logo{ width: 25%; margin-top: 0.5%; float: left;}
-    
-}
-
-@media (min-width: 1200px) { 
-    .menu{ width: 10%; padding-top: 1.5%; }
-}
 
 /*PopUp*/
 .blcPopUp{ width: 100%; background: #FFF; position: absolute; z-index: 12; filter:alpha(opacity=70); -moz-opacity:0.7; opacity:0.7; -khtml-opacity:0.7;}
@@ -64,7 +45,7 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 .boxPopUp{ width: 1320px; margin-top: 50px; position: fixed; z-index: 13;}
 .popUp{ width: 320px; margin: 0 0 10px 10px; float: left;}
 
-/*Capa*/
+/*============= CAPA ==============*/
 .capa{ width: 100%; margin: 90px 0 0 0; float: left;}
 .blcDestaqueNews{ width: 100%; float: left;}
 .vinDestaqueNews{}
@@ -134,14 +115,15 @@ section#slide ul li span{ width: 600px; background: #bcb000; display: table; pad
 .boxVideoTit{ width: 100%; height: 40px; margin: 4px; float: left;}
 
 .boxRolnewsTv{ width: 100%; float: left;}
-/*Rodape*/
+
+/*============= RODAPE ==============*/
 footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 .copyright{ float: left;}
 .logoRodape{ width: 65px; height: 54px; float: left; padding: 10px 0 0 0;}
 .txtCopyright{ padding: 20px 0 0 10px; float: left;}
 .developer{ padding: 20px 0 0 0; float: right;}
 
-/*Noticias*/
+/*============= NOTICIAS ==============*/
 .news{ width: 100%; padding: 5px; float: left; background: #FFF;}
 .blcNews{ width: 100%; float: left;}
 .boxNews{ width: 100%; padding: 5px; margin-bottom: 5px; float: left; background: #ececec;}
@@ -151,7 +133,7 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 .boxNewsDadosTit{ width: 100%; float: left;}
 .boxNewsDadosPrev{ width: 100%; float: left;}
 
-/*Noticia*/
+/*============= NOTICIA ==============*/
 .headline{ width: 100%; float: left;}
 .headline h1{ width: 100%; font-size: 4rem; float: left; }
 .headline h2{ width: 100%; font-size: 2rem; margin: -5px 0 0 0; float: left;}
@@ -160,18 +142,37 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 .noticiaImg{ width: 480px; margin: 5px 5px 5px 0px; float: left;}
 .noticiaTxt{ width: 100%; font-size: 1.6rem;}
 
-/*Video*/
+/*============= VIDEO ==============*/
 .videoPlayer{ width: 100%; float: left; background: #FFF; margin-bottom: 10px; padding: 10px;}
 .videoSocial{ float: right;}
 .frameBox{ width: 640px; margin: 0 auto;}
 .videoPlayer iframe{ width: 640px; height: 360px;}
 .maxLogo{ width: 100%; float: left;}
 
-/*Contato*/
+/*============= CONTATO ==============*/
 .breadcrumb{ background: #FFF;}
 
-/*Eventos*/
+/*============= EVENTOS ==============*/
 .boxEvento{ width: 100%; height: 360px; border: 1px solid #CCC; padding: 5px; float: left; color: #000; text-decoration: none;}
 .boxEvento:hover{ text-decoration: none; color: #ff7212;}
 .boxEvento p{ margin: 0 0 0 0;}
 .boxSocialTxt{ width: 100%; float: left;}
+
+
+@media (min-width: 768px) { 
+    /*========= MIN 768px =========*/
+
+}
+
+@media (min-width: 992px) { 
+    /*========= MIN 992px =========*/
+    header{ height: 9.90%;}
+    .menu{ width: 10%; padding-top: 2.5%; }
+    aside ul li{ padding: 1%;}
+    .logo{ width: 25%; margin-top: 0.5%; float: left;}
+}
+
+@media (min-width: 1200px) { 
+    /*========= MIN 1200px =========*/
+    .menu{ width: 10%; padding-top: 1.5%; }
+}
