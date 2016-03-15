@@ -55,9 +55,3 @@ Shadowbox.init({
     language: 'pt',
     player: ['img', 'html', 'swf']
 });
-
-//Redireciona conforme a resolução
-var resol = screen.width;
-if (resol <= 768) {
-    window.location.href = "http://m.rolnews.com.br";
-}
