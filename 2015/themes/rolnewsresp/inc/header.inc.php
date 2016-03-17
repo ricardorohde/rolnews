@@ -16,7 +16,7 @@
                         <button type="submit" name="sendsearch" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
                     </form>
                 </div>
-                <div class="logo"><a href="<?= HOME; ?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
+                <a href="<?= HOME; ?>" title="<?= SITENAME; ?>"><h1 class="logo"><?= SITENAME; ?></h1></a>
                 <div class="dataTopo t14 branco hidden-xs">
                     <script>dataCorrente();</script>
                     <div id="boxHr"></div>
