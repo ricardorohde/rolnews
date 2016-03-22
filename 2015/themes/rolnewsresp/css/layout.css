@@ -3,7 +3,15 @@
 body { background: #fff4f4; overflow-x: hidden;}
 a { text-decoration: none;}
 ul { list-style: none;}
-img { max-width: 100%;}
+img,
+object,
+embed,
+video,
+iframe,
+iframe[style]{
+    max-width: 100%;
+    height: auto;
+}
 
 /*============= PADROES ==============*/
 .shadowBottom{ box-shadow: 0px 1px 5px #888;}
@@ -20,46 +28,13 @@ img { max-width: 100%;}
 nav{ width: 100%; float: left;}
 
 /*============= COLORS ==============*/
-.amarelo, .amarelo a			{ color:#fff000;  }
-.amarelo2, .amarelo2 a			{ color:#FC0;  }
-.azul, .azul a				{ color:#006fb8;  }
-.azul2, .azul2 a			{ color:#004d81;  }
-.azul3, .azul3 a                        { color:#297ac3;  }
-.azul4, .azul4 a			{ color:#183d67;  }
-.azul5, .azul5 a			{ color:#0c73ae;  }
-.azulciano, .azulciano a                { color:#196187;  }
-.azulEscuro, .azulEscuro a              { color:#000066;  }
-.branco, .branco a                      { color:#FFFFFF;  }
-.cinza, .cinza a                        { color:#858685;  }
-.cinza2, .cinza2 a			{ color:#dde7d4;  }
-.cinza3, .cinza3 a			{ color:#8c9299;  }
-.cinza4, .cinza4 a			{ color:#969696;  }
-.cinza5, .cinza5 a			{ color:#c9c8c8;  }
-.cinza_claro, .cinza_claro a            { color:#CCCCCC;  }
-.cesq, .cesq a                          { color:#333333;  }
-.dourado, .dourado a			{ color:#dd8a05;  }
-.grafite, .grafite a			{ color:#333333;  }
-.grafite2, .grafite2 a			{ color:#635c70;  }
-.grafite3, .grafite3 a			{ color:#939393;  }
-.laranja, .laranja a			{ color:#fe4e00;  }
-.laranja2, .laranja2 a			{ color:#df903d;  }
-.marrom, .marrom a			{ color:#5a2a2a;  }
-.marrom2, .marrom2 a			{ color:#864a0a;  }
-.preto, .preto a			{ color:#000000;  }
-.rosa, .rosa a				{ color:#F03;  	  }
-.rosa2, .rosa2 a			{ color:#ba4378	  }
-.roxo, .roxo a				{ color:#3e3f5e;  }
-.vermelho, .vermelho a			{ color:#DB0115;  }
-.vinho, .vinho a 			{ color:#990000;  }
-.verde, .verde a			{ color:#018101;  }
-.verde2, .verde2 a			{ color:#a2d848;  }
-.verde3, .verde3 a			{ color:#66cc00;  }
-.verde4, .verde4 a			{ color:#65821d;  }
-
+.branco, .branco a { color:#FFF;}
+.grafite, .grafite a { color:#333;}
+.preto, .preto a { color:#000;}
 /*============= TOPO ==============*/
 
-/*1260 - contexto*/
-header{ width: 100%; height: 15%; position: fixed; z-index: 11; background: #FF7212;}
+/*1140px - contexto*/
+header{ width: 100%; max-height: 74px; position: fixed; z-index: 11; background: #FF7212;}
 #topo{ width: 100%; float: left;}
 .menu{ width: 25%; padding-top: 22px; float: left; cursor: pointer; font-size: 1.15em; color: #FFF;}
 #menu{ width: 100%; margin-top: 70px; padding: 1%; position: fixed; z-index: 10; background: #FFF; display: none; }
@@ -83,6 +58,7 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 .popUp{ width: 320px; margin: 0 0 10px 10px; float: left;}
 
 /*============= CAPA ==============*/
+/*970px*/
 .capa{ width: 100%; margin: 85px 0 0 0; float: left;}
 .vinNoticiasDest{ width: 100%; margin: 0 0 5px 0; font-size: 1.3em; font-weight: bold;}
 .boxDestaqueNews{ width: 100%; padding: 2%; float: left; background: #fff;}
@@ -97,14 +73,14 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 .destaqueNewsSmallItemTit{ width: 56.40%; height: 85px; float: left; padding-left: 1%; }
 .destaqueNewsSmallItemTit:hover{color: #ff7212;}
 
-.blcPublicidade{ width: 100%; float: left; padding: 3px; background: #fff;}
+.blcPublicidade{ width: 100%; position: relative; border: solid 3px #FFF; background: #FFF;}
 .vinPublicidade{ font-size: 0.8em;}
-.boxPublicidade{ width: 100%; max-height: 312px; float: left;}
-.boxPublicidadeFull{ width: 100%; height: auto; float: left;}
+.boxPublicidade{ width: 100%; max-height: 312px; position: relative;}
+.boxPublicidadeFull{ width: 100%; position: relative;}
 
 .blcMaisNews{ width: 100%; float: left;}
-.boxMaisNews{ width: 100%; float: left; background: #fff;}
-.boxMaisNewImg{ width: 100%; height: 170px; float: left;}
+.boxMaisNews{ width: 100%; padding: 1%; float: left; background: #fff;}
+.boxMaisNewImg{ width: 100%; float: left;}
 .boxMaisNewsDados{ width: 100%; height: 175px; padding: 0 5px; float: left;}
 .boxMaisNewsDadosCat{float: left; padding-top: 2px; border-bottom: 1px solid #ff0000;}
 .boxMaisNewsDadosTit{ width: 100%; float: left;}
@@ -112,8 +88,10 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 
 .boxMaisNewsBigImg{ width: 25.6%; height: 108px; padding-left: 2px; float: left;}
 .boxMaisNewsBigDados{ width: 74.4%; padding-left: 10px; float: left;}
-.boxMaisNewsSmallImg{ width: 45.1%; height: 108px; padding-left: 2px; float: left;}
-.boxMaisNewsSmallDados{ width: 54.9%; padding-left: 5px; float: left;}
+.boxMaisNewsSmallImg{ width: 45.1%; padding-left: 2px; float: left;}
+.boxMaisNewsSmallDados{ width: 54.9%; padding: 5px; float: left;}
+.boxMaisNewsSmallDados .boxMaisNewsCat{ font-size: 1.0em; font-weight: bold;}
+.boxMaisNewsSmallDados .boxMaisNewsTit{ font-size: 0.9375em; line-height: 125%; word-wrap: break-word;}
 .boxMaisNewsFull{ width: 100%; height: 233px; float: left;}
 .boxMaisNewsFullDados{ width: 93%; position: absolute; bottom: 0; padding: 5px; background: #000;}
 
@@ -142,9 +120,9 @@ section#slide ul li span{ width: 97%; background: #bcb000; display: table; paddi
 .boxFlyers{width: 100%; height: 320px; padding: 5px; float: left; background: #fff;}
 
 .blcVideo{width: 100%; float: left;}
-.boxVideo{width: 100%; float: left; margin-bottom: 10px; background: #fff;}
-.boxVideoImg{ width: 225px; height: 110px; margin: 4px; float: left;}
-.boxVideoTit{ width: 100%; height: 40px; margin: 4px; float: left;}
+.boxVideo{width: 100%; float: left; margin-bottom: 10px; padding: 1%; background: #fff;}
+.boxVideoImg{ width: 100%; float: left;}
+.boxVideoTit{ width: 100%; height: 40px; float: left;}
 
 .boxRolnewsTv{ width: 100%; float: left;}
 
@@ -193,7 +171,7 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 
 @media (min-width: 768px) { 
     /*========= MIN 768px =========*/
-
+    .boxMaisNewsDateTime{ display: none;}
 }
 
 @media (min-width: 992px) { 
@@ -206,4 +184,5 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 @media (min-width: 1200px) { 
     /*========= MIN 1200px =========*/
     .menu{ width: 10%; padding-top: 1.5%; }
+    .boxMaisNewsDateTime{ display: block;}
 }

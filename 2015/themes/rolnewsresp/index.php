@@ -7,15 +7,15 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = '221537-1000x150.swf';
+$bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
 ?>
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull slide">
+            <div class="boxPublicidadeFull">
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
                     <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>"><param name="quality" value="high">
-                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="978"></embed>
+                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%"></embed>
                 </object>
             </div>
         </div>
@@ -51,7 +51,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
-                                <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" class="img-responsive" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=326&h=200'; ?>" /></div>
+                                <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=345&h=200'; ?>" /></div>
                                 <div class="destaqueNewsBigDados">
                                     <div class="destaqueNewsBigDadosCat grafite"><?= strtoupper($newsDestBig['categoria']); ?></div>
                                     <div class="destaqueNewsBigDadosTit grafite bold"><?= Check::Words($newsDestBig['titulo'], 15); ?></div>
@@ -65,7 +65,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                                 ?>
                                 <div class="destaqueNewsSmallItem">
                                     <a href="<?= HOME . '/noticia/' . $newsDesSmall['url_name']; ?>" title="<?= $newsDesSmall['titulo']; ?>">
-                                        <div class="destaqueNewsSmallItemImg"><img alt="<?= $newsDesSmall['titulo']; ?>" title="<?= $newsDesSmall['titulo']; ?>" class="img-responsive" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDesSmall['foto'] . '&w=115&h=85'; ?>"/></div>
+                                        <div class="destaqueNewsSmallItemImg"><img alt="<?= $newsDesSmall['titulo']; ?>" title="<?= $newsDesSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDesSmall['foto'] . '&w=147&h=85'; ?>"/></div>
                                         <div class="destaqueNewsSmallItemTit grafite"><?= Check::Words($newsDesSmall['titulo'], 13); ?></div>
                                     </a>
                                 </div>
@@ -106,7 +106,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                 ?>
                 <a href="<?= HOME . '/noticia/' . $newsBig['url_name']; ?>" title="<?= $newsBig['titulo']; ?>">
                     <div class="boxMaisNews borderTopRed radius shadowBottom">
-                        <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=143&h=108'; ?>" width="143" height="108"/></div>
+                        <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=165&h=108'; ?>"/></div>
                         <div class="boxMaisNewsBigDados">
                             <div class="boxMaisNewsCat grafite"><?= strtoupper($newsBig['categoria']); ?></div>
                             <div class="boxMaisNewsTit grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
@@ -124,10 +124,10 @@ $bannerSwf1 = '221537-1000x150.swf';
                 <a href="<?= HOME . '/noticia/' . $newsSmall['url_name']; ?>" title="<?= $newsSmall['titulo']; ?>">
                     <div class="col-md-6">
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=119&h=108'; ?>" width="119" height="108"/></div>
+                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=165&h=108'; ?>"/></div>
                             <div class="boxMaisNewsSmallDados">
                                 <div class="boxMaisNewsCat grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
-                                <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsSmall['titulo'], 10); ?></div>
+                                <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsSmall['titulo'], 8); ?></div>
                                 <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -193,10 +193,10 @@ $bannerSwf1 = '221537-1000x150.swf';
                         <div class="col-md-12">
                             <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
                                 <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=160&h=108'; ?>"/></div>
                                     <div class="boxMaisNewsSmallDados">
                                         <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
-                                        <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolitica['titulo'], 10); ?></div>
+                                        <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolitica['titulo'], 8); ?></div>
                                         <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
                                     </div>
                                 </div>
@@ -212,7 +212,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                 <div class="col-md-4">
                     <a href="<?= HOME . '/noticia/' . $catPoliticaBig['url_name']; ?>" title="<?= $catPoliticaBig['titulo']; ?>">
                         <div class="boxMaisNews radius shadowBottom">
-                            <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=308&h=170'; ?>" width="308" height="170"/></div>
+                            <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=360&h=170'; ?>"/></div>
                             <div class="boxMaisNewsDados">
                                 <div class="boxMaisNewsDadosCat grafite"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
                                 <div class="boxMaisNewsDadosTit grafite"><?= Check::Words($catPoliticaBig['titulo'], 10); ?></div>
@@ -259,7 +259,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                             ?>
 
                             <a href="<?= HOME . '/noticia/' . $catPoliticaSingle['url_name']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>">
-                                <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=326&h=200'; ?>" width="326" height="200"/></div>
+                                <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=345&h=200'; ?>"/></div>
                                 <div class="destaqueNewsBigDados">
                                     <div class="destaqueNewsBigDadosCat grafite"><?= strtoupper($catPoliticaSingle['categoria']); ?></div>
                                     <div class="destaqueNewsBigDadosTit grafite"><?= Check::Words($catPoliticaSingle['titulo'], 10); ?></div>
@@ -275,7 +275,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                                 ?>
                                 <a href="<?= HOME . '/noticia/' . $catPoliticaSmall['url_name']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>">
                                     <div class="destaqueNewsSmallItem">
-                                        <div class="destaqueNewsSmallItemImg"><img alt="<?= $catPoliticaSmall['titulo']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSmall['foto'] . '&w=115&h=85'; ?>" width="115" height="85"/></div>
+                                        <div class="destaqueNewsSmallItemImg"><img alt="<?= $catPoliticaSmall['titulo']; ?>" title="<?= $catPoliticaSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSmall['foto'] . '&w=147&h=85'; ?>"/></div>
                                         <div class="destaqueNewsSmallItemTit grafite"><?= Check::Words($catPoliticaSmall['titulo'], 10); ?></div>
                                     </div>
                                 </a>
@@ -300,7 +300,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catPolicial['url_name']; ?>" title="<?= $catPolicial['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=160&h=108'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolicial['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolicial['titulo'], 10); ?></div>
@@ -324,7 +324,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catCultura['url_name']; ?>" title="<?= $catCultura['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=160&h=108'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catCultura['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catCultura['titulo'], 10); ?></div>
@@ -348,7 +348,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catEsporte['url_name']; ?>" title="<?= $catEsporte['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=138&h=108'; ?>" width="138" height="108"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=160&h=108'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catEsporte['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catEsporte['titulo'], 10); ?></div>
@@ -373,7 +373,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -402,7 +402,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                                 <li>
                                     <a href="<?= HOME . '/evento/' . $eventos['url_name']; ?>" title="<?= $eventos['evento']; ?>">
                                         <span><?= $eventos['evento']; ?></span>
-                                        <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" width="561" height="320" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
+                                        <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
                                     </a>
                                 </li>     
                                 <?php
@@ -466,7 +466,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -498,7 +498,7 @@ $bannerSwf1 = '221537-1000x150.swf';
                                     <div class="media">
                                         <div class="media-left">
                                             <a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>">
-                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $colunista['foto'] . '&w=100'; ?>" width="100" title="<?= $colunista['nome']; ?>" alt="<?= $colunista['nome']; ?>">
+                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $colunista['foto'] . '&w=200&h=100'; ?>" title="<?= $colunista['nome']; ?>" alt="<?= $colunista['nome']; ?>">
                                             </a>
                                         </div>
                                         <div class="media-body">
@@ -532,11 +532,11 @@ $bannerSwf1 = '221537-1000x150.swf';
 <div class="row marginBottom">
     <div class="col-md-6">    
         <div class="vinPag borderBottomPurple grafite">FACEBOOK</div>
-        <div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="480" data-height="485" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div>
+        <div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="480" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div>
     </div>
     <div class="col-md-6">
         <div class="vinPag borderBottomYellow grafite">ROLNEWS TV</div>
-        <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="480" height="214" alt="Rolnews TV" title="Rolnews TV"></a></div>
+        <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="100%" alt="Rolnews TV" title="Rolnews TV"></a></div>
     </div>
 </div>
 <div class="row marginBottom">
