@@ -55,3 +55,7 @@ Shadowbox.init({
     language: 'pt',
     player: ['img', 'html', 'swf']
 });
+
+$('.debug').each(function () {
+    $(this).after('<p style="color: #fff; background: #333; padding: 10px">' + $(this).width() + 'px</p>');
+});
