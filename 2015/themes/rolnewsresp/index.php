@@ -10,7 +10,7 @@ $newsDestBig = $news->getResult()[0];
 $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
 ?>
 <div class="row marginBottom hidden-xs">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull">
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
@@ -22,7 +22,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull slide">
                 <?php
@@ -45,11 +45,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
 <div class="row marginBottom">
     <div class="col-md-8">
         <div class="row">
-            <div class="col-xs-12 col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <h4 class="vinNoticiasDest">NOTÍCIAS EM DESTAQUE</h4>
                 <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
                             <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
                                 <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=345&h=200'; ?>" /></div>
                                 <div class="destaqueNewsBigDados">
@@ -58,7 +58,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             <?php
                             $news->setPlaces("destaque=sim&limit=3&offset=1");
                             foreach ($news->getResult() as $newsDesSmall):
@@ -97,9 +97,9 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-7">
+    <div class="col-md-7 col-sm-12">
         <div class="row marginBottom">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-4">
                 <?php
                 $news->setPlaces("destaque=sim&limit=1&offset=4");
                 $newsBig = $news->getResult()[0];
@@ -115,14 +115,13 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                     </div>
                 </a>
             </div>
-        </div>
-        <div class="row marginBottom">
+        
             <?php
             $news->setPlaces("destaque=sim&limit=2&offset=5");
             foreach ($news->getResult() as $newsSmall):
                 ?>
                 <a href="<?= HOME . '/noticia/' . $newsSmall['url_name']; ?>" title="<?= $newsSmall['titulo']; ?>">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-4">
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
                             <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=165&h=108'; ?>"/></div>
                             <div class="boxMaisNewsSmallDados">
@@ -135,6 +134,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 </a>
             <?php endforeach; ?>
         </div>
+        
     </div>
     <div class="col-md-5">
         <?php
@@ -183,14 +183,15 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     <div class="col-md-12">
         <div class="vinDestaqueNews borderBottomGreen t18 grafite">POLÍTICA</div>
         <div class="row marginBottom">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
+                
                 <?php
                 $newsCat = new Read;
                 $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
                 foreach ($newsCat->getResult() as $catPolitica):
                     ?>
                     <div class="row marginBottom">
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-sm-12">
                             <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
                                 <div class="boxMaisNews radius shadowBottom">
                                     <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=160&h=108'; ?>"/></div>
@@ -204,12 +205,13 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                         </div>
                     </div>
                 <?php endforeach; ?>
+                    
             </div>
             <?php
             $newsCat->setPlaces("categoria=politica&limit=2&offset=3");
             foreach ($newsCat->getResult() as $catPoliticaBig):
                 ?>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-xs-12">
                     <a href="<?= HOME . '/noticia/' . $catPoliticaBig['url_name']; ?>" title="<?= $catPoliticaBig['titulo']; ?>">
                         <div class="boxMaisNews radius shadowBottom">
                             <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=360&h=170'; ?>"/></div>
@@ -248,11 +250,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
 
     <div class="col-md-8">
         <div class="row">
-            <div class="col-xs-12 col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="vinNoticiasDest grafite bold">GERAL</div>
                 <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
                             <?php
                             $newsCat->setPlaces("categoria=geral&limit=1&offset=0");
                             $catPoliticaSingle = $newsCat->getResult()[0];
@@ -267,7 +269,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                             </a>
 
                         </div>
-                        <div class="col-xs-12 col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
 
                             <?php
                             $newsCat->setPlaces("categoria=geral&limit=3&offset=1");
@@ -289,7 +291,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <div class="blcMaisNews ">
             <div class="vinMaisNews borderBottomGreen grafite">POLICIAL</div>
             <?php
@@ -313,7 +315,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4  col-sm-4">
         <div class="blcMaisNews">
             <div class="vinMaisNews borderBottomPurple grafite">CULTURA</div>
             <?php
@@ -337,7 +339,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 col-sm-4">
         <div class="blcMaisNews">
             <div class="vinMaisNews borderBottomBlue grafite">ESPORTES</div>
             <?php
@@ -383,7 +385,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-7">
+    <div class="col-md-7 col-sm-6">
         <div class="blcCoberturas">
             <div class="vinCoberturas borderBottomYellow grafite">EVENTOS</div>
             <div class="boxCoberturas radius shadowBottom">
@@ -414,7 +416,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             </div>
         </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 col-sm-6">
         <div class="blcFlyers">
             <div class="vinFlyers borderBottomPurple grafite">DESTAQUES</div>
             <div class="boxFlyers radius shadowBottom">
@@ -491,7 +493,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                         $ReadColuna = new Read;
                         $ReadColuna->ExeRead('noticias', "WHERE coluna = :coluna AND qm_cadastr = :colunista ORDER BY id DESC LIMIT 1", "coluna=sim&colunista={$colunista['id']}");
                         ?>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-4">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>"><?= $colunista['nome']; ?></a></div>
                                 <div class="panel-body">
@@ -530,11 +532,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-6">    
+    <div class="col-md-6 col-sm-6">    
         <div class="vinPag borderBottomPurple grafite">FACEBOOK</div>
         <div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="480" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-sm-6">
         <div class="vinPag borderBottomYellow grafite">ROLNEWS TV</div>
         <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="100%" alt="Rolnews TV" title="Rolnews TV"></a></div>
     </div>
