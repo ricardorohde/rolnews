@@ -194,7 +194,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                         <div class="col-md-12 col-sm-12">
                             <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
                                 <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=160&h=108'; ?>"/></div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=500&h=108'; ?>" class="debug"/></div>
                                     <div class="boxMaisNewsSmallDados">
                                         <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
                                         <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolitica['titulo'], 8); ?></div>
