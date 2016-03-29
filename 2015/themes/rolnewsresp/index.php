@@ -51,7 +51,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 ">
                             <a href="<?= HOME . '/noticia/' . $newsDestBig['url_name']; ?>" title="<?= $newsDestBig['titulo']; ?>">
-                                <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=345&h=200'; ?>" /></div>
+                                <div class="destaqueNewsBigImg"><img alt="<?= $newsDestBig['titulo']; ?>" title="<?= $newsDestBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsDestBig['foto'] . '&w=570&h=285'; ?>"/></div>
                                 <div class="destaqueNewsBigDados">
                                     <div class="destaqueNewsBigDadosCat grafite"><?= strtoupper($newsDestBig['categoria']); ?></div>
                                     <div class="destaqueNewsBigDadosTit grafite bold"><?= Check::Words($newsDestBig['titulo'], 15); ?></div>
@@ -97,44 +97,44 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-7 col-sm-12">
-        <div class="row marginBottom">
-            <div class="col-md-12 col-sm-4">
+    <div class="col-md-7 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-md-12 col-sm-4 col-xs-12 marginBottom">
                 <?php
                 $news->setPlaces("destaque=sim&limit=1&offset=4");
                 $newsBig = $news->getResult()[0];
                 ?>
                 <a href="<?= HOME . '/noticia/' . $newsBig['url_name']; ?>" title="<?= $newsBig['titulo']; ?>">
                     <div class="boxMaisNews borderTopRed radius shadowBottom">
-                        <div class="boxMaisNewsBigImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=165&h=108'; ?>"/></div>
-                        <div class="boxMaisNewsBigDados">
+                        <div class="boxMaisNewsSmallImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=320&h=200'; ?>"/></div>
+                        <div class="boxMaisNewsSmallDados">
                             <div class="boxMaisNewsCat grafite"><?= strtoupper($newsBig['categoria']); ?></div>
-                            <div class="boxMaisNewsTit grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
-                            <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
+                            <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
+                            <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($newsBig['data'])); ?></div>
                         </div>
                     </div>
                 </a>
             </div>
-        
+
             <?php
             $news->setPlaces("destaque=sim&limit=2&offset=5");
             foreach ($news->getResult() as $newsSmall):
                 ?>
                 <a href="<?= HOME . '/noticia/' . $newsSmall['url_name']; ?>" title="<?= $newsSmall['titulo']; ?>">
-                    <div class="col-md-6 col-sm-4">
+                    <div class="col-md-6 col-sm-4 col-xs-6 marginBottom">
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=165&h=108'; ?>"/></div>
+                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=320&h=200'; ?>"/></div>
                             <div class="boxMaisNewsSmallDados">
                                 <div class="boxMaisNewsCat grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
                                 <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsSmall['titulo'], 8); ?></div>
-                                <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
+                                <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($newsSmall['data'])); ?></div>
                             </div>
                         </div>
                     </div>
                 </a>
             <?php endforeach; ?>
         </div>
-        
+
     </div>
     <div class="col-md-5">
         <?php
@@ -183,35 +183,35 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     <div class="col-md-12">
         <div class="vinDestaqueNews borderBottomGreen t18 grafite">POLÍTICA</div>
         <div class="row marginBottom">
-            <div class="col-md-4 col-sm-12">
-                
-                <?php
-                $newsCat = new Read;
-                $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
-                foreach ($newsCat->getResult() as $catPolitica):
-                    ?>
-                    <div class="row marginBottom">
-                        <div class="col-md-12 col-sm-12">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <?php
+                    $newsCat = new Read;
+                    $newsCat->ExeRead("noticias n", "LEFT JOIN noticias_categoria nc ON nc.cat_url = n.categoria WHERE n.categoria = :categoria ORDER BY id DESC LIMIT :limit OFFSET :offset", "categoria=politica&limit=3&offset=0");
+                    foreach ($newsCat->getResult() as $catPolitica):
+                        ?>
+
+                        <div class="col-md-12 col-sm-4 col-xs-12">
                             <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
-                                <div class="boxMaisNews radius shadowBottom">
-                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=500&h=108'; ?>" class="debug"/></div>
+                                <div class="boxMaisNews radius shadowBottom marginBottom">
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=320&h=200'; ?>" /></div>
                                     <div class="boxMaisNewsSmallDados">
                                         <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
                                         <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolitica['titulo'], 8); ?></div>
-                                        <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
+                                        <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($catPolitica['data'])); ?></div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    </div>
-                <?php endforeach; ?>
-                    
+
+                    <?php endforeach; ?>
+                </div>
             </div>
             <?php
             $newsCat->setPlaces("categoria=politica&limit=2&offset=3");
             foreach ($newsCat->getResult() as $catPoliticaBig):
                 ?>
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-6">
                     <a href="<?= HOME . '/noticia/' . $catPoliticaBig['url_name']; ?>" title="<?= $catPoliticaBig['titulo']; ?>">
                         <div class="boxMaisNews radius shadowBottom">
                             <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=360&h=170'; ?>"/></div>
@@ -254,14 +254,14 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 <div class="vinNoticiasDest grafite bold">GERAL</div>
                 <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             <?php
                             $newsCat->setPlaces("categoria=geral&limit=1&offset=0");
                             $catPoliticaSingle = $newsCat->getResult()[0];
                             ?>
 
                             <a href="<?= HOME . '/noticia/' . $catPoliticaSingle['url_name']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>">
-                                <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=345&h=200'; ?>"/></div>
+                                <div class="destaqueNewsBigImg"><img alt="<?= $catPoliticaSingle['titulo']; ?>" title="<?= $catPoliticaSingle['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaSingle['foto'] . '&w=570&h=285'; ?>"/></div>
                                 <div class="destaqueNewsBigDados">
                                     <div class="destaqueNewsBigDadosCat grafite"><?= strtoupper($catPoliticaSingle['categoria']); ?></div>
                                     <div class="destaqueNewsBigDadosTit grafite"><?= Check::Words($catPoliticaSingle['titulo'], 10); ?></div>
@@ -291,7 +291,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-4 col-sm-4">
+    <div class="col-md-4 col-sm-4 col-xs-6">
         <div class="blcMaisNews ">
             <div class="vinMaisNews borderBottomGreen grafite">POLICIAL</div>
             <?php
@@ -302,11 +302,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catPolicial['url_name']; ?>" title="<?= $catPolicial['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=160&h=108'; ?>"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolicial['titulo']; ?>" title="<?= $catPolicial['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolicial['foto'] . '&w=320&h=200'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolicial['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolicial['titulo'], 10); ?></div>
-                                    <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catPolicial['data'])); ?></div>
+                                    <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($catPolicial['data'])); ?></div>
                                 </div>
                             </div>
                         </a>
@@ -315,7 +315,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="col-md-4  col-sm-4">
+    <div class="col-md-4 col-sm-4 col-xs-6">
         <div class="blcMaisNews">
             <div class="vinMaisNews borderBottomPurple grafite">CULTURA</div>
             <?php
@@ -326,11 +326,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catCultura['url_name']; ?>" title="<?= $catCultura['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=160&h=108'; ?>"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catCultura['titulo']; ?>" title="<?= $catCultura['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catCultura['foto'] . '&w=320&h=200'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catCultura['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catCultura['titulo'], 10); ?></div>
-                                    <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catCultura['data'])); ?></div>
+                                    <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($catCultura['data'])); ?></div>
                                 </div>
                             </div>
                         </a>
@@ -339,7 +339,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="col-md-4 col-sm-4">
+    <div class="col-md-4 col-sm-4 col-xs-6 hidden-xs">
         <div class="blcMaisNews">
             <div class="vinMaisNews borderBottomBlue grafite">ESPORTES</div>
             <?php
@@ -350,11 +350,11 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                     <div class="col-md-12">
                         <a href="<?= HOME . '/noticia/' . $catEsporte['url_name']; ?>" title="<?= $catEsporte['titulo']; ?>">
                             <div class="boxMaisNews radius shadowBottom">
-                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=160&h=108'; ?>"/></div>
+                                <div class="boxMaisNewsSmallImg"><img alt="<?= $catEsporte['titulo']; ?>" title="<?= $catEsporte['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catEsporte['foto'] . '&w=320&h=200'; ?>"/></div>
                                 <div class="boxMaisNewsSmallDados">
                                     <div class="boxMaisNewsCat grafite"><?= strtoupper($catEsporte['categoria']); ?></div>
                                     <div class="boxMaisNewsTit grafite"><?= Check::Words($catEsporte['titulo'], 10); ?></div>
-                                    <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catEsporte['data'])); ?></div>
+                                    <div class="boxMaisNewsDateTime grafite hidden-sm"><?= date('d/m/Y H:i', strtotime($catEsporte['data'])); ?></div>
                                 </div>
                             </div>
                         </a>
@@ -493,7 +493,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                         $ReadColuna = new Read;
                         $ReadColuna->ExeRead('noticias', "WHERE coluna = :coluna AND qm_cadastr = :colunista ORDER BY id DESC LIMIT 1", "coluna=sim&colunista={$colunista['id']}");
                         ?>
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>"><?= $colunista['nome']; ?></a></div>
                                 <div class="panel-body">

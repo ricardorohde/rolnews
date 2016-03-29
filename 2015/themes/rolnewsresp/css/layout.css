@@ -74,10 +74,10 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 .destaqueNewsSmallItemTit{ width: 56.40%; height: 85px; float: left; padding-left: 1%; }
 .destaqueNewsSmallItemTit:hover{color: #ff7212;}
 
-.blcPublicidade{ width: 100%; position: relative; border: solid 3px #FFF; background: #FFF;}
+.blcPublicidade{ width: 100%; position: relative; display: table; border: solid 3px #FFF; background: #FFF;}
 .vinPublicidade{ font-size: 0.8em;}
-.boxPublicidade{ width: 100%; max-height: 312px; position: relative;}
-.boxPublicidadeFull{ width: 100%; position: relative;}
+.boxPublicidade{ width: 100%; max-height: 312px; position: relative; display: table;}
+.boxPublicidadeFull{ width: 100%; position: relative; display: table;}
 
 .blcMaisNews{ width: 100%; float: left;}
 .boxMaisNews{ width: 100%; padding: 1%; float: left; background: #fff;}
@@ -87,8 +87,6 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 .boxMaisNewsDadosTit{ width: 100%; float: left;}
 .boxMaisNewsDadosTit:hover{ width: 100%; color: #ff7212; float: left;}
 
-.boxMaisNewsBigImg{ width: 25.6%; height: 108px; padding-left: 2px; float: left;}
-.boxMaisNewsBigDados{ width: 74.4%; padding-left: 10px; float: left;}
 .boxMaisNewsSmallImg{ width: 45.1%; padding-left: 2px; float: left;}
 .boxMaisNewsSmallDados{ width: 54.9%; padding: 5px; float: left;}
 .boxMaisNewsSmallDados .boxMaisNewsCat{ font-size: 1.0em; font-weight: bold;}
@@ -177,12 +175,19 @@ footer{ width: 100%; height: 74px; float: left; background: #ff7212;}
 }
 
 @media (max-width: 992px){
-    .boxMaisNewsFullDados { width: 100%; position: relative; top: 67%; display: table;}
+    .boxDestaqueNews{ margin-bottom: 10px;}
+    .boxMaisNewsSmallImg{ width: 100%;}
+    .boxMaisNewsSmallDados{ width: 100%;}
+    
+    .boxMaisNewsFullDados{ width: 100%; position: relative; top: 67%; display: table;}
+    
 }
 
 @media (max-width: 768px) { 
     /*========= MAX 768px =========*/
     .boxMaisNewsDateTime{ display: none;}
+    
+    .logo{ float: right;}
     
 }
 
