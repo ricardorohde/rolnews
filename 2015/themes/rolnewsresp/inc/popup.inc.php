@@ -1,5 +1,5 @@
-<div class="blcPopUp"></div>
-<div class="grpPoupUp">
+<div class="blcPopUp hidden-sm hidden-xs"></div>
+<div class="grpPoupUp hidden-sm hidden-xs">
     <div class="boxPopUp">
         <div class="closePopUp"><span class="btn btn-xs btn-danger"><b class="glyphicon glyphicon-off"></b> Fechar Publicidades</span></div>
         <?php

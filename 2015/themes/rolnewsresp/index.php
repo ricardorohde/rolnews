@@ -35,7 +35,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
                         echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -78,7 +81,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 hidden-sm hidden-xs">
         <div class="blcPublicidade radius shadowBottom">
             <div class="vinPublicidade grafite">Publicidade</div>
             <div class="boxPublicidade slide">
@@ -89,7 +92,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=355&h=390\" media=\"(max-width:1200px)\" />";
                         echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=355&h=315\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -172,7 +178,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
                         echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -230,7 +239,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-4">
+    <div class="col-md-4 hidden-sm hidden-xs"">
         <div class="blcPublicidade radius shadowBottom">
             <div class="vinPublicidade grafite">Publicidade</div>
             <div class="boxPublicidade slide">
@@ -241,7 +250,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=302&h=312\" />";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=355&h=390\" media=\"(max-width:1200px)\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=355&h=315\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -377,7 +389,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
                         echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -431,7 +446,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                         foreach ($banners->getResult() as $flyers):
                             ?>
                             <a href="#" title="<?= $flyers['titulo']; ?>">
-                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $flyers['banner'] . '&w=382&h=310'; ?>" width="382" height="310" title="<?= $flyers['titulo']; ?>" alt="<?= $flyers['titulo']; ?>">
+                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $flyers['banner'] . '&w=450&h=310'; ?>" title="<?= $flyers['titulo']; ?>" alt="<?= $flyers['titulo']; ?>">
                             </a>
                             <?php
                         endforeach;
@@ -470,7 +485,10 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
                         echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
                         echo "</a>";
                     endforeach;
                 endif;
