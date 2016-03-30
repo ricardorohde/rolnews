@@ -7,8 +7,24 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
+$bannerSwf1 = '221537-1000x150.swf';
+$bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 ?>
+
+<!-- SUPER BANNER PNA - EU CURTO RO-->
+<div style="width: 100%; position: fixed; bottom: 15px; z-index: 19000; height: 251px; left: 50%; margin-left: -50%; transition: 0.4s;" id="banner-eucurtoro"> 
+    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '-180px'" style="position: relative; top: 42px; z-index: 30000; left: 92%; width: 60px; height: 20px; border-radius: 5px;">
+        <img src="<?= INCLUDE_PATH; ?>/images/seta-fechar.png" style=" width: 100%;   -webkit-filter: brightness(1%);">
+    </div>
+    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '30px'" style=" position: relative; top: 22px; left: 89%; z-index: 30000; width: 30px; height: 20px; border-radius: 5px;">
+        <img src="<?= INCLUDE_PATH; ?>/images/seta-abrir.png" style=" width: 100%; text-shadow:#000 0px 0px 10px;  -webkit-filter: brightness(1%);">
+    </div>
+    <div style=" width: 1800px; position: relative; height: 211px; left: 50%;  margin-left: -900px; box-shadow: 0px 0px 20px 0px black;">
+        <embed width="100%"  height="100%" name="plugin" id="plugin" src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf2; ?>" type="application/x-shockwave-flash" z-index="20000"> 
+    </div>
+</div>
+<!-- SUPER BANNER PNA - EU CURTO RO-->
+
 <!--
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
