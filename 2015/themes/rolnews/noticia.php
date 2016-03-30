@@ -1,3 +1,11 @@
+<
+
+
+
+
+
+
+
 <?php
 if ($Link->getData()):
     extract($Link->getData());
@@ -6,6 +14,10 @@ else:
     header('Location: ' . HOME . DIRECTORY_SEPARATOR . '404');
 endif;
 ?>
+
+
+
+<? if($bloquear == 'sim'){ include("bloquearselecao.php"); } ?>
 <article class="news">
     <div class="headline">
         <h3 class="borderBottomBlue bold"><?= $categoria; ?></h3>

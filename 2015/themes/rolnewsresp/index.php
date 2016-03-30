@@ -9,6 +9,7 @@ $newsDestBig = $news->getResult()[0];
 //Banners SWF Governo
 $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
 ?>
+<!--
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -21,6 +22,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
         </div>
     </div>
 </div>
+-->
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -33,7 +35,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=978&h=150\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
                         echo "</a>";
                     endforeach;
                 endif;
@@ -87,7 +89,7 @@ $bannerSwf1 = 'MINHAAGENCIA-GOV-DEZEMBRO.swf';
                 else:
                     foreach ($banners->getResult() as $bnr):
                         echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
-                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=302&h=312\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=355&h=315\" />";
                         echo "</a>";
                     endforeach;
                 endif;
