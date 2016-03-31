@@ -13,13 +13,13 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 
 <!-- SUPER BANNER PNA - EU CURTO RO-->
 <div class="hidden-sm hidden-xs" style="width: 100%; position: fixed; bottom: 10px; z-index: 19000; left: 50%; margin-left: -50%; transition: 0.4s;" id="banner-eucurtoro"> 
-    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '-15%'" style="position: relative; top: 42px; z-index: 30000; left: 92%; width: 60px; height: 20px; border-radius: 5px;">
-        <img src="<?= INCLUDE_PATH; ?>/images/seta-fechar.png" style=" width: 100%;   -webkit-filter: brightness(1%);">
+    <div onclick="document.getElementById('banner-eucurtoro').style.bottom = '-15%'" style="position: relative; top: 42px; z-index: 30000; left: 92%; width: 60px; height: 20px; border-radius: 5px;">
+        <img src="<?= INCLUDE_PATH; ?>/images/seta-fechar.png" style=" width: 100%; -webkit-filter: brightness(1%);">
     </div>
-    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '2%'" style="position: relative; top: 22px; left: 89%; z-index: 30000; width: 30px; height: 20px; border-radius: 5px;">
-        <img src="<?= INCLUDE_PATH; ?>/images/seta-abrir.png" style=" width: 100%; text-shadow:#000 0px 0px 10px;  -webkit-filter: brightness(1%);">
+    <div onclick="document.getElementById('banner-eucurtoro').style.bottom = '2%'" style="position: relative; top: 22px; left: 89%; z-index: 30000; width: 30px; height: 20px; border-radius: 5px;">
+        <img src="<?= INCLUDE_PATH; ?>/images/seta-abrir.png" style=" width: 100%; text-shadow:#000 0px 0px 10px; -webkit-filter: brightness(1%);">
     </div>
-    <div style=" width: 1800px; position: relative; left: 50%;  margin-left: -900px; box-shadow: 0px 0px 20px 0px black;">
+    <div style=" width: 1800px; position: relative; left: 50%; margin-left: -900px; box-shadow: 0px 0px 20px 0px black;">
         <embed width="100%" height="100%" name="plugin" id="plugin" src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf2; ?>" type="application/x-shockwave-flash" z-index="20000"> 
     </div>
 </div>
