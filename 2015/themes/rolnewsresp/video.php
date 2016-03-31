@@ -28,11 +28,11 @@ endif;
                 <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div>
-            <div class="frameBox">
-                <iframe width="480" height="310" src="https://www.youtube.com/embed/<?= $link; ?>?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                <p><b>Autor:</b> <?= $autor; ?></p>
-                <p><b>Postado em:</b> <?= date('d/m/Y H:i', strtotime($data)); ?>Hs</p>
+            <div class="frameBox ratio4">
+                <iframe class="ratio_element" width="100%" src="https://www.youtube.com/embed/<?= $link; ?>?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
             </div>
+            <p><b>Autor:</b> <?= $autor; ?></p>
+            <p><b>Postado em:</b> <?= date('d/m/Y H:i', strtotime($data)); ?>Hs</p>
         </div>
     </div>
 </div>
@@ -52,7 +52,7 @@ endif;
             $tpl_videos = $View->Load('videos');
 
             foreach ($videos->getResult() as $v):
-                $v['titulo'] = Check::Words($v['titulo'], 10);
+                $v['titulo'] = Check::Words($v['titulo'], 7);
                 $View->Show($v, $tpl_videos);
             endforeach;
         endif;
