@@ -19,8 +19,8 @@
                 <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div>
-            <div class="frameBox">
-                <iframe src="https://sitehosting.com.br/controle/player.php?playerimg=https%3A%2F%2Fsitehosting.com.br%2Fimagens%2Fhospedagemestreaming.png%3Fe%3D2%26u%3Dstudiomax&amp;playermovie=&amp;nome=studiomax&amp;servidor=streaming55.sitehosting.com.br&amp;width=640&amp;height=360&amp;autostart=true&amp;iframe=iframe" frameborder="0" scrolling="no"></iframe>
+            <div class="frameBox ratio4">
+                <iframe class="ratio_element" src="https://iframe.dacast.com/b/20748/c/80766" width="100%" frameborder="0" scrolling="no"></iframe>
             </div>
             <div class="maxLogo tcenter bold">
                 TODO CONTEÚDO GERADO PERTENCE A: <br>
