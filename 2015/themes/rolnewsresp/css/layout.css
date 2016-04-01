@@ -22,7 +22,8 @@ body { background: #fff4f4; overflow-x: hidden;}
 .btnVertodos{ padding-bottom: 3px; float: right;}
 nav{ width: 100%; float: left;}
 .bold{ font-weight: bold;}
-.tcenter{text-align: center;}
+.tcenter{ text-align: center;}
+.tjustify{ text-align: justify;}
 /*============= COLORS ==============*/
 .branco, .branco a { color:#FFF;}
 .grafite, .grafite a { color:#333;}
