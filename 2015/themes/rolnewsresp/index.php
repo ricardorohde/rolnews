@@ -130,7 +130,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
                 ?>
                 <a href="<?= HOME . '/noticia/' . $newsBig['url_name']; ?>" title="<?= $newsBig['titulo']; ?>">
                     <div class="boxMaisNews borderTopRed radius shadowBottom">
-                        <div class="boxMaisNewsSmallImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=320&h=200'; ?>"/></div>
+                        <div class="boxMaisNewsSmallImg"><img alt="<?= $newsBig['titulo']; ?>" title="<?= $newsBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsBig['foto'] . '&w=385&h=200'; ?>"/></div>
                         <div class="boxMaisNewsSmallDados">
                             <div class="boxMaisNewsCat grafite"><?= strtoupper($newsBig['categoria']); ?></div>
                             <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsBig['titulo'], 15); ?></div>
@@ -147,7 +147,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
                 <a href="<?= HOME . '/noticia/' . $newsSmall['url_name']; ?>" title="<?= $newsSmall['titulo']; ?>">
                     <div class="col-md-6 col-sm-4 col-xs-6 marginBottom">
                         <div class="boxMaisNews borderTopRed radius shadowBottom">
-                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=320&h=200'; ?>"/></div>
+                            <div class="boxMaisNewsSmallImg"><img alt="<?= $newsSmall['titulo']; ?>" title="<?= $newsSmall['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $newsSmall['foto'] . '&w=320&h=245'; ?>"/></div>
                             <div class="boxMaisNewsSmallDados">
                                 <div class="boxMaisNewsCat grafite"><?= strtoupper($newsSmall['categoria']); ?></div>
                                 <div class="boxMaisNewsTit bold grafite"><?= Check::Words($newsSmall['titulo'], 8); ?></div>
@@ -178,9 +178,9 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row marginBottom">
     <div class="col-md-12">
-        <p class="t18 grafite tcenter bold"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTÍCIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
+        <p class="btnTodasNews"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTÍCIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
     </div>
 </div>
 <div class="row marginBottom">
@@ -208,7 +208,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 </div>
 <div class="row marginBottom">
     <div class="col-md-12">
-        <div class="vinDestaqueNews borderBottomGreen t18 grafite">POLÍTICA</div>
+        <div class="vinDestaqueNews borderBottomGreen t18 grafite bold">POLÍTICA</div>
         <div class="row marginBottom">
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="row">
@@ -221,7 +221,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
                         <div class="col-md-12 col-sm-4 col-xs-12">
                             <a href="<?= HOME . '/noticia/' . $catPolitica['url_name']; ?>" title="<?= $catPolitica['titulo']; ?>">
                                 <div class="boxMaisNews radius shadowBottom marginBottom">
-                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=320&h=200'; ?>" /></div>
+                                    <div class="boxMaisNewsSmallImg"><img alt="<?= $catPolitica['titulo']; ?>" title="<?= $catPolitica['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPolitica['foto'] . '&w=385&h=245'; ?>" /></div>
                                     <div class="boxMaisNewsSmallDados">
                                         <div class="boxMaisNewsCat grafite"><?= strtoupper($catPolitica['categoria']); ?></div>
                                         <div class="boxMaisNewsTit grafite"><?= Check::Words($catPolitica['titulo'], 8); ?></div>
@@ -255,7 +255,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-4 hidden-sm hidden-xs"">
+    <div class="col-md-4 hidden-sm hidden-xs">
         <div class="blcPublicidade radius shadowBottom">
             <div class="vinPublicidade grafite">Publicidade</div>
             <div class="boxPublicidade slide">
@@ -281,7 +281,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="vinNoticiasDest grafite bold">GERAL</div>
+                <div class="vinNoticiasDest grafite bold bold">GERAL</div>
                 <div class="boxDestaqueNews borderTopRed radiusBottom shadowBottom">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -323,7 +323,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 <div class="row marginBottom">
     <div class="col-md-4 col-sm-4 col-xs-6">
         <div class="blcMaisNews ">
-            <div class="vinMaisNews borderBottomGreen grafite">POLICIAL</div>
+            <div class="vinMaisNews borderBottomGreen grafite bold">POLICIAL</div>
             <?php
             $newsCat->setPlaces("categoria=policial&limit=2&offset=0");
             foreach ($newsCat->getResult() as $catPolicial):
@@ -347,7 +347,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
     </div>
     <div class="col-md-4 col-sm-4 col-xs-6">
         <div class="blcMaisNews">
-            <div class="vinMaisNews borderBottomPurple grafite">CULTURA</div>
+            <div class="vinMaisNews borderBottomPurple grafite bold">CULTURA</div>
             <?php
             $newsCat->setPlaces("categoria=cultura&limit=2&offset=0");
             foreach ($newsCat->getResult() as $catCultura):
@@ -371,7 +371,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
     </div>
     <div class="col-md-4 col-sm-4 col-xs-6 hidden-xs">
         <div class="blcMaisNews">
-            <div class="vinMaisNews borderBottomBlue grafite">ESPORTES</div>
+            <div class="vinMaisNews borderBottomBlue grafite bold">ESPORTES</div>
             <?php
             $newsCat->setPlaces("categoria=esporte&limit=2&offset=0");
             foreach ($newsCat->getResult() as $catEsporte):
@@ -420,7 +420,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 <div class="row marginBottom">
     <div class="col-md-7 col-sm-6">
         <div class="blcCoberturas">
-            <div class="vinCoberturas borderBottomYellow grafite">EVENTOS</div>
+            <div class="vinCoberturas borderBottomYellow grafite bold">EVENTOS</div>
             <div class="boxCoberturas radius shadowBottom">
                 <section id="slide">
                     <section id="buttons">
@@ -451,7 +451,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
     </div>
     <div class="col-md-5 col-sm-6">
         <div class="blcFlyers">
-            <div class="vinFlyers borderBottomPurple grafite">DESTAQUES</div>
+            <div class="vinFlyers borderBottomPurple grafite bold">DESTAQUES</div>
             <div class="boxFlyers radius shadowBottom">
                 <div class="slide">
                     <?php
@@ -476,7 +476,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinPag borderBottomBlue"><span class="grafite">VIDEOS</span> <span class="btnVertodos"><a href="<?= HOME . '/videos' ?>" class="btn btn-primary btn-xs t14"><b class="glyphicon glyphicon-play-circle"></b> VER TODOS</a></span></div>
+            <div class="vinPag borderBottomBlue"><span class="grafite bold">VIDEOS</span> <span class="btnVertodos"><a href="<?= HOME . '/videos' ?>" class="btn btn-primary btn-xs t14"><b class="glyphicon glyphicon-play-circle"></b> VER TODOS</a></span></div>
             <div class="row">
                 <?php
                 $videos = new Read;
@@ -516,7 +516,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcVideo">
-            <div class="vinPag borderBottomGreen grafite">COLUNISTAS</div>
+            <div class="vinPag borderBottomGreen grafite bold">COLUNISTAS</div>
             <div class="row">
                 <?php
                 $ReadColunista = new Read;
@@ -529,17 +529,19 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
                         $ReadColuna = new Read;
                         $ReadColuna->ExeRead('noticias', "WHERE coluna = :coluna AND qm_cadastr = :colunista ORDER BY id DESC LIMIT 1", "coluna=sim&colunista={$colunista['id']}");
                         ?>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="panel panel-default">
+
+                        <div class="col-md-3 col-sm-4 col-xs-12">
+                            <div class="panel panel-success">
                                 <div class="panel-heading"><a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>"><?= $colunista['nome']; ?></a></div>
                                 <div class="panel-body">
-                                    <div class="media">
-                                        <div class="media-left">
+
+                                    <div class="colunistaBox">
+                                        <div class="colunistaImg">
                                             <a href="#" title="Todas as colunas de <?= $colunista['nome']; ?>">
-                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $colunista['foto'] . '&w=200&h=100'; ?>" title="<?= $colunista['nome']; ?>" alt="<?= $colunista['nome']; ?>">
+                                                <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $colunista['foto'] . '&w=320&h=120'; ?>" title="<?= $colunista['nome']; ?>" alt="<?= $colunista['nome']; ?>">
                                             </a>
                                         </div>
-                                        <div class="media-body">
+                                        <div class="colunistaTxt">
                                             <?php
                                             if (!$ReadColuna->getResult()):
                                                 ?>
@@ -569,11 +571,11 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 </div>
 <div class="row marginBottom">
     <div class="col-md-6 col-sm-6">    
-        <div class="vinPag borderBottomPurple grafite">FACEBOOK</div>
-        <div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="480" data-height="485" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div>
+        <div class="vinPag borderBottomPurple grafite bold">FACEBOOK</div>
+        <div class="fbbox"><div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div></div>
     </div>
     <div class="col-md-6 col-sm-6">
-        <div class="vinPag borderBottomYellow grafite">ROLNEWS TV</div>
+        <div class="vinPag borderBottomYellow grafite bold">ROLNEWS TV</div>
         <div class="boxRolnewsTv"><a href="<?= HOME . '/rolnewstv'; ?>" title="Rolnews TV"><img src="<?= INCLUDE_PATH . '/images/img-rolnews-tv.jpg'; ?>" width="100%" alt="Rolnews TV" title="Rolnews TV"></a></div>
     </div>
 </div>

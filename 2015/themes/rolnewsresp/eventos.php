@@ -2,7 +2,8 @@
     <div class="col-md-12">
         <div class="vinVideo borderBottomBlue t18 grafite bold">ROLNEWS EVENTOS</div>
         <div class="videoPlayer">
-            <?php
+            <div class="row">
+                <?php
                 $getPage = (!empty($Link->getlocal()[1]) ? $Link->getlocal()[1] : 1);
                 $Pager = new Pager(HOME . '/eventos/');
                 $Pager->ExePager($getPage, 12);
@@ -26,6 +27,7 @@
                 echo $Pager->getPaginator();
                 echo '</nav>';
                 ?>
+            </div>
         </div>
     </div>
 </div>

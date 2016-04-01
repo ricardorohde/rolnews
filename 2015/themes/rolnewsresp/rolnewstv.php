@@ -13,14 +13,16 @@
                 <script type="text/javascript">
                     var a2a_config = a2a_config || {};
                     a2a_config.linkname = "Rolnews TV";
-                    a2a_config.linkurl = "<?= HOME;?>/rolnewstv";
+                    a2a_config.linkurl = "<?= HOME; ?>/rolnewstv";
                     a2a_config.locale = "pt-BR";
                 </script>
                 <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
                 <!-- AddToAny END -->
             </div>
-            <div class="frameBox ratio4">
-                <iframe class="ratio_element" src="https://iframe.dacast.com/b/20748/c/80766" width="100%" frameborder="0" scrolling="no"></iframe>
+            <div class="frameBox">
+                <div class="ratio4">
+                    <iframe class="ratio_element" src="https://iframe.dacast.com/b/20748/c/80766" width="100%" frameborder="0" scrolling="no"></iframe>
+                </div>
             </div>
             <div class="maxLogo tcenter bold">
                 TODO CONTEÚDO GERADO PERTENCE A: <br>

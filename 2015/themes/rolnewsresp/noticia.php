@@ -51,13 +51,17 @@ endif;
                 <div class="noticiaMediaMais">
                     <div class="vinheta t18 bold grafite">Outras Fotos</div>
                     <div class="noticiaBlcMediaMais">
-                        <?php
-                        foreach ($OutrasFotos->getResult() as $fotos):
-                            echo '<a href="' . HOME . '/uploads/' . $fotos['foto'] . '" rel="shadowbox[vocation]">';
-                            echo '<img alt="' . $titulo . '" title="' . $titulo . '" class="img-thumbnail" src="' . HOME . '/tim.php?src=' . HOME . '/uploads/' . $fotos['foto'] . '&w=180&h=100&q=90" width="180" height="100"/>';
-                            echo '</a>';
-                        endforeach;
-                        ?>
+                        <div class="row">
+                            <?php
+                            foreach ($OutrasFotos->getResult() as $fotos):
+                                echo '<div class="col-md-2 col-sm-3 col-xs-6">';
+                                echo '<a href="' . HOME . '/uploads/' . $fotos['foto'] . '" rel="shadowbox[vocation]">';
+                                echo '<img alt="' . $titulo . '" title="' . $titulo . '" class="img-thumbnail" src="' . HOME . '/tim.php?src=' . HOME . '/uploads/' . $fotos['foto'] . '&w=180&h=100&q=90"/>';
+                                echo '</a>';
+                                echo '</div>';
+                            endforeach;
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <?php
