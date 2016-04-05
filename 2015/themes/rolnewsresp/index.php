@@ -243,7 +243,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
                         <div class="boxMaisNews radius shadowBottom">
                             <div class="boxMaisNewImg"><img alt="<?= $catPoliticaBig['titulo']; ?>" title="<?= $catPoliticaBig['titulo']; ?>" src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $catPoliticaBig['foto'] . '&w=360&h=170'; ?>"/></div>
                             <div class="boxMaisNewsDados">
-                                <div class="boxMaisNewsDadosCat grafite"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
+                                <div class="boxMaisNewsDadosCat grafite bold"><?= strtoupper($catPoliticaBig['categoria']); ?></div>
                                 <div class="boxMaisNewsDadosTit grafite"><?= Check::Words($catPoliticaBig['titulo'], 10); ?></div>
                                 <div class="boxMaisNewsDateTime grafite"><?= date('d/m/Y H:i', strtotime($catPoliticaBig['data'])); ?></div>
                             </div>

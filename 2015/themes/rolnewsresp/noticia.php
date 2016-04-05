@@ -41,6 +41,17 @@ endif;
     <div class="noticiaTxt tjustify">
         <?= $noticia; ?>
     </div>
+    <?php if (!empty($video)): ?>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="videoPlayer">
+                    <div class="ratio4">
+                        <iframe class="ratio_element" width="100%" src="<?= $video; ?>" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
     <div class="row marginBottom">
         <div class="col-md-12">
             <?php
