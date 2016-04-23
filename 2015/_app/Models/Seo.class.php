@@ -150,7 +150,7 @@ class Seo {
                     $this->seoData = $ReadSeo->getResult()[0];
                     $this->Data = [$titulo . ' - ' . SITENAME, "Exibição da notícia: {$titulo}", HOME . "/noticia/{$url_name}", $foto];
 
-                    //noticia:: conta views da noticia
+                    //Noticia:: conta views da noticia
                     $ArrUpdate = ['contador' => $contador + 1];
                     $Update = new Update();
                     $Update->ExeUpdate("noticias", $ArrUpdate, "WHERE id = :idnews", "idnews={$id}");

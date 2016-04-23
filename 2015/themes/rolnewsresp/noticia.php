@@ -46,7 +46,7 @@ endif;
             <div class="col-md-8 col-md-offset-2">
                 <div class="videoPlayer">
                     <div class="ratio4">
-                        <iframe class="ratio_element" width="100%" src="<?= $video; ?>" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="ratio_element"  width="100%" height="100%" src="https://www.youtube.com/embed/<?= $video; ?>" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

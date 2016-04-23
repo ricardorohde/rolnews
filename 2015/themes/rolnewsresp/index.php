@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $View = new View;
 $tpl_videos = $View->Load('videos');
 
@@ -9,6 +9,7 @@ $newsDestBig = $news->getResult()[0];
 //Banners SWF Governo
 $bannerSwf1 = '221537-1000x150.swf';
 $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
+$bannerSwf3 = 'RORURALSHOW2016.swf';
 ?>
 
 <!-- SUPER BANNER PNA - EU CURTO RO-->
@@ -25,7 +26,27 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 </div>
 <!-- SUPER BANNER PNA - EU CURTO RO-->
 
-<!--
+
+<div class="row marginBottom hidden-xs">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="blcPublicidade radius shadowBottom">
+            <div class="boxPublicidadeFull">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
+                    <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf3; ?>"><param name="quality" value="high">
+                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf3; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%"></embed>
+                </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -38,7 +59,7 @@ $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
         </div>
     </div>
 </div>
--->
+
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
