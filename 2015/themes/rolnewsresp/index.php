@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $View = new View;
 $tpl_videos = $View->Load('videos');
 
@@ -11,7 +11,6 @@ $bannerSwf1 = '221537-1000x150.swf';
 $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
 $bannerSwf3 = 'RORURALSHOW2016.swf';
 ?>
-
 <!-- SUPER BANNER PNA - EU CURTO RO-->
 <div class="hidden-sm hidden-xs" style="width: 100%; position: fixed; bottom: 10px; z-index: 19000; left: 50%; margin-left: -50%; transition: 0.4s;" id="banner-eucurtoro"> 
     <div onclick="document.getElementById('banner-eucurtoro').style.bottom = '-15%'" style="position: relative; top: 42px; z-index: 30000; left: 92%; width: 60px; height: 20px; border-radius: 5px;">
@@ -25,8 +24,6 @@ $bannerSwf3 = 'RORURALSHOW2016.swf';
     </div>
 </div>
 <!-- SUPER BANNER PNA - EU CURTO RO-->
-
-
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -39,14 +36,6 @@ $bannerSwf3 = 'RORURALSHOW2016.swf';
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -59,7 +48,6 @@ $bannerSwf3 = 'RORURALSHOW2016.swf';
         </div>
     </div>
 </div>
-
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -84,6 +72,20 @@ $bannerSwf3 = 'RORURALSHOW2016.swf';
         </div>
     </div>
 </div>
+<?php
+$LiveNews = new Read;
+$LiveNews->ExeRead('noticias', "WHERE livenews = :lnews ORDER BY id DESC LIMIT 1", "lnews=S");
+$live = $LiveNews->getResult();
+if (!empty($live)):
+    ?>
+    <div class="row marginBottom">
+        <div class="col-md-12">
+            <a href="<?= HOME . '/noticia/' . $live[0]['url_name']; ?>">
+                <div class="faixaNews"><b>AGORA:</b> <?= $live[0]['titulo']; ?></div>
+            </a>
+        </div>
+    </div>
+<?php endif; ?>
 <div class="row marginBottom">
     <div class="col-md-8">
         <div class="row">

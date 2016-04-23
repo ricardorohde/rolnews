@@ -58,6 +58,7 @@ aside ul li a:hover{color: #ff7212; text-decoration: none;}
 /*============= CAPA ==============*/
 /*970px*/
 .capa{ width: 100%; margin: 85px 0 0 0; float: left;}
+.faixaNews{ width: 100%; padding: 0.5% 0; text-align: center; color: #FFF; font-size: 1.5em; float: left; background: #F00;}
 .vinNoticiasDest{ width: 100%; margin: 0 0 5px 0; font-size: 1.3em; font-weight: bold;}
 .boxDestaqueNews{ width: 100%; padding: 2%; float: left; background: #fff;}
 .destaqueNewsBigImg{ width: 100%; float: left;}

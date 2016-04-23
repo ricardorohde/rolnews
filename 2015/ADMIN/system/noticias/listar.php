@@ -37,6 +37,16 @@
                     $readAcao->ExeDelete($acaoId);
                     WSErro($readAcao->getError()[0], $readAcao->getError()[1]);
                     break;
+                case 'livenews-on':
+                    $UPLive = new Update;
+                    $UPLive->ExeUpdate('noticias', ['livenews'=>'S'], "WHERE id = :id", "id={$acaoId}");
+                    WSErro('Live News <b>ATIVADO</b> com sucesso', WS_ACCEPT);
+                    break;
+                case 'livenews-off':
+                    $UPLive = new Update;
+                    $UPLive->ExeUpdate('noticias', ['livenews'=>'N'], "WHERE id = :id", "id={$acaoId}");
+                    WSErro('Live News <b>DESATIVADO</b> com sucesso', WS_ACCEPT);
+                    break;
             endswitch;
             ?>
             <div class="box box-primary">
@@ -62,14 +72,19 @@
                                     ?>
                                     <tr>
                                         <td><?= $reg['id']; ?></td>
-                                        <td><?= Check::Words($reg['titulo'], 10 ); ?></td>
+                                        <td><?= Check::Words($reg['titulo'], 10); ?></td>
                                         <td><?= date('d/m/Y H:m:s', strtotime($reg['data'])); ?></td>
                                         <td><?= $reg['destaque']; ?></td>
                                         <td>
                                             <div class="btn-group">
-                                                <a href="painel.php?exe=noticias/addfotos&id=<?= $reg['id']; ?>&tipo=N" class="btn btn-flat btn-sm btn-success "><b class="fa fa-camera"></b> Add Fotos</a>
-                                                <a href="painel.php?exe=noticias/editar&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-primary "><b class="fa fa-edit"></b> Editar</a>
-                                                <a href="painel.php?exe=noticias/listar&acao=excluir&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-danger "><b class="fa fa-trash-o"></b> Excluir</a>
+                                                <?php if ($reg['livenews'] == 'S'): ?>
+                                                    <a href="painel.php?exe=noticias/listar&acao=livenews-off&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-warning " title="Desativar Live News"><b class="fa fa-flag"></b> LiveNews</a>
+                                                <?php else: ?>
+                                                    <a href="painel.php?exe=noticias/listar&acao=livenews-on&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-info " title="Ativar Live News"><b class="fa fa-flag-o"></b> LiveNews</a>
+                                                <?php endif; ?>
+                                                <a href="painel.php?exe=noticias/addfotos&id=<?= $reg['id']; ?>&tipo=N" class="btn btn-flat btn-sm btn-success " title="Adicionar Mais Fotos"><b class="fa fa-camera"></b> Add Fotos</a>
+                                                <a href="painel.php?exe=noticias/editar&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-primary " title="Editar Noticia"><b class="fa fa-edit"></b> Editar</a>
+                                                <a href="painel.php?exe=noticias/listar&acao=excluir&id=<?= $reg['id']; ?>" class="btn btn-flat btn-sm btn-danger " title="Excluir Noticia"><b class="fa fa-trash-o"></b> Excluir</a>
                                             </div>                                           
                                         </td>
                                     </tr>
