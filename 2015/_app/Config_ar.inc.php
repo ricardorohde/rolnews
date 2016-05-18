@@ -4,9 +4,9 @@ date_default_timezone_set("America/Manaus");
 
 // CONFIGURAÇÕES DO BANCO ####################
 define('HOST', 'localhost');
-define('USER', 'acirm378_userdb');
+define('USER', 'rolnews_userdbCW');
 define('PASS', 'H3xnZ8709J');
-define('DBSA', 'acirm378_dbsite');
+define('DBSA', 'rolnews_dbsiteCW');
 
 // DEFINE SERVIDOR DE E-MAIL ################
 define('MAILUSER', 'email@dominio.com.br');
@@ -15,12 +15,12 @@ define('MAILPORT', 'postadeenvio');
 define('MAILHOST', 'servidordeenvio');
 
 // DEFINE IDENTIDADE DO SITE ################
-define('SITENAME', 'ACIRM');
-define('SITEDESC', 'A ACIRM tem a te oferecer muitas vantagens com os produtos e serviços oferecidos, venha fazer parte, associe-se.');
+define('SITENAME', 'ROLNEWS');
+define('SITEDESC', 'Rolnews - Informação digital');
 
 // DEFINE A BASE DO SITE ####################
-define('HOME', 'http://www.acirmro.com.br');
-define('THEME', 'acirm');
+define('HOME', 'http://www.rolnews.com.br');
+define('THEME', 'rolnews');
 
 define('INCLUDE_PATH', HOME . DIRECTORY_SEPARATOR . 'themes' . DIRECTORY_SEPARATOR . THEME);
 define('REQUIRE_PATH', 'themes' . DIRECTORY_SEPARATOR . THEME);

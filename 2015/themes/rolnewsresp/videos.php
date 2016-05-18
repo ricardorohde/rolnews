@@ -1,5 +1,29 @@
 <div class="row marginBottom">
     <div class="col-md-12">
+        <div class="blcPublicidade radius shadowBottom">
+            <div class="boxPublicidadeFull slide">
+                <?php
+                $banners = new Read;
+                $banners->ExeRead("banners", "WHERE tipo = :idtipo ORDER BY rand()", "idtipo=13");
+                if (!$banners->getResult()):
+                    WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                else:
+                    foreach ($banners->getResult() as $bnr):
+                        echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
+                        echo "</a>";
+                    endforeach;
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row marginBottom">
+    <div class="col-md-12">
         <div class="blcVideo">
             <div class="vinVideo borderBottomBlue t18 grafite bold">VIDEOS</div>
             <div class="row">
@@ -25,6 +49,29 @@
                     $Pager->ExePaginator('videos', "WHERE titulo != :t ORDER BY id DESC", "t=''");
                     echo $Pager->getPaginator();
                     echo '</nav>';
+                endif;
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row marginBottom">
+    <div class="col-md-12">
+        <div class="blcPublicidade radius shadowBottom">
+            <div class="boxPublicidadeFull slide">
+                <?php
+                $banners->setPlaces("idtipo=14");
+                if (!$banners->getResult()):
+                    WSErro('Desculpe, ainda não há nenhum <br><b>Banner</b> cadastrado!', WS_INFOR);
+                else:
+                    foreach ($banners->getResult() as $bnr):
+                        echo "<a href=\"{$bnr['link']}\" title=\"{$bnr['titulo']}\" target=\"_blank\">";
+                        echo "<picture>";
+                        echo "<source srcset=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=183\" media=\"(max-width:1200px)\" />";
+                        echo "<img alt=\"{$bnr['titulo']}\" title=\"{$bnr['titulo']}\" src=" . HOME . "/tim.php?src=" . HOME . "/uploads/{$bnr['banner']}&w=1134&h=150\" />";
+                        echo "</picture>";
+                        echo "</a>";
+                    endforeach;
                 endif;
                 ?>
             </div>
