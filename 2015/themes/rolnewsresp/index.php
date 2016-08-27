@@ -7,35 +7,23 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = 'MAIOAMARELOGOV.swf';
+$bannerSwf1 = 'BASA01AGOSET.gif';
 $bannerSwf2 = 'eutenhoorgulhoderondonia.swf';
-$bannerSwf3 = 'RORURALSHOW2016.swf';
+$bannerSwf3 = 'eutenhoorgulhoderondonia.swf';
 ?>
 
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull">
-                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
-                    <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf3; ?>"><param name="quality" value="high">
-                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf3; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%"></embed>
-                </object>
+                <a href="http://www.bancoamazonia.com.br/" target="_blank">
+                    <img src="http://rolnews.com.br/uploads/banners/swf/BASA01AGOSET.gif" style=" width: 100%;">
+                </a>
             </div>
         </div>
     </div>
 </div>
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="978">
-                    <param name="movie" value="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>"><param name="quality" value="high">
-                    <embed src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%"></embed>
-                </object>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -450,12 +438,12 @@ if (!empty($live)):
                                         <span><?= $eventos['evento']; ?></span>
                                         <img src="<?= HOME . '/tim.php?src=' . HOME . '/uploads/' . $eventos['foto'] . '&w=561&h=320'; ?>" title="<?= $eventos['evento']; ?>" alt="<?= $eventos['evento']; ?>">
                                     </a>
-                                </li>     
+                                </li>
                                 <?php
                             endforeach;
                         endif;
                         ?>
-                    </ul>    
+                    </ul>
                 </section>
             </div>
         </div>
@@ -556,7 +544,7 @@ if (!empty($live)):
                                             <?php
                                             if (!$ReadColuna->getResult()):
                                                 ?>
-                                                <p  class="media-heading bold">Nenhuma coluna cadastrada...</p>                                                
+                                                <p  class="media-heading bold">Nenhuma coluna cadastrada...</p>
                                                 <?php
                                             else:
                                                 $coluna = $ReadColuna->getResult()[0];
@@ -581,7 +569,7 @@ if (!empty($live)):
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-6 col-sm-6">    
+    <div class="col-md-6 col-sm-6">
         <div class="vinPag borderBottomPurple grafite bold">FACEBOOK</div>
         <div class="fbbox"><div class="fb-page" data-href="https://www.facebook.com/rolnews" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/rolnews"><a href="https://www.facebook.com/rolnews">Rolnews Informação Digital</a></blockquote></div></div></div>
     </div>
@@ -591,9 +579,44 @@ if (!empty($live)):
     </div>
 </div>
 <div class="row marginBottom">
-    <div class="col-md-12">  
+    <div class="col-md-12">
         <div class="alert alert-warning" style="text-align:justify;">
-            <B>Decisão Judicial</B><br>Juiz de Direito <b>Jeferson Cristi Tessila de Melo</b>, da 2ª Vara Cívil do Poder Judiciário de Rondônia, sob o processo ordinário 0003368-18.2011.8.22.0010 requerente ao <b>Sr. Eliazar Lisboa </b>// Segue em anexo a Sentença e Processo do mesmo.   <a href="http://www.rolnews.com.br/judicial.pdf" target="_blank">[[ Download ]]</a> 
+            <B>Decisão Judicial</B><br>Juiz de Direito <b>Jeferson Cristi Tessila de Melo</b>, da 2ª Vara Cívil do Poder Judiciário de Rondônia, sob o processo ordinário 0003368-18.2011.8.22.0010 requerente ao <b>Sr. Eliazar Lisboa </b>// Segue em anexo a Sentença e Processo do mesmo.   <a href="http://www.rolnews.com.br/judicial.pdf" target="_blank">[[ Download ]]</a>
         </div>
     </div>
 </div>
+
+<!-- SUPER BANNER PNA - leis -->
+<link rel="stylesheet" type="text/css" href="http://eucurtoro.com.br/banners/leisderondonia/superbannerpna.css">
+<div id="banner-eucurtoro2">
+    <div type="button" onclick="abreUm();" id="openbt">
+        <img src="http://eucurtoro.com.br/banners/leisderondonia/Up.png" style=" width: 100%;">
+    </div>
+</div>
+<div id="banner-eucurtoro">
+    <div type="button" onclick="fechaDois();" id="closebt">
+        <img src="http://eucurtoro.com.br/banners/leisderondonia/Up.png" style=" width: 100%;">
+    </div>
+    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '-1511px'" id="closebt2">
+        <img src="http://eucurtoro.com.br/banners/leisderondonia/botaofechar.png" style=" width: 100%;">
+    </div>
+    <div id="preiframe">
+        <img src="http://eucurtoro.com.br/banners/leisderondonia/Banner-90x1280-4.png" id="iframebanner-90" onclick="abreUm();"></img>
+        <img src="http://eucurtoro.com.br/banners/leisderondonia/Base-4.png" id="iframebanner-base"></img>
+        <div id="iframevideo"><iframe width="100%" src="https://www.youtube.com/embed/wp5tsj6AcTk" class="ratio_element" frameborder="0" allowfullscreen></iframe></div>
+        <div id="tablet"><img src="http://eucurtoro.com.br/banners/leisderondonia/tablet.png"></div>
+        <div id="tabletslides"><iframe  src="http://eucurtoro.com.br/banners/leisderondonia/tablet-slides/tablet-slides.html" id="iframeslides" style="width:438px; height:259px;"> </iframe></div>
+    </div>
+    <div id="botaosaibatudo"><a href="http://eucurtoro.com.br/leis-de-rondonia/"><img src="http://eucurtoro.com.br/banners/leisderondonia/botaosaibatudo.png"></a></div>
+</div>
+<script type="text/javascript">
+    function abreUm() {
+        document.getElementById('banner-eucurtoro').style.bottom = '0px';
+        document.getElementById('banner-eucurtoro2').style.bottom = '-50px';
+    }
+    function fechaDois() {
+        document.getElementById('banner-eucurtoro').style.bottom = '-510px';
+        document.getElementById('banner-eucurtoro2').style.bottom = '8px';
+    }
+</script>
+<!-- SUPER BANNER PNA - leis -->
