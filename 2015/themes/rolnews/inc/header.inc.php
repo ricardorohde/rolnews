@@ -1,24 +1,26 @@
-<header class="shadowBottom">
-    <div class="centerlyt">
-        <div id="topo ">
-            <div class="menu t18 branco"><span class="glyphicon glyphicon-menu-hamburger"></span> MENU</div>
-            <div class="busca">
-                <?php
-                $search = filter_input(INPUT_POST, 's', FILTER_DEFAULT);
-                if (!empty($search)):
-                    $search = strip_tags(trim(urlencode($search)));
-                    header('Location: ' . HOME . '/busca/' . $search);
-                endif;
-                ?>
-                <form name="busca" action="" method="post">
-                    <input type="search" name="s" class="form-control" placeholder=" Buscar Notícias...">
-                    <button type="submit" name="sendsearch" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
-                </form>
-            </div>
-            <div class="logo"><a href="<?= HOME; ?>"><img src="<?= INCLUDE_PATH; ?>/images/logo-topo.png"></a></div>
-            <div class="dataTopo t14 branco">
-                <script>dataCorrente();</script>
-                <div id="boxHr"></div>
+<header>
+    <div class="navbar">
+        <div class="container-fluid">
+            <div id="topo ">
+                <div class="menu"><i class="glyphicon glyphicon-menu-hamburger"></i> MENU</div>
+                <div class="busca hidden-xs">
+                    <?php
+                    $search = filter_input(INPUT_POST, 's', FILTER_DEFAULT);
+                    if (!empty($search)):
+                        $search = strip_tags(trim(urlencode($search)));
+                        header('Location: ' . HOME . '/busca/' . $search);
+                    endif;
+                    ?>
+                    <form name="busca" action="" method="post">
+                        <input type="search" name="s" class="form-control" placeholder=" Buscar Notícias...">
+                        <button type="submit" name="sendsearch" class="btnBusca grafite2"><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                </div>
+                <a href="<?= HOME; ?>" title="<?= SITENAME; ?>"><h1 class="logo"><?= SITENAME; ?></h1></a>
+                <div class="dataTopo t14 branco hidden-xs">
+                    <script>dataCorrente();</script>
+                    <div id="boxHr"></div>
+                </div>
             </div>
         </div>
     </div>
