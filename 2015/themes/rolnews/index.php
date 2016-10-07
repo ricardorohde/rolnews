@@ -7,7 +7,7 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = 'detran_snt.swf';
+$bannerSwf1 = null;
 ?>
 
 <div class="row marginBottom hidden-xs">
@@ -22,16 +22,17 @@ $bannerSwf1 = 'detran_snt.swf';
     </div>
 </div>
 
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <embed width="100%"  height="100%" name="plugin" id="plugin" src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" type="application/x-shockwave-flash" >
+<?php if (!empty($bannerSwf1)): ?>
+    <div class = "row marginBottom hidden-xs">
+        <div class = "col-md-12 col-sm-12 col-xs-12">
+            <div class = "blcPublicidade radius shadowBottom">
+                <div class = "boxPublicidadeFull">
+                    <embed width = "100%" height = "100%" name = "plugin" id = "plugin" src = "<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" type = "application/x-shockwave-flash" >
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+<?php endif; ?>
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -593,6 +594,8 @@ if (!empty($live)):
         </div>
     </div>
 </div>
+
+
 <!-- SUPER BANNER PNA - LeisDeRondonia 2 -->
 <link rel="stylesheet" type="text/css" href="http://eucurtoro.com.br/banners/leisderondonia/superbannerpna.css">
 <div id="banner-eucurtoro2">
@@ -607,11 +610,11 @@ if (!empty($live)):
     <div id="preiframe">
         <img src="http://eucurtoro.com.br/banners/leisderondonia2/Banner-90x1280-4.png" id="iframebanner-90" onclick="abreUm();"></img>
         <img src="http://eucurtoro.com.br/banners/leisderondonia2/Base-4.png" id="iframebanner-base"></img>
-        <div id="iframevideo" ><iframe width="100%" class="ratio_element" src="https://www.youtube.com/embed/iS4dMZe9v34" frameborder="0" allowfullscreen></iframe></div>
+        <div id="iframevideo"><iframe width="100%" class="ratio_element" src="https://www.youtube.com/embed/iS4dMZe9v34" frameborder="0" allowfullscreen></iframe></div>
         <div id="tablet"><img src="http://eucurtoro.com.br/banners/leisderondonia2/tablet.png"></div>
         <div id="tabletslides"><iframe  src="http://eucurtoro.com.br/banners/leisderondonia2/tablet-slides/tablet-slides.html" id="iframeslides" style="width:438px; height:259px;"> </iframe></div>
     </div>
-    <div id="botaosaibatudo"><a href="http://eucurtoro.com.br/leis-de-rondonia/"><img src="http://eucurtoro.com.br/banners/leisderondonia2/botaosaibatudo.png"></a></div>
+    <div id="botaosaibatudo"><a href="http://eucurtoro.com.br/leis-de-rondonia/" target="_blank"><img src="http://eucurtoro.com.br/banners/leisderondonia2/botaosaibatudo.png"></a></div>
 </div>
 <script type="text/javascript">
     function abreUm() {
