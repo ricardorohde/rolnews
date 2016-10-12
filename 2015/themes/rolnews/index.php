@@ -14,8 +14,8 @@ $bannerSwf1 = null;
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
             <div class="boxPublicidadeFull">
-                <a href="http://www.bancoamazonia.com.br/" target="_blank">
-                    <img src="http://rolnews.com.br/uploads/banners/swf/basa_renegociacao.gif" style=" width: 100%; max-height: 150px;">
+                <a href="http://vestibular.facsaopaulo.edu.br/" target="_blank">
+                    <img src="http://rolnews.com.br/uploads/banners/swf/banner_fsp_vest2017.jpg" style=" width: 100%; max-height: 150px;">
                 </a>
             </div>
         </div>
