@@ -595,26 +595,24 @@ if (!empty($live)):
     </div>
 </div>
 
-
 <!-- SUPER BANNER PNA - LeisDeRondonia 2 -->
 <link rel="stylesheet" type="text/css" href="http://eucurtoro.com.br/banners/leisderondonia/superbannerpna.css">
 <div id="banner-eucurtoro2">
     <div type="button" onclick="abreUm();" id="openbt">
-        <img src="http://eucurtoro.com.br/banners/leisderondonia2/Up.png" style=" width: 100%;"></div>
+        <img src="http://eucurtoro.com.br/banners/leisderondonia3/Up.png" style=" width: 100%;">
+    </div>
 </div>
 <div id="banner-eucurtoro">
-    <div type="button" onclick="fechaDois();" id="closebt">
-        <img src="http://eucurtoro.com.br/banners/leisderondonia2/Up.png" style=" width: 100%;"></div>
-    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '-1511px'" id="closebt2">
-        <img src="http://eucurtoro.com.br/banners/leisderondonia/botaofechar.png" style=" width: 100%;"></div>
+    <div type="button" onclick="fechaDois();" id="closebt"><img src="http://eucurtoro.com.br/banners/leisderondonia3/Up.png" style=" width: 100%;"></div>
+    <div type="button" onclick="document.getElementById('banner-eucurtoro').style.bottom = '-1511px'" id="closebt2"><img src="http://eucurtoro.com.br/banners/leisderondonia/botaofechar.png" style=" width: 100%;"></div>
     <div id="preiframe">
-        <img src="http://eucurtoro.com.br/banners/leisderondonia2/Banner-90x1280-4.png" id="iframebanner-90" onclick="abreUm();"></img>
-        <img src="http://eucurtoro.com.br/banners/leisderondonia2/Base-4.png" id="iframebanner-base"></img>
-        <div id="iframevideo"><iframe width="100%" class="ratio_element" src="https://www.youtube.com/embed/iS4dMZe9v34" frameborder="0" allowfullscreen></iframe></div>
-        <div id="tablet"><img src="http://eucurtoro.com.br/banners/leisderondonia2/tablet.png"></div>
-        <div id="tabletslides"><iframe  src="http://eucurtoro.com.br/banners/leisderondonia2/tablet-slides/tablet-slides.html" id="iframeslides" style="width:438px; height:259px;"> </iframe></div>
+        <img src="http://eucurtoro.com.br/banners/leisderondonia3/Banner-90x1280-4.png" id="iframebanner-90" onclick="abreUm();"></img>
+        <img src="http://eucurtoro.com.br/banners/leisderondonia3/Base-4.png" id="iframebanner-base"></img>
+        <div id="iframevideo"><iframe width="100%" class="ratio_element" src="https://www.youtube.com/embed/W0m_L8jNDkM" frameborder="0" allowfullscreen></iframe></div>
+        <div id="tablet"><img src="http://eucurtoro.com.br/banners/leisderondonia3/tablet.png"></div>
+        <div id="tabletslides"><iframe  src="http://eucurtoro.com.br/banners/leisderondonia3/tablet-slides/tablet-slides.html" id="iframeslides" style="width:438px; height:259px;"> </iframe></div>
     </div>
-    <div id="botaosaibatudo"><a href="http://eucurtoro.com.br/leis-de-rondonia/" target="_blank"><img src="http://eucurtoro.com.br/banners/leisderondonia2/botaosaibatudo.png"></a></div>
+    <div id="botaosaibatudo"><a href="http://eucurtoro.com.br/leis-de-rondonia/" target="_blank"><img src="http://eucurtoro.com.br/banners/leisderondonia3/botaosaibatudo.png"></a></div>
 </div>
 <script type="text/javascript">
     function abreUm() {
