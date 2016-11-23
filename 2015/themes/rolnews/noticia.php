@@ -9,6 +9,7 @@ endif;
 //Banners SWF Governo
 $bannerSwf1 = 'detran_snt.swf';
 ?>
+
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -33,6 +34,17 @@ $bannerSwf1 = 'detran_snt.swf';
         </div>
     </div>
 </div>
+
+<div class="row marginBottom hidden-xs">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="blcPublicidade radius shadowBottom">
+            <div class="boxPublicidadeFull">
+                <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= HOME . '/uploads/banners/swf/html5_detran/1000x150.html'; ?>"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="row marginBottom hidden-xs">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">
@@ -42,7 +54,7 @@ $bannerSwf1 = 'detran_snt.swf';
         </div>
     </div>
 </div>
-
+-->
 <article class="news">
     <div class="headline">
         <h3 class="borderBottomBlue bold"><?= $categoria; ?></h3>
