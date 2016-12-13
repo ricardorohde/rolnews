@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>1000x150</title>
+        <title>1000X150</title>
         <style>
             body{ margin: 0; padding: 0;}
         </style>
@@ -13,7 +13,6 @@
         <script src="1000x150.js"></script>
 
         <script>
-
             var canvas, stage, exportRoot;
 
             function init() {
@@ -33,7 +32,7 @@
             }
 
             function handleComplete() {
-                exportRoot = new lib._1000x150();
+                exportRoot = new lib._1000X150();
 
                 stage = new createjs.Stage(canvas);
                 stage.addChild(exportRoot);
@@ -46,7 +45,7 @@
         </script>
     </head>
 
-    <body onload="init();">
+    <body onload="init();" style="background-color:#D4D4D4">
         <canvas id="canvas" width="1000" height="150" style="background-color:#FFFFFF"></canvas>
     </body>
 </html>
