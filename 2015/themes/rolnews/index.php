@@ -189,16 +189,6 @@ if (!empty($live)):
         <p class="btnTodasNews"><a href="<?= HOME . '/noticias'; ?>">TODAS AS NOTÍCIAS <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
     </div>
 </div>
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= HOME . '/uploads/banners/swf/html5_aedes_aegypti/1000X150.html'; ?>"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="row marginBottom">
     <div class="col-md-12">
         <div class="blcPublicidade radius shadowBottom">
