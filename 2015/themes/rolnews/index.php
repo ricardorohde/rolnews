@@ -7,18 +7,31 @@ $news->ExeRead("noticias n", "WHERE n.destaque = :destaque ORDER BY n.id DESC LI
 $newsDestBig = $news->getResult()[0];
 
 //Banners SWF Governo
-$bannerSwf1 = null;
+$bannerHTML_1 = HOME . '/uploads/banners/swf/html5_aedes_aegypti/html5.html';
+$bannerHTML_2 = HOME . '/uploads/banners/swf/html5_ro_noticia/html5.html';
 ?>
-
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= HOME . '/uploads/banners/swf/html5_aniversario_ro/1000x150.html'; ?>"></iframe>
+<?php if (!empty($bannerHTML_1)): ?>
+    <div class="row marginBottom hidden-xs">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="blcPublicidade radius shadowBottom">
+                <div class="boxPublicidadeFull">
+                    <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= $bannerHTML_1; ?>"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
+<?php endif; ?>
+<?php if (!empty($bannerHTML_2)): ?>
+    <div class="row marginBottom hidden-xs">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="blcPublicidade radius shadowBottom">
+                <div class="boxPublicidadeFull">
+                    <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= $bannerHTML_2; ?>"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
 <div class="row marginBottom">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="blcPublicidade radius shadowBottom">

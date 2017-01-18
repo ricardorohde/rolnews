@@ -35,26 +35,33 @@ $bannerSwf1 = 'detran_snt.swf';
     </div>
 </div>
 
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= HOME . '/uploads/banners/swf/html5_aniversario_ro/1000x150.html'; ?>"></iframe>
+<?php
+//Banners SWF Governo
+$bannerHTML_1 = HOME . '/uploads/banners/swf/html5_aedes_aegypti/html5.html';
+$bannerHTML_2 = HOME . '/uploads/banners/swf/html5_ro_noticia/html5.html';
+?>
+<?php if (!empty($bannerHTML_1)): ?>
+    <div class="row marginBottom hidden-xs">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="blcPublicidade radius shadowBottom">
+                <div class="boxPublicidadeFull">
+                    <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= $bannerHTML_1; ?>"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--
-<div class="row marginBottom hidden-xs">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blcPublicidade radius shadowBottom">
-            <div class="boxPublicidadeFull">
-                <embed width="100%"  height="100%" name="plugin" id="plugin" src="<?= HOME . '/uploads/banners/swf/' . $bannerSwf1; ?>" type="application/x-shockwave-flash" >
+<?php endif; ?>
+<?php if (!empty($bannerHTML_2)): ?>
+    <div class="row marginBottom hidden-xs">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="blcPublicidade radius shadowBottom">
+                <div class="boxPublicidadeFull">
+                    <iframe width="100%" height="100%" style="overflow: none;" scrolling="no" src="<?= $bannerHTML_2; ?>"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
--->
+<?php endif; ?>
 <article class="news">
     <div class="headline">
         <h3 class="borderBottomBlue bold"><?= $categoria; ?></h3>
